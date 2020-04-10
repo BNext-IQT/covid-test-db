@@ -19,7 +19,7 @@ import (
 )
 
 func getDB () *gorm.DB {
-	const addr = "postgresql://covid_bug@localhost:26257/covid_tests?sslmode=disable"
+	const addr = "postgresql://covid_bug@roach:26257/covid_tests?sslmode=disable"
     db, err := gorm.Open("postgres", addr)
     if err != nil {
         log.Fatal(err)

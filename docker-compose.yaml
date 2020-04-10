@@ -14,6 +14,18 @@ services:
     volumes:
       - '${PWD}/cockroach-data/roach:/cockroach/cockroach-data'
       - '${PWD}/sql_scripts:/sql_scripts'
+  api:
+    container_name: api
+    hostname: bugbrother
+    restart: always
+    build:
+      context: api
+    image: 'covid-test-db/api:latest'
+    ports:
+      - 5000:5000
+    networks:
+      - database
+      - api
 networks:
   admin:
     name: admin
