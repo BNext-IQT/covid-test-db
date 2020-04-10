@@ -9,43 +9,24 @@ import (
 )
 
 type Poc struct {
-    id   uuid.UUID `gorm:"type:uuid;primary_key;"`
-    name string 
-    phone string
-    email string
+    Id      uuid.UUID     `json:"id" gorm:"column:id; type:uuid; primary_key;"`
+    Name    string        `json:"name" gorm:"column:name; type:string; not_null"` 
+    Phone   string        `json:"phone" gorm:"column:phone; type:string;"`
+    Email   string        `json:"email" gorm:"column:email; type:string;"`
 }
 
-// Functions of type `txnFunc` are passed as arguments to our
-// `runTransaction` wrapper that handles transaction retries for us
-// (see implementation below).
-type txnFunc func(*gorm.DB) error
-
-// This function is used for testing the transaction retry loop.  It
-// can be deleted from production code.
-var forceRetryLoop txnFunc = func(db *gorm.DB) error {
-
-    // The first statement in a transaction can be retried transparently
-    // on the server, so we need to add a dummy statement so that our
-    // force_retry statement isn't the first one.
-    if err := db.Exec("SELECT now()").Error; err != nil {
-        return err
-    }
-    // Used to force a transaction retry.
-    if err := db.Exec("SELECT crdb_internal.force_retry('1s'::INTERVAL)").Error; err != nil {
-        return err
-    }
-    return nil
+func (Poc) TableName() string {
+    return "pocs"
 }
 
 func Create(db *gorm.DB, name string, email string, phone string) (*Poc, error) {
-    toInsert := &Poc{}
-    id := uuid.New()
-    toInsert.id = id
-    toInsert.name = name
-    toInsert.email = email
-    toInsert.phone = phone
+    var toInsert = &Poc{
+        Name: name,
+        Email: email,
+        Phone: phone,
+    }
 
-    err := db.Save(&toInsert).Error;
+    err := db.Create(toInsert).Error;
 
     if err != nil {
         toInsert = nil
@@ -53,10 +34,19 @@ func Create(db *gorm.DB, name string, email string, phone string) (*Poc, error) 
     return toInsert, err
 }
 
+func Update(db *gorm.DB, toUpdate *Poc) (*Poc, error) {
+    err := db.Save(toUpdate).Error;
+
+    if err != nil {
+        toUpdate = nil
+    }
+    return toUpdate, err
+}
+
 func FetchById(db *gorm.DB, id uuid.UUID) (*Poc, error) {
     result :=  &Poc{}
 
-    err := db.First(&result, id).Error;
+    err := db.Where("id = ?", id).First(&result).Error;
 
     if err != nil {
         result = nil

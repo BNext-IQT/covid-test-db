@@ -1,4 +1,9 @@
+/*create users and database*/
+CREATE USER IF NOT EXISTS covid_bug;
 CREATE DATABASE IF NOT EXISTS covid_tests;
+GRANT ALL ON DATABASE covid_tests TO covid_bug;
+
+/*setup tables*/
 CREATE TABLE IF NOT EXISTS covid_tests.pocs (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	name STRING NOT NULL,
@@ -31,8 +36,6 @@ CREATE TABLE IF NOT EXISTS covid_tests.test_types(
 	updated_by STRING NULL,
 	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp()
 );
-INSERT INTO covid_tests.test_types (name, created_by, updated_by) VALUES ('Immunoassays/serology', 'initialize.sql', 'initialize.sql');
-INSERT INTO covid_tests.test_types (name, created_by, updated_by) VALUES ('molecular assays', 'initialize.sql', 'initialize.sql');
 
 CREATE TABLE IF NOT EXISTS covid_tests.regulatory_approval_types(
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -42,15 +45,6 @@ CREATE TABLE IF NOT EXISTS covid_tests.regulatory_approval_types(
 	updated_by STRING NULL,
 	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp()
 );
-INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('CE-IVD', 'initialize.sql', 'initialize.sql');
-INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('RUO', 'initialize.sql', 'initialize.sql');
-INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('HSA', 'initialize.sql', 'initialize.sql');
-INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('EUA', 'initialize.sql', 'initialize.sql');
-INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('MFDS (by country)', 'initialize.sql', 'initialize.sql');
-INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('TGA (by country)', 'initialize.sql', 'initialize.sql');
-INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('FDA (by country)', 'initialize.sql', 'initialize.sql');
-INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('WHO EUL', 'initialize.sql', 'initialize.sql');
-INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('NRA', 'initialize.sql', 'initialize.sql');
 
 CREATE TABLE IF NOT EXISTS covid_tests.tests (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -73,3 +67,17 @@ CREATE TABLE IF NOT EXISTS covid_tests.test_regulatory_approvals (
 	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
 	PRIMARY KEY (test_id, regulatory_approval_type_id)
 );
+
+/* fill in reference tables */
+INSERT INTO covid_tests.test_types (name, created_by, updated_by) VALUES ('Immunoassays/serology', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.test_types (name, created_by, updated_by) VALUES ('molecular assays', 'initialize.sql', 'initialize.sql');
+
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('CE-IVD', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('RUO', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('HSA', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('EUA', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('MFDS (by country)', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('TGA (by country)', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('FDA (by country)', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('WHO EUL', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('NRA', 'initialize.sql', 'initialize.sql');

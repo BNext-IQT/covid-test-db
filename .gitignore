@@ -10,6 +10,10 @@
 
 # production
 /build
+api/api
+
+#logfiles
+*.log
 
 # misc
 .DS_Store
