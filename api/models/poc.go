@@ -1,24 +1,18 @@
-package poc
+package models
 
 import (
-	"fmt"
-	"log"
-
-	"github.com/google/uuid"
-	
-	// Import GORM-related packages.
+    "github.com/google/uuid"
+    
+    // Import GORM-related packages.
     "github.com/jinzhu/gorm"
     _ "github.com/jinzhu/gorm/dialects/postgres"
-
-    // Necessary in order to check for transaction retry error codes.
-    "github.com/lib/pq"
 )
 
-type poc struct {
+type Poc struct {
     id   uuid.UUID `gorm:"type:uuid;primary_key;"`
-    Name string NOT NULL,
-	phone string NULL,
-	email string NULL,
+    name string 
+    phone string
+    email string
 }
 
 // Functions of type `txnFunc` are passed as arguments to our
@@ -43,27 +37,30 @@ var forceRetryLoop txnFunc = func(db *gorm.DB) error {
     return nil
 }
 
-func create(db *gorm.DB, name, email, phone) (poc, error) {
-	var toInsert poc
-	id, err := uuid.NewV4()
-	poc.id := id
-	poc.name := name
-	poc.email := email
-	poc.phone := phone
+func Create(db *gorm.DB, name string, email string, phone string) (*Poc, error) {
+    toInsert := &Poc{}
+    id := uuid.New()
+    toInsert.id = id
+    toInsert.name = name
+    toInsert.email = email
+    toInsert.phone = phone
 
-	if err := db.Save(&toInsert).Error; err != nil {
-        return err
+    err := db.Save(&toInsert).Error;
+
+    if err != nil {
+        toInsert = nil
     }
-    return toInsert
+    return toInsert, err
 }
 
-func fetchById(db *gorm.DB, id) (poc, error) {
-    var result poc
+func FetchById(db *gorm.DB, id uuid.UUID) (*Poc, error) {
+    result :=  &Poc{}
 
-    if err := db.First(&result, id).Error; err != nil {
-    	result := nil
-        return err
+    err := db.First(&result, id).Error;
+
+    if err != nil {
+        result = nil
     }
 
-    return result
+    return result, err
 }
