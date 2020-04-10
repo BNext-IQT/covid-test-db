@@ -4,9 +4,12 @@ CREATE TABLE IF NOT EXISTS covid_tests.pocs (
 	name STRING NOT NULL,
 	phone STRING NULL,
 	email STRING NULL,
+	created_by STRING NULL,
 	created TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
+	updated_by STRING NULL,
 	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp()
 );
+
 CREATE TABLE IF NOT EXISTS covid_tests.companies (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	name STRING NOT NULL,
@@ -14,23 +17,59 @@ CREATE TABLE IF NOT EXISTS covid_tests.companies (
 	state STRING NOT NULL,
 	country STRING NOT NULL,
 	poc_id UUID NULL REFERENCES covid_tests.pocs(id) ON DELETE CASCADE,
+	created_by STRING NULL,
 	created TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
+	updated_by STRING NULL,
 	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp()
 );
+
 CREATE TABLE IF NOT EXISTS covid_tests.test_types(
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	name STRING NOT NULL,
+	created_by STRING NULL,
 	created TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
+	updated_by STRING NULL,
 	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp()
 );
-INSERT INTO covid_tests.test_types (name) VALUES ('Immunoassays/serology');
-INSERT INTO covid_tests.test_types (name) VALUES ('molecular assays');
+INSERT INTO covid_tests.test_types (name, created_by, updated_by) VALUES ('Immunoassays/serology', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.test_types (name, created_by, updated_by) VALUES ('molecular assays', 'initialize.sql', 'initialize.sql');
+
+CREATE TABLE IF NOT EXISTS covid_tests.regulatory_approval_types(
+	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+	name STRING NOT NULL,
+	created_by STRING NULL,
+	created TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
+	updated_by STRING NULL,
+	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp()
+);
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('CE-IVD', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('RUO', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('HSA', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('EUA', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('MFDS (by country)', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('TGA (by country)', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('FDA (by country)', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('WHO EUL', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_tests.regulatory_approval_types (name, created_by, updated_by) VALUES ('NRA', 'initialize.sql', 'initialize.sql');
+
 CREATE TABLE IF NOT EXISTS covid_tests.tests (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	name STRING NOT NULL,
 	description STRING NOT NULL,
 	test_type_id UUID NULL REFERENCES covid_tests.test_types(id) ON DELETE CASCADE,
 	poc_id UUID NULL REFERENCES covid_tests.pocs(id) ON DELETE CASCADE,
+	created_by STRING NULL,
 	created TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
+	updated_by STRING NULL,
 	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp()
+);
+
+CREATE TABLE IF NOT EXISTS covid_tests.test_regulatory_approvals (
+	test_id UUID NULL REFERENCES covid_tests.tests(id) ON DELETE CASCADE,
+	regulatory_approval_type_id UUID NULL REFERENCES covid_tests.regulatory_approval_types(id) ON DELETE CASCADE,
+	created_by STRING NULL,
+	created TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
+	updated_by STRING NULL,
+	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
+	PRIMARY KEY (test_id, regulatory_approval_type_id)
 );
