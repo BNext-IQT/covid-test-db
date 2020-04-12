@@ -26,6 +26,17 @@ services:
     networks:
       - database
       - api
+  ui:
+    container_name: ui
+    hostname: magnifyingglass
+    restart: always
+    build:
+      context: ui
+    image: 'covid-test-db/ui:latest'
+    ports:
+      - 5001:8080
+    networks:
+      - api
 networks:
   admin:
     name: admin
@@ -34,5 +45,3 @@ networks:
     driver: bridge
   api:
     name: api
-  ui:
-    name: ui
