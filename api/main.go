@@ -9,6 +9,7 @@ import (
 	"net/http"
 
 	"github.com/google/uuid"
+	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 
 	// Import GORM-related packages.
@@ -76,11 +77,21 @@ func updatePoc(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(created)
 }
 
+func getPocList(w http.ResponseWriter, r *http.Request) {
+	db := getDB()
+	defer db.Close()
+
+	results, err := models.FetchList(db)
+	if err != nil {
+        log.Print(err)
+    }
+	json.NewEncoder(w).Encode(results)
+}
+
 func getPoc(w http.ResponseWriter, r *http.Request) {
 	pocID, err := uuid.Parse(mux.Vars(r)["id"])
 	db := getDB()
 	defer db.Close()
-	log.Print(pocID)
 
 	result, err := models.FetchById(db, pocID)
 	if err != nil {
@@ -99,9 +110,15 @@ func main() {
 	log.Println("Logging Started")
 
 	router := mux.NewRouter().StrictSlash(false)
+
+	headersOk := handlers.AllowedHeaders([]string{"X-Requested-With", "Content-Type", "Authorization"})
+	originsOk := handlers.AllowedOrigins([]string{"*"})
+	methodsOk := handlers.AllowedMethods([]string{"GET", "HEAD", "POST", "PUT", "OPTIONS"})
+
 	router.HandleFunc("/", homeLink)
+	router.HandleFunc("/pocs", getPocList).Methods("GET")
 	router.HandleFunc("/pocs", createPoc).Methods("POST")
 	router.HandleFunc("/pocs/{id}", getPoc).Methods("GET")
 	router.HandleFunc("/pocs/{id}", updatePoc).Methods("PUT")
-	log.Fatal(http.ListenAndServe(":5000", router))
+	log.Fatal(http.ListenAndServe(":5000", handlers.CORS(headersOk, originsOk, methodsOk)(router)))
 }

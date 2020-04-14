@@ -54,3 +54,15 @@ func FetchById(db *gorm.DB, id uuid.UUID) (*Poc, error) {
 
     return result, err
 }
+
+func FetchList(db *gorm.DB) ([]Poc, error) {
+    var results []Poc =  nil
+
+    err := db.Find(&results).Error;
+
+    if err != nil {
+        results = nil
+    }
+
+    return results, err
+}
