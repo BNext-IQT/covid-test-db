@@ -16,7 +16,7 @@ import (
     "github.com/jinzhu/gorm"
     _ "github.com/jinzhu/gorm/dialects/postgres"
 
-    "gitlab.iqt.org/rashley/covid-test-db/api/models"
+    "gitlab.iqt.org/rashley/covid-test-db/models/poc"
 )
 
 func getDB () *gorm.DB {
@@ -41,7 +41,7 @@ func homeLink(w http.ResponseWriter, r *http.Request) {
 func createPoc(w http.ResponseWriter, r *http.Request) {
 	db := getDB()
 	defer db.Close()
-	var p models.Poc
+	var p poc.Poc
 
 	err := json.NewDecoder(r.Body).Decode(&p)
     if err != nil {
@@ -49,7 +49,7 @@ func createPoc(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-	created, err := models.Create(db, p.Name, p.Email, p.Phone)
+	created, err := poc.Create(db, p.Name, p.Email, p.Phone)
 	if err != nil {
         log.Print(err)
     }
@@ -60,7 +60,7 @@ func updatePoc(w http.ResponseWriter, r *http.Request) {
 	pocID, err := uuid.Parse(mux.Vars(r)["id"])
 	db := getDB()
 	defer db.Close()
-	var p models.Poc
+	var p poc.Poc
 
 	err = json.NewDecoder(r.Body).Decode(&p)
 
@@ -70,7 +70,7 @@ func updatePoc(w http.ResponseWriter, r *http.Request) {
     }
     p.Id = pocID
 
-	created, err := models.Update(db, &p)
+	created, err := poc.Update(db, &p)
 	if err != nil {
         log.Print(err)
     }
@@ -81,7 +81,7 @@ func getPocList(w http.ResponseWriter, r *http.Request) {
 	db := getDB()
 	defer db.Close()
 
-	results, err := models.FetchList(db)
+	results, err := poc.FetchList(db)
 	if err != nil {
         log.Print(err)
     }
@@ -93,7 +93,7 @@ func getPoc(w http.ResponseWriter, r *http.Request) {
 	db := getDB()
 	defer db.Close()
 
-	result, err := models.FetchById(db, pocID)
+	result, err := poc.FetchById(db, pocID)
 	if err != nil {
         log.Print(err)
     }
