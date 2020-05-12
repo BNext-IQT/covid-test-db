@@ -22,7 +22,7 @@
     methods: {
       getData(){
         axios
-        .get("http://localhost:5000/pocs")
+        .get("http://localhost:5000/pocs", {crossdomain: true})
         .then((res) => {
           this.pocs = res.data;
         })

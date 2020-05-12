@@ -11,13 +11,13 @@ import (
     _ "github.com/jinzhu/gorm/dialects/postgres"
 
 	"gitlab.iqt.org/rashley/covid-test-db/models/poc"
-    // "gitlab.iqt.org/rashley/covid-test-db/models/test_type"
-    "gitlab.iqt.org/rashley/covid-test-db/models/test_target_type"
+    // "gitlab.iqt.org/rashley/covid-test-db/models/diagnostic_type"
+    "gitlab.iqt.org/rashley/covid-test-db/models/diagnostic_target_type"
     // "gitlab.iqt.org/rashley/covid-test-db/models/regulatory_approval_type"
 )
 
 func getDB () *gorm.DB {
-	const addr = "postgresql://covid_bug@localhost:26257/covid_tests?sslmode=disable"
+	const addr = "postgresql://covid_bug@localhost:26257/covid_diagnostics?sslmode=disable"
     db, err := gorm.Open("postgres", addr)
     if err != nil {
         log.Fatal(err)
@@ -44,14 +44,14 @@ func getOrCreatePoc(name string, email string)(*poc.Poc, error){
 	return result, err
 }
 
-func getTargetTypes(name string)([]test_target_type.TestTargetType, error){
+func getTargetTypes(name string)([]diagnostic_target_type.DiagnosticTargetType, error){
 	db := getDB()
 	defer db.Close()
-	var validTypes []test_target_type.TestTargetType
-	allTypes, err := test_target_type.FetchList(db)
+	var validTypes []diagnostic_target_type.DiagnosticTargetType
+	allTypes, err := diagnostic_target_type.FetchList(db)
 
 	for _, t := range allTypes{
-		if(strings.Contains(strings.ToLower(Name), strings.ToLower(t.name))){
+		if(strings.Contains(strings.ToLower(name), strings.ToLower(t.Name))){
 			validTypes = append(validTypes, t)
 		}
 	}
@@ -80,8 +80,8 @@ func main() {
 		gq := e.DOM
 		company_name := e.ChildText("a.labo")
 		website_url := e.ChildAttr("a.labo", "href")
-		test := gq.Contents().Not("span").Not("a").Text()
-		test = strings.TrimSpace(test)
+		diagnostic := gq.Contents().Not("span").Not("a").Text()
+		diagnostic = strings.TrimSpace(diagnostic)
 		contact, _ := gq.Find("span.contact").Children().Find("a[href]").Attr("href")
 		contact = strings.TrimSpace(strings.Replace(contact, "mailto:", "", -1))
 		idx := strings.IndexByte(contact, '@')

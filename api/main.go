@@ -20,7 +20,7 @@ import (
 )
 
 func getDB () *gorm.DB {
-	const addr = "postgresql://covid_bug@roach:26257/covid_tests?sslmode=disable"
+	const addr = "postgresql://covid_bug@roach:26257/covid_diagnostics?sslmode=disable"
     db, err := gorm.Open("postgres", addr)
     if err != nil {
         log.Fatal(err)
@@ -116,7 +116,7 @@ func main() {
 	methodsOk := handlers.AllowedMethods([]string{"GET", "HEAD", "POST", "PUT", "OPTIONS"})
 
 	router.HandleFunc("/", homeLink)
-	router.HandleFunc("/pocs", getPocList).Methods("GET")
+	router.HandleFunc("/pocs", getPocList).Methods("GET", "OPTIONS")
 	router.HandleFunc("/pocs", createPoc).Methods("POST")
 	router.HandleFunc("/pocs/{id}", getPoc).Methods("GET")
 	router.HandleFunc("/pocs/{id}", updatePoc).Methods("PUT")
