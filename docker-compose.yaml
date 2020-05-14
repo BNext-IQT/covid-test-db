@@ -19,7 +19,8 @@ services:
     hostname: bugbrother
     restart: always
     build:
-      context: api
+      context: .
+      dockerfile: api/Dockerfile
     image: 'covid-test-db/api:latest'
     ports:
       - 5000:5000

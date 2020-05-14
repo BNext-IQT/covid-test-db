@@ -7,15 +7,16 @@ ENV GO111MODULE=on \
     GOARCH=amd64
 
 # Move to working directory /build
+COPY ./models /models
 WORKDIR /build
 
 # Copy and download dependency using go mod
-COPY go.mod .
-COPY go.sum .
+COPY api/go.mod .
+COPY api/go.sum .
 RUN go mod download
 
 # Copy the code into the container
-COPY . .
+COPY api .
 
 # Build the application
 RUN go build -o main .

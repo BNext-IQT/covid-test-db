@@ -33,7 +33,7 @@ if [ $# -gt 0 ]; then
     check_args "$@"
 fi
 
-docker-compose -f docker-compose.yaml up -d 
+docker-compose -f docker-compose.yaml up -d --build
 
 if [ "$RUN_INIT" -gt 0 ]; then
 	docker exec -it roach \

@@ -18,9 +18,13 @@ CREATE TABLE IF NOT EXISTS covid_diagnostics.pocs (
 CREATE TABLE IF NOT EXISTS covid_diagnostics.companies (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	name STRING NOT NULL,
-	city STRING NOT NULL,
-	state STRING NOT NULL,
-	country STRING NOT NULL,
+	street_address STRING NULL,
+	city STRING NULL,
+	state STRING NULL,
+	country STRING NULL,
+	postal_code STRING NULL,
+	stage STRING NULL,
+	valuation STRING NULL,
 	poc_id UUID NULL REFERENCES covid_diagnostics.pocs(id) ON DELETE CASCADE,
 	created_by STRING NULL,
 	created TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
@@ -70,6 +74,7 @@ CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostics (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	name STRING NOT NULL,
 	description STRING NOT NULL,
+	company_id UUID NULL REFERENCES covid_diagnostics.companies(id) ON DELETE CASCADE,
 	diagnostic_type_id UUID NULL REFERENCES covid_diagnostics.diagnostic_types(id) ON DELETE CASCADE,
 	poc_id UUID NULL REFERENCES covid_diagnostics.pocs(id) ON DELETE CASCADE,
 	created_by STRING NULL,
@@ -102,8 +107,8 @@ CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostic_targets (
 INSERT INTO covid_diagnostics.diagnostic_types (name, created_by, updated_by) VALUES ('Immunoassays/serology', 'initialize.sql', 'initialize.sql');
 INSERT INTO covid_diagnostics.diagnostic_types (name, created_by, updated_by) VALUES ('molecular assays', 'initialize.sql', 'initialize.sql');
 
-INSERT INTO covid_diagnostics.diagnostic_types (name, created_by, updated_by) VALUES ('IgG', 'initialize.sql', 'initialize.sql');
-INSERT INTO covid_diagnostics.diagnostic_types (name, created_by, updated_by) VALUES ('IgM', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_diagnostics.diagnostic_target_types (name, created_by, updated_by) VALUES ('IgG', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_diagnostics.diagnostic_target_types (name, created_by, updated_by) VALUES ('IgM', 'initialize.sql', 'initialize.sql');
 
 INSERT INTO covid_diagnostics.regulatory_approval_types (name, created_by, updated_by) VALUES ('CE-IVD', 'initialize.sql', 'initialize.sql');
 INSERT INTO covid_diagnostics.regulatory_approval_types (name, created_by, updated_by) VALUES ('RUO', 'initialize.sql', 'initialize.sql');

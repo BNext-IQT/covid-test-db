@@ -7,33 +7,41 @@ import (
     "github.com/jinzhu/gorm"
     _ "github.com/jinzhu/gorm/dialects/postgres"
 
-    "gitlab.iqt.org/rashley/covid-test-db/api/poc"
-    "gitlab.iqt.org/rashley/covid-test-db/api/diagnostic_type"
-    "gitlab.iqt.org/rashley/covid-test-db/api/diagnostic_target_type"
-    "gitlab.iqt.org/rashley/covid-test-db/api/regulatory_approval_type"
+    "gitlab.iqt.org/rashley/covid-test-db/models/poc"
+    "gitlab.iqt.org/rashley/covid-test-db/models/company"
+    "gitlab.iqt.org/rashley/covid-test-db/models/diagnostic_type"
+    "gitlab.iqt.org/rashley/covid-test-db/models/diagnostic_target_type"
+    "gitlab.iqt.org/rashley/covid-test-db/models/regulatory_approval_type"
 )
 
 type Diagnostic struct {
-    Id      			uuid.UUID     			 `json:"id" gorm:"column:id; type:uuid; primary_key;"`
-    Name    			string        			 `json:"name" gorm:"column:name; type:string; not_null"` 
-    Description 		string 		  			 `json:"description" gorm:"column:description; type:string; not_null"` 
-	DiagnosticTypeId  	uuid.UUID 	  			 `json:"diagnosticTypeId" gorm:"column:diagnostic_type_id; type:uuid;`
-	DiagnosticType  	DiagnosticType 	  		 `json:"diagnosticType" gorm:"foreignkey:diagnosticTypeId;`
-	PocId   			uuid.UUID     			 `json:"pocId" gorm:"column:poc_id; type:uuid;"`
-    Poc     			Poc 					 `json:"poc" gorm:"foreignkey:PocId;"`
-    RegulatoryApprovals	[]RegulatoryApprovalType `gorm:"many2many:regulatory_approval_types;"`
-    dDagnosticTargets	[]DiagnosticTargetType 	 `gorm:"many2many:diagnostic_target_types;"`
+    Id      			uuid.UUID     			                            `json:"id" gorm:"column:id; type:uuid; primary_key;"`
+    Name    			string        			                            `json:"name" gorm:"column:name; type:string; not_null"` 
+    Description 		string 		  			                            `json:"description" gorm:"column:description; type:string; not_null"` 
+	CompanyId           uuid.UUID                                           `json:"companyId" gorm:"column:company_id; type:uuid;"`
+    Company             company.Company                                     `json:"company" gorm:"foreignkey:CompanyId;"`
+    DiagnosticTypeId  	uuid.UUID 	  			                            `json:"diagnosticTypeId" gorm:"column:diagnostic_type_id; type:uuid;`
+	DiagnosticType  	diagnostic_type.DiagnosticType 	  		            `json:"diagnosticType" gorm:"foreignkey:diagnosticTypeId;`
+	PocId   			uuid.UUID     			                            `json:"pocId" gorm:"column:poc_id; type:uuid;"`
+    Poc     			poc.Poc 					                        `json:"poc" gorm:"foreignkey:PocId;"`
+    RegulatoryApprovals	[]regulatory_approval_type.RegulatoryApprovalType   `gorm:"many2many:regulatory_approval_types;"`
+    DiagnosticTargets	[]diagnostic_target_type.DiagnosticTargetType 	    `gorm:"many2many:diagnostic_targets;"`
 }
 
 func (Diagnostic) TableName() string {
     return "diagnostics"
 }
 
-func Create(db *gorm.DB, name string, description string, diagnosticType DiagnosticType, poc Poc, 
-			approvals []RegulatoryApprovalType, targets []DiagnosticTargetType) (*Diagnostic, error) {
+func Create(
+             db *gorm.DB, name string, description string, company company.Company, 
+             diagnosticType diagnostic_type.DiagnosticType, poc poc.Poc, 
+			 approvals []regulatory_approval_type.RegulatoryApprovalType, 
+             targets []diagnostic_target_type.DiagnosticTargetType) (*Diagnostic, error) {
     var toInsert = &Diagnostic{
         Name: name,
         Description: description,
+        CompanyId: company.Id,
+        Company: company,
         DiagnosticTypeId: diagnosticType.Id,
         DiagnosticType: diagnosticType,
         PocId: poc.Id,
