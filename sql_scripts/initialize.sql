@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostics (
 	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp()
 );
 
-CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostic_regulatory_approval (
+CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostic_regulatory_approvals (
 	diagnostic_id UUID NULL REFERENCES covid_diagnostics.diagnostics(id) ON DELETE CASCADE,
 	regulatory_approval_type_id UUID NULL REFERENCES covid_diagnostics.regulatory_approval_types(id) ON DELETE CASCADE,
 	created_by STRING NULL,

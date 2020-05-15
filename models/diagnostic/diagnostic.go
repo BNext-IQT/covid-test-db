@@ -24,7 +24,7 @@ type Diagnostic struct {
 	DiagnosticType  	diagnostic_type.DiagnosticType 	  		            `json:"diagnosticType" gorm:"foreignkey:diagnosticTypeId;`
 	PocId   			uuid.UUID     			                            `json:"pocId" gorm:"column:poc_id; type:uuid;"`
     Poc     			poc.Poc 					                        `json:"poc" gorm:"foreignkey:PocId;"`
-    RegulatoryApprovals	[]regulatory_approval_type.RegulatoryApprovalType   `gorm:"many2many:regulatory_approval_types;"`
+    RegulatoryApprovals	[]regulatory_approval_type.RegulatoryApprovalType   `gorm:"many2many:diagnostic_regulatory_approvals;"`
     DiagnosticTargets	[]diagnostic_target_type.DiagnosticTargetType 	    `gorm:"many2many:diagnostic_targets;"`
 }
 
@@ -82,7 +82,7 @@ func FetchById(db *gorm.DB, id uuid.UUID) (*Diagnostic, error) {
 func FetchList(db *gorm.DB) ([]Diagnostic, error) {
     var results []Diagnostic =  nil
 
-    err := db.Find(&results).Error;
+    err := db.Preload("Company").Preload("Poc").Preload("DiagnosticType").Preload("RegulatoryApprovals").Preload("DiagnosticTargets").Find(&results).Error;
 
     if err != nil {
         results = nil

@@ -199,5 +199,9 @@ func main() {
 	router.HandleFunc("/pocs", createPoc).Methods("POST")
 	router.HandleFunc("/pocs/{id}", getPoc).Methods("GET")
 	router.HandleFunc("/pocs/{id}", updatePoc).Methods("PUT")
+	router.HandleFunc("/diagnostics", getDiagnosticList).Methods("GET")
+	router.HandleFunc("/diagnostics", createDiagnostic).Methods("POST")
+	router.HandleFunc("/diagnostics/{id}", getDiagnostic).Methods("GET")
+	router.HandleFunc("/diagnostics/{id}", updateDiagnostic).Methods("PUT")
 	log.Fatal(http.ListenAndServe(":5000", handlers.CORS()(router)))
 }

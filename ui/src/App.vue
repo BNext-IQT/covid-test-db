@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <h1>COVID-19 Testing Database</h1>
-    <Pocs />
+    <Diagnostics />
   </div>
 </template>
 
 <script>
-import Pocs from '@/components/pocs/Pocs.vue'
+import Diagnostics from '@/components/diagnostics/Diagnostics.vue'
 
 export default {
   name: 'App',
   components: {
-    Pocs
+    Diagnostics
   }
 }
 </script>

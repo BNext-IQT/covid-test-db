@@ -66,7 +66,7 @@ func getDB () *gorm.DB {
     //defer db.Close()
 
     // Set to `true` and GORM will print out all DB queries.
-    db.LogMode(true)
+    db.LogMode(false)
 
     return db
 }
@@ -183,6 +183,7 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
     approvals, err := getApprovals(row[mapping["regulatory_status"]])
 
     if(err != nil){
+    	log.Println(err)
     	return nil, err
     }
     
@@ -217,7 +218,11 @@ func main() {
     }
     rows := f.GetRows("Molecular test fields")
     for _, row := range rows {
-    	getDiagnosticFromRow(row)
+    	_, dxErr := getDiagnosticFromRow(row)
+
+    	if(dxErr != nil){
+    		log.Println(dxErr)
+    	}
     }
 
 	log.Println("Excel file processing complete")
