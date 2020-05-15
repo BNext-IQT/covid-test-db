@@ -12,6 +12,8 @@ replace gitlab.iqt.org/rashley/covid-test-db/models/diagnostic_target_type => ..
 
 replace gitlab.iqt.org/rashley/covid-test-db/models/regulatory_approval_type => ../models/regulatory-approval-type/
 
+replace gitlab.iqt.org/rashley/covid-test-db/models/sample_type => ../models/sample-type/
+
 go 1.14
 
 require (
@@ -27,4 +29,5 @@ require (
 	gitlab.iqt.org/rashley/covid-test-db/models/diagnostic_type v0.0.0-00010101000000-000000000000
 	gitlab.iqt.org/rashley/covid-test-db/models/poc v0.0.0-00010101000000-000000000000
 	gitlab.iqt.org/rashley/covid-test-db/models/regulatory_approval_type v0.0.0-00010101000000-000000000000
+	gitlab.iqt.org/rashley/covid-test-db/models/sample_type v0.0.0-00010101000000-000000000000
 )

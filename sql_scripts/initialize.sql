@@ -60,6 +60,15 @@ CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostic_target_types(
 	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp()
 );
 
+CREATE TABLE IF NOT EXISTS covid_diagnostics.sample_types(
+	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+	name STRING NOT NULL,
+	created_by STRING NULL,
+	created TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
+	updated_by STRING NULL,
+	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp()
+);
+
 CREATE TABLE IF NOT EXISTS covid_diagnostics.regulatory_approval_types(
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	name STRING NOT NULL,
@@ -77,6 +86,11 @@ CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostics (
 	company_id UUID NULL REFERENCES covid_diagnostics.companies(id) ON DELETE CASCADE,
 	diagnostic_type_id UUID NULL REFERENCES covid_diagnostics.diagnostic_types(id) ON DELETE CASCADE,
 	poc_id UUID NULL REFERENCES covid_diagnostics.pocs(id) ON DELETE CASCADE,
+	verified_lod STRING NULL,
+	avg_ct	NUMERIC(10, 4) NULL,
+	prep_integrated BOOLEAN DEFAULT FALSE,
+	tests_per_run INT NULL,
+	tests_per_kit INT NULL,
 	created_by STRING NULL,
 	created TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
 	updated_by STRING NULL,
@@ -101,6 +115,16 @@ CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostic_targets (
 	updated_by STRING NULL,
 	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
 	PRIMARY KEY (diagnostic_id, diagnostic_target_type_id)
+);
+
+CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostic_sample_types (
+	diagnostic_id UUID NULL REFERENCES covid_diagnostics.diagnostics(id) ON DELETE CASCADE,
+	sample_type_id UUID NULL REFERENCES covid_diagnostics.sample_types(id) ON DELETE CASCADE,
+	created_by STRING NULL,
+	created TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
+	updated_by STRING NULL,
+	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
+	PRIMARY KEY (diagnostic_id, sample_type_id)
 );
 
 /* fill in reference tables */

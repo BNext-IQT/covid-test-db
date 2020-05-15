@@ -51,6 +51,18 @@ func FetchById(db *gorm.DB, id uuid.UUID) (*DiagnosticTargetType, error) {
     return result, err
 }
 
+func FetchByName(db *gorm.DB, name string) (*DiagnosticTargetType, error) {
+    result :=  &DiagnosticTargetType{}
+
+    err := db.Where("name = ?", name).First(&result).Error;
+
+    if err != nil {
+        result = nil
+    }
+
+    return result, err
+}
+
 func FetchList(db *gorm.DB) ([]DiagnosticTargetType, error) {
     var results []DiagnosticTargetType =  nil
 

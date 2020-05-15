@@ -12,6 +12,7 @@ import (
     "gitlab.iqt.org/rashley/covid-test-db/models/diagnostic_type"
     "gitlab.iqt.org/rashley/covid-test-db/models/diagnostic_target_type"
     "gitlab.iqt.org/rashley/covid-test-db/models/regulatory_approval_type"
+    "gitlab.iqt.org/rashley/covid-test-db/models/sample_type"
 )
 
 type Diagnostic struct {
@@ -24,8 +25,14 @@ type Diagnostic struct {
 	DiagnosticType  	diagnostic_type.DiagnosticType 	  		            `json:"diagnosticType" gorm:"foreignkey:diagnosticTypeId;`
 	PocId   			uuid.UUID     			                            `json:"pocId" gorm:"column:poc_id; type:uuid;"`
     Poc     			poc.Poc 					                        `json:"poc" gorm:"foreignkey:PocId;"`
-    RegulatoryApprovals	[]regulatory_approval_type.RegulatoryApprovalType   `gorm:"many2many:diagnostic_regulatory_approvals;"`
-    DiagnosticTargets	[]diagnostic_target_type.DiagnosticTargetType 	    `gorm:"many2many:diagnostic_targets;"`
+    VerifiedLod         string                                              `json:"verifiedLod" gorm:"column:verified_lod; type:string; null"`
+    AvgCt               float64                                             `json:"avgCt" gorm:"column:avg_ct; type:numeric; null"`
+    PrepIntegrated      bool                                                `json:"prepIntegrated" gorm:"column:prep_integrated; type:bit; not_null"`
+    TestsPerRun         int64                                               `json:"testsPerRun" gorm:"column:tests_per_run; type:int; null"`
+    TestsPerKit         int64                                               `json:"testsPerKit" gorm:"column:tests_per_kit; type:int; null"`
+    RegulatoryApprovals	[]regulatory_approval_type.RegulatoryApprovalType   `json:"regulatoryApprovals" gorm:"many2many:diagnostic_regulatory_approvals;"`
+    DiagnosticTargets	[]diagnostic_target_type.DiagnosticTargetType 	    `json:"diagnosticTargets" gorm:"many2many:diagnostic_targets;"`
+    SampleTypes         []sample_type.SampleType                            `json:"sampleTypes" gorm:"many2many:sample_types;"`
 }
 
 func (Diagnostic) TableName() string {
@@ -35,8 +42,11 @@ func (Diagnostic) TableName() string {
 func Create(
              db *gorm.DB, name string, description string, company company.Company, 
              diagnosticType diagnostic_type.DiagnosticType, poc poc.Poc, 
+             verifiedLod string, avgCt float64, prepIntegrated bool,
+             testsPerRun int64, testsPerKit int64,
 			 approvals []regulatory_approval_type.RegulatoryApprovalType, 
-             targets []diagnostic_target_type.DiagnosticTargetType) (*Diagnostic, error) {
+             targets []diagnostic_target_type.DiagnosticTargetType,
+             sampleTypes []sample_type.SampleType) (*Diagnostic, error) {
     var toInsert = &Diagnostic{
         Name: name,
         Description: description,
@@ -46,6 +56,11 @@ func Create(
         DiagnosticType: diagnosticType,
         PocId: poc.Id,
         Poc: poc,
+        VerifiedLod: verifiedLod,
+        AvgCt: avgCt,
+        PrepIntegrated: prepIntegrated,
+        TestsPerRun: testsPerRun,
+        TestsPerKit: testsPerKit,
         RegulatoryApprovals: approvals,
         DiagnosticTargets: targets,
     }

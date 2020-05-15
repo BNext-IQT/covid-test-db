@@ -1,6 +1,6 @@
 <template>
   <div class="diagnostics">
-      <DiagnosticTable :diagnostics="diagnostics" @select:poc="setSelectedDx" />
+      <DiagnosticTable :diagnostics="diagnostics" :selectedDx="selectedDx" @select:poc="setSelectedDx" />
      <!--  <hr>
       <PocForm :poc="selectedPoc" @update:poc="updatePoc" @clear:poc="clearSelection" /> -->
   </div>
