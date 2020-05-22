@@ -83,6 +83,7 @@ CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostics (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	name STRING NOT NULL,
 	description STRING NOT NULL,
+	test_url STRING NULL,
 	company_id UUID NULL REFERENCES covid_diagnostics.companies(id) ON DELETE CASCADE,
 	diagnostic_type_id UUID NULL REFERENCES covid_diagnostics.diagnostic_types(id) ON DELETE CASCADE,
 	poc_id UUID NULL REFERENCES covid_diagnostics.pocs(id) ON DELETE CASCADE,

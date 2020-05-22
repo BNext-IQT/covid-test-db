@@ -12,6 +12,7 @@ node_modules
 # production
 /build
 api/api
+scraper/scraper
 
 #logfiles
 *.log
@@ -25,6 +26,8 @@ api/api
 
 #data
 cockroach-data/
+scraper/.~lock.Database_Molecular_and_Sero.xlsx#
+
 
 npm-debug.log*
 yarn-debug.log*

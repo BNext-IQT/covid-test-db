@@ -1,6 +1,6 @@
 <template>
   <div class="diagnostics">
-      <DiagnosticTable :diagnostics="diagnostics" :selectedDx="selectedDx" @select:poc="setSelectedDx" />
+      <DiagnosticTable :diagnostics="diagnostics" :sampleTypeList="sampleTypeList" :selectedDx="selectedDx" @select:poc="setSelectedDx" />
      <!--  <hr>
       <PocForm :poc="selectedPoc" @update:poc="updatePoc" @clear:poc="clearSelection" /> -->
   </div>
@@ -15,8 +15,9 @@
   export default {
     data (){
       return {
-        diagnostics: null,
-        selectedDx: { }
+        diagnostics: [],
+        selectedDx: { },
+        sampleTypeList: [],
       }
     },
     methods: {
@@ -29,33 +30,16 @@
         .catch((err) => {
           console.log("error: %o", err);
         })
+
+        axios
+        .get("http://localhost:5000/sampletypes", {crossdomain: true})
+        .then((res) => {
+          this.sampleTypeList = JSON.parse(JSON.stringify(res.data));
+        })
+        .catch((err) => {
+          console.log("error: %o", err);
+        })
       },
-      // updatePoc(poc) {
-      //   if(poc.name && (poc.phone || poc.email)){
-      //     const body = poc
-      //     if(poc.id == null){
-      //       axios
-      //       .post("http://localhost:5000/pocs", body)
-      //       .then((res) => {
-      //         this.selectedPoc = res.data;
-      //         this.getData();
-      //       })
-      //       .catch((err) => {
-      //         console.log("error: %o", err);
-      //       })
-      //     }else if(poc.id != null){
-      //       axios
-      //       .put("http://localhost:5000/pocs/" + poc.id, body)
-      //       .then((res) => {
-      //         this.selectedPoc = res.data;
-      //         this.getData();
-      //       })
-      //       .catch((err) => {
-      //         console.log("error: %o", err);
-      //       })
-      //     }
-      //   }
-      // },
       setSelectedDx(dx) {
         this.selectedDx = dx;
       },

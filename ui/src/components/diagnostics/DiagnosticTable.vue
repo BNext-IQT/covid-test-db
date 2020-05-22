@@ -1,11 +1,29 @@
 <template>
   <div class="dx-table">
-    <table class="ui celled table">
+    <vue-good-table
+      :columns="getColumns()"
+      :rows="diagnostics"
+      :search-options="{
+        enabled: true,
+        skipDiacritics: true,
+      }"
+    >
+      <template slot="table-row" slot-scope="props">
+        <span v-if="props.column.field == 'sampleTypes'">
+          <div v-for="st in props.row.sampleTypes" :key="st.id">{{ st.name }}</div>
+        </span>
+        <span v-else>
+          {{props.formattedRow[props.column.field]}}
+        </span>
+      </template>
+    </vue-good-table>
+    <!-- <table class="ui celled table">
       <thead>
         <tr>
           <th>Company</th>
           <th>Name</th>
           <th>PoC</th>
+          <th>Integrated Sample Prep</th>
           <th>Type</th>
           <th>Regulatory Status</th>
         </tr>
@@ -61,6 +79,7 @@
             <span v-else> {{ dx.poc.email }} </span>
             
           </td>
+          <td>{{ dx.prepIntegrated }}</td>
           <td>{{ dx.diagnosticType.name }}</td>
           <td>
               <div v-for="ra in dx.regulatoryApprovals" :key="ra.id">
@@ -69,21 +88,82 @@
           </td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
   </div>
 </template>
 
 <script>
+  import { VueGoodTable } from 'vue-good-table';
+
   export default {
     methods: {
       select(dx) {
         this.$emit('select:poc', dx);
       },
+      getColumns(){
+        const stl = this.sampleTypeList.length > 0 ? this.sampleTypeList.map((i) => {
+          return {'value': i.id, 'text':i.name}
+        }) : ['Loading...'];
+        return [
+          { 
+            'label': 'Company',
+            'field':'company.name',
+            'filterOptions':{
+              'enabled': true
+            }
+          },
+          { 
+            'label': 'State/Province',
+            'field':'company.state',
+            'filterOptions':{
+              'enabled': true
+            }
+          },
+          { 
+            'label': 'Country',
+            'field':'company.country',
+            'filterOptions':{
+              'enabled': true
+            }
+          },
+          { 
+            'label': 'Name',
+            'field':'name',
+            'filterOptions':{
+              'enabled': true
+            }
+          },
+          { 
+            'label': 'Integrated Sample Prep',
+            'field':'prepIntegrated',
+            'filterOptions':{
+              'enabled': true,
+              'filterDropdownItems': ['true', 'false']
+            }
+          },
+          { 
+            'label': 'Sample Types',
+            'field':'sampleTypes',
+            'filterOptions':{
+              'enabled': true,
+              'filterDropdownItems': stl,
+              'filterFn': (data, filterString) => {
+                return data.filter(st => st.id === filterString).length > 0
+              }
+            }
+          }
+        ]
+      }
     },
     name: 'DiagnosticTable',
     props: {
       diagnostics: Array,
       selectedDx: Object,
+      sampleTypeList: Array,
+    },
+    components: {
+      VueGoodTable,
+      //PocForm,
     }
   }
 </script>

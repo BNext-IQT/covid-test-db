@@ -18,6 +18,7 @@ import (
 
     "gitlab.iqt.org/rashley/covid-test-db/models/poc"
     "gitlab.iqt.org/rashley/covid-test-db/models/diagnostic"
+    "gitlab.iqt.org/rashley/covid-test-db/models/sample_type"
 )
 
 func getDB () *gorm.DB {
@@ -32,6 +33,13 @@ func getDB () *gorm.DB {
     db.LogMode(false)
 
     return db
+}
+
+func sendJsonResponse(w http.ResponseWriter, payload interface{}) {
+    response, _ := json.Marshal(payload)
+
+    w.Header().Set("Content-Type", "application/json")
+    w.Write(response)
 }
 
 func homeLink(w http.ResponseWriter, r *http.Request) {
@@ -55,7 +63,8 @@ func createPoc(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
         log.Print(err)
     }
-	json.NewEncoder(w).Encode(created)
+
+   	sendJsonResponse(w, created)
 }
 
 func updatePoc(w http.ResponseWriter, r *http.Request) {
@@ -76,7 +85,8 @@ func updatePoc(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
         log.Print(err)
     }
-	json.NewEncoder(w).Encode(created)
+	
+    sendJsonResponse(w, created)
 }
 
 func getPocList(w http.ResponseWriter, r *http.Request) {
@@ -87,7 +97,8 @@ func getPocList(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
         log.Print(err)
     }
-	json.NewEncoder(w).Encode(results)
+	
+    sendJsonResponse(w, results)
 }
 
 func getPoc(w http.ResponseWriter, r *http.Request) {
@@ -99,7 +110,8 @@ func getPoc(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
         log.Print(err)
     }
-	json.NewEncoder(w).Encode(result)
+	
+    sendJsonResponse(w, result)
 }
 
 //diagnostic endpoints
@@ -114,7 +126,7 @@ func createDiagnostic(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-	created, err := diagnostic.Create(db, d.Name, d.Description, d.Company,
+	created, err := diagnostic.Create(db, d.Name, d.Description, d.TestUrl, d.Company,
 			 d.DiagnosticType, d.Poc, d.VerifiedLod, d.AvgCt,          
 			 d.PrepIntegrated, d.TestsPerRun, d.TestsPerKit,
 			 d.RegulatoryApprovals, d.DiagnosticTargets, d.SampleTypes,
@@ -122,7 +134,8 @@ func createDiagnostic(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
         log.Print(err)
     }
-	json.NewEncoder(w).Encode(created)
+	
+    sendJsonResponse(w, created)
 }
 
 func updateDiagnostic(w http.ResponseWriter, r *http.Request) {
@@ -143,7 +156,8 @@ func updateDiagnostic(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
         log.Print(err)
     }
-	json.NewEncoder(w).Encode(created)
+	
+    sendJsonResponse(w, created)
 }
 
 func getDiagnosticList(w http.ResponseWriter, r *http.Request) {
@@ -154,7 +168,8 @@ func getDiagnosticList(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
         log.Print(err)
     }
-	json.NewEncoder(w).Encode(results)
+	
+    sendJsonResponse(w, results)
 }
 
 func getDiagnostic(w http.ResponseWriter, r *http.Request) {
@@ -166,7 +181,21 @@ func getDiagnostic(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
         log.Print(err)
     }
-	json.NewEncoder(w).Encode(result)
+	
+    sendJsonResponse(w, result)
+}
+
+//sampleType endpoints
+func getSampleTypeList(w http.ResponseWriter, r *http.Request) {
+	db := getDB()
+	defer db.Close()
+
+	results, err := sample_type.FetchList(db)
+	if err != nil {
+        log.Print(err)
+    }
+	
+    sendJsonResponse(w, results)
 }
 
 func main() {
@@ -203,5 +232,6 @@ func main() {
 	router.HandleFunc("/diagnostics", createDiagnostic).Methods("POST")
 	router.HandleFunc("/diagnostics/{id}", getDiagnostic).Methods("GET")
 	router.HandleFunc("/diagnostics/{id}", updateDiagnostic).Methods("PUT")
+	router.HandleFunc("/sampletypes", getSampleTypeList).Methods("GET")
 	log.Fatal(http.ListenAndServe(":5000", handlers.CORS()(router)))
 }

@@ -24,40 +24,50 @@ func molecularColumnMapping () map[string]int{
     return map[string]int{
         "company_name":  0,
         "test_name":   1,
-        "regulatory_status": 2,
-        "gene_target": 3,
-        "sample_type": 4,
-        "verified_lod": 5,
-        "avg_ct": 6,
-        "sensitivity": 7,
-        "specificity": 8,
-        "source": 9,
-        "turn_around_time": 10,
-        "prep_integrated": 11,  
-        "tests_per_run": 12,
-        "tests_per_kit": 13,
-        "product_no": 14,
-        "pcr_platform": 15, 
-        "ct_cut_off": 16,
-        "company_support": 17,
-        "company_poc": 18,
-        "company_poc_phone": 19,
-        "company_street": 20,
-        "company_city": 21,
-        "company_state": 22,
-        "company_country": 23,
-        "company_postal_code": 24,
-        "cost_per_kit": 25,
-        "in_stock": 26,
-        "lead_time": 27,
-        "company_stage": 28,
-        "company_valuation": 29,
-        "company_entered_market": 30,
-        "test_counts": 31,
-        "production_rate": 32,
-        "expanding_capacity": 33,
+        "test_url": 2,
+        "regulatory_status": 3,
+        "gene_target": 4,
+        "sample_type": 5,
+        "verified_lod": 6,
+        "avg_ct": 7,
+        "sensitivity": 8,
+        "specificity": 9,
+        "source": 10,
+        "turn_around_time": 11,
+        "prep_integrated": 12,  
+        "tests_per_run": 13,
+        "tests_per_kit": 14,
+        "product_no": 15,
+        "pcr_platform": 16, 
+        "ct_cut_off": 17,
+        "company_support": 18,
+        "company_poc": 19,
+        "company_poc_phone": 20,
+        "company_street": 21,
+        "company_city": 22,
+        "company_state": 23,
+        "company_country": 24,
+        "company_postal_code": 25,
+        "cost_per_kit": 26,
+        "in_stock": 27,
+        "lead_time": 28,
+        "company_stage": 29,
+        "company_valuation": 30,
+        "company_entered_market": 31,
+        "test_counts": 32,
+        "production_rate": 33,
+        "expanding_capacity": 34,
     }
 } 
+
+func Index(vs []string, t string) int {
+    for i, v := range vs {
+        if v == t {
+            return i
+        }
+    }
+    return -1
+}
 
 func getDB () *gorm.DB {
     const addr = "postgresql://covid_bug@localhost:26257/covid_diagnostics?sslmode=disable"
@@ -130,7 +140,7 @@ func getOrCreateSampleType(name string)(*sample_type.SampleType, error){
     return result, err
 }
 
-func createDiagnostic( name string, description string, company company.Company,
+func createDiagnostic( name string, description string,  testUrl string, company company.Company,
              diagnosticType diagnostic_type.DiagnosticType, poc poc.Poc, 
              verifiedLod string, avgCt float64, prepIntegrated bool,
              testsPerRun int64, testsPerKit int64,
@@ -141,7 +151,7 @@ func createDiagnostic( name string, description string, company company.Company,
     defer db.Close()
 
     var result *diagnostic.Diagnostic = nil
-    result, err := diagnostic.Create(db, name, description, company, diagnosticType, poc,
+    result, err := diagnostic.Create(db, name, description, testUrl, company, diagnosticType, poc,
                     verifiedLod, avgCt, prepIntegrated, testsPerRun, testsPerKit, 
                     approvals, targets, sampleTypes)   
 
@@ -232,7 +242,7 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
     
     tts := strings.Split(row[mapping["gene_target"]], ",")
     sts := strings.Split(row[mapping["sample_type"]], ",")
-
+    log.Println(sts)
     targetTypes, errs := getTargetTypes(tts)
     if(len(errs) > 0){
         for _, e := range errs{
@@ -247,6 +257,7 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
         }
         return nil, errs[0]
     }
+    log.Println(sampleTypes)
     diagnosticType, err := getDiagnosticType("molecular assays")
     approvals, err := getApprovals(strings.TrimSpace(row[mapping["regulatory_status"]]))
 
@@ -254,15 +265,16 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
         log.Println(err)
         return nil, err
     }
-    
+    positives := []string{"y", "yes", "t", "true", "1"}
     avgCt, _ := strconv.ParseFloat(row[mapping["avg_ct"]], 64)
-    prepIntegrated, _ := strconv.ParseBool(row[mapping["prep_integrated"]])
+    prepIntegrated := Index(positives, strings.ToLower(strings.TrimSpace(row[mapping["prep_integrated"]]))) >= 0
     tpr, _ := strconv.ParseInt(row[mapping["tests_per_run"]], 10, 64)
     tpk, _ := strconv.ParseInt(row[mapping["tests_per_kit"]], 10, 64)
 
     dx, dxErr := createDiagnostic(
         strings.TrimSpace(row[mapping["test_name"]]),
         strings.TrimSpace(row[mapping["test_name"]]),
+        strings.TrimSpace(row[mapping["test_url"]]),
         *company,
         *diagnosticType,
         *poc,

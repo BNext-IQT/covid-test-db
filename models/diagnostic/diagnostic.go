@@ -17,7 +17,8 @@ import (
 
 type Diagnostic struct {
     Id      			uuid.UUID     			                            `json:"id" gorm:"column:id; type:uuid; primary_key;"`
-    Name    			string        			                            `json:"name" gorm:"column:name; type:string; not_null"` 
+    Name    			string        			                            `json:"name" gorm:"column:name; type:string; not_null"`
+    TestUrl             string                                              `json:"testUrl" gorm:"column:test_url; type:string; null"` 
     Description 		string 		  			                            `json:"description" gorm:"column:description; type:string; not_null"` 
 	CompanyId           uuid.UUID                                           `json:"companyId" gorm:"column:company_id; type:uuid;"`
     Company             company.Company                                     `json:"company" gorm:"foreignkey:CompanyId;"`
@@ -32,7 +33,7 @@ type Diagnostic struct {
     TestsPerKit         int64                                               `json:"testsPerKit" gorm:"column:tests_per_kit; type:int; null"`
     RegulatoryApprovals	[]regulatory_approval_type.RegulatoryApprovalType   `json:"regulatoryApprovals" gorm:"many2many:diagnostic_regulatory_approvals;"`
     DiagnosticTargets	[]diagnostic_target_type.DiagnosticTargetType 	    `json:"diagnosticTargets" gorm:"many2many:diagnostic_targets;"`
-    SampleTypes         []sample_type.SampleType                            `json:"sampleTypes" gorm:"many2many:sample_types;"`
+    SampleTypes         []sample_type.SampleType                            `json:"sampleTypes" gorm:"many2many:diagnostic_sample_types;"`
 }
 
 func (Diagnostic) TableName() string {
@@ -40,7 +41,7 @@ func (Diagnostic) TableName() string {
 }
 
 func Create(
-             db *gorm.DB, name string, description string, company company.Company, 
+             db *gorm.DB, name string, description string, testUrl string, company company.Company, 
              diagnosticType diagnostic_type.DiagnosticType, poc poc.Poc, 
              verifiedLod string, avgCt float64, prepIntegrated bool,
              testsPerRun int64, testsPerKit int64,
@@ -50,6 +51,7 @@ func Create(
     var toInsert = &Diagnostic{
         Name: name,
         Description: description,
+        TestUrl: testUrl,
         CompanyId: company.Id,
         Company: company,
         DiagnosticTypeId: diagnosticType.Id,
@@ -63,6 +65,7 @@ func Create(
         TestsPerKit: testsPerKit,
         RegulatoryApprovals: approvals,
         DiagnosticTargets: targets,
+        SampleTypes: sampleTypes,
     }
 
     err := db.Create(toInsert).Error;
@@ -97,7 +100,7 @@ func FetchById(db *gorm.DB, id uuid.UUID) (*Diagnostic, error) {
 func FetchList(db *gorm.DB) ([]Diagnostic, error) {
     var results []Diagnostic =  nil
 
-    err := db.Preload("Company").Preload("Poc").Preload("DiagnosticType").Preload("RegulatoryApprovals").Preload("DiagnosticTargets").Find(&results).Error;
+    err := db.Preload("Company").Preload("Poc").Preload("DiagnosticType").Preload("RegulatoryApprovals").Preload("DiagnosticTargets").Preload("SampleTypes").Find(&results).Error;
 
     if err != nil {
         results = nil
