@@ -79,6 +79,15 @@ CREATE TABLE IF NOT EXISTS covid_diagnostics.regulatory_approval_types(
 	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp()
 );
 
+CREATE TABLE IF NOT EXISTS covid_diagnostics.pcr_platforms(
+	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+	name STRING NOT NULL,
+	created_by STRING NULL,
+	created TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
+	updated_by STRING NULL,
+	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp()
+);
+
 CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostics (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	name STRING NOT NULL,
@@ -92,6 +101,14 @@ CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostics (
 	prep_integrated BOOLEAN DEFAULT FALSE,
 	tests_per_run INT NULL,
 	tests_per_kit INT NULL,
+	sensitivity NUMERIC(10, 4) NULL,
+	specificity NUMERIC(10, 4) NULL,
+	source_of_perf_data STRING NULL,
+	catalog_no STRING NULL,
+	point_of_care BOOLEAN DEFAULT FALSE,
+	cost_per_kit NUMERIC(10, 4) NULL,
+	in_stock BOOLEAN DEFAULT FALSE,
+	lead_time INT NULL,
 	created_by STRING NULL,
 	created TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
 	updated_by STRING NULL,
@@ -126,6 +143,16 @@ CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostic_sample_types (
 	updated_by STRING NULL,
 	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
 	PRIMARY KEY (diagnostic_id, sample_type_id)
+);
+
+CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostic_pcr_platforms (
+	diagnostic_id UUID NULL REFERENCES covid_diagnostics.diagnostics(id) ON DELETE CASCADE,
+	pcr_platform_id UUID NULL REFERENCES covid_diagnostics.pcr_platforms(id) ON DELETE CASCADE,
+	created_by STRING NULL,
+	created TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
+	updated_by STRING NULL,
+	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
+	PRIMARY KEY (diagnostic_id, pcr_platform_id)
 );
 
 /* fill in reference tables */

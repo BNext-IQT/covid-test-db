@@ -18,45 +18,46 @@ import (
     "gitlab.iqt.org/rashley/covid-test-db/models/diagnostic_target_type"
     "gitlab.iqt.org/rashley/covid-test-db/models/regulatory_approval_type"
     "gitlab.iqt.org/rashley/covid-test-db/models/sample_type"
+    "gitlab.iqt.org/rashley/covid-test-db/models/pcr_platform"
 )
 
 func molecularColumnMapping () map[string]int{
     return map[string]int{
         "company_name":  0,
         "test_name":   1,
-        "test_url": 2,
-        "regulatory_status": 3,
-        "gene_target": 4,
-        "sample_type": 5,
-        "verified_lod": 6,
-        "avg_ct": 7,
-        "sensitivity": 8,
-        "specificity": 9,
-        "source": 10,
-        "turn_around_time": 11,
-        "prep_integrated": 12,  
-        "tests_per_run": 13,
-        "tests_per_kit": 14,
-        "product_no": 15,
-        "pcr_platform": 16, 
-        "ct_cut_off": 17,
-        "company_support": 18,
-        "company_poc": 19,
-        "company_poc_phone": 20,
-        "company_street": 21,
-        "company_city": 22,
-        "company_state": 23,
-        "company_country": 24,
-        "company_postal_code": 25,
-        "cost_per_kit": 26,
-        "in_stock": 27,
-        "lead_time": 28,
-        "company_stage": 29,
-        "company_valuation": 30,
-        "company_entered_market": 31,
-        "test_counts": 32,
-        "production_rate": 33,
-        "expanding_capacity": 34,
+        "pcr_platform": 2, 
+        "sensitivity": 3,
+        "specificity": 4,
+        "source": 5,
+        "test_url": 6,
+        "regulatory_status": 7,
+        "sample_type": 8,
+        "point_of_care": 9,
+        "prep_integrated": 10,
+        "product_no": 11,
+        "company_support": 12,
+        "company_poc": 13,
+        "company_poc_phone": 14,
+        "company_street": 15,
+        "company_city": 16,
+        "company_state": 17,
+        "company_country": 18,
+        "company_postal_code": 19,
+        "cost_per_kit": 20,
+        "in_stock": 21,
+        "lead_time": 22,
+        "company_stage": 23,
+        "company_valuation": 24,
+        "company_entered_market": 25,
+        "test_counts": 26,
+        "production_rate": 27,
+        "expanding_capacity": 28,
+        "gene_target": 29,
+        "verified_lod": 30,
+        "avg_ct": 31,
+        "turn_around_time": 32,
+        "tests_per_run": 33,
+        "tests_per_kit": 34,
     }
 } 
 
@@ -140,20 +141,39 @@ func getOrCreateSampleType(name string)(*sample_type.SampleType, error){
     return result, err
 }
 
-func createDiagnostic( name string, description string,  testUrl string, company company.Company,
+func getOrCreatePcrPlatform(name string)(*pcr_platform.PcrPlatform, error){
+    db := getDB()
+    defer db.Close()
+    var result *pcr_platform.PcrPlatform = nil
+    existing, err := pcr_platform.FetchByName(db, name)
+    if(existing != nil && !gorm.IsRecordNotFoundError(err)){
+        result = existing
+    } else {
+        result, err = pcr_platform.Create(db, name)
+    }
+
+    return result, err
+}
+
+func createDiagnostic( name string, description string, testUrl string, company company.Company, 
              diagnosticType diagnostic_type.DiagnosticType, poc poc.Poc, 
              verifiedLod string, avgCt float64, prepIntegrated bool,
-             testsPerRun int64, testsPerKit int64,
+             testsPerRun int64, testsPerKit int64, sensitivity float64, specificity float64,
+             sourceOfPerfData string, catalogNo string, pointOfCare bool, costPerKit float64,
+             inStock bool, leadTime int64,
              approvals []regulatory_approval_type.RegulatoryApprovalType, 
              targets []diagnostic_target_type.DiagnosticTargetType,
-             sampleTypes []sample_type.SampleType)(*diagnostic.Diagnostic, error){
+             sampleTypes []sample_type.SampleType,
+             pcrPlatforms []pcr_platform.PcrPlatform)(*diagnostic.Diagnostic, error){
     db := getDB()
     defer db.Close()
 
     var result *diagnostic.Diagnostic = nil
     result, err := diagnostic.Create(db, name, description, testUrl, company, diagnosticType, poc,
-                    verifiedLod, avgCt, prepIntegrated, testsPerRun, testsPerKit, 
-                    approvals, targets, sampleTypes)   
+                    verifiedLod, avgCt, prepIntegrated, testsPerRun, testsPerKit,
+                    sensitivity, specificity, sourceOfPerfData, catalogNo, pointOfCare, costPerKit,
+                    inStock, leadTime,
+                    approvals, targets, sampleTypes, pcrPlatforms)   
 
     return result, err
 }
@@ -165,7 +185,7 @@ func getSampleTypes(names []string)([]sample_type.SampleType, []error){
     var errs []error = nil
 
     for _, name := range names{
-        st, err := getOrCreateSampleType(name)
+        st, err := getOrCreateSampleType(strings.TrimSpace(name))
         if(err == nil){
             types = append(types, *st)
         } else {
@@ -176,6 +196,24 @@ func getSampleTypes(names []string)([]sample_type.SampleType, []error){
     return types, errs
 }
 
+func getPcrPlatforms(names []string)([]pcr_platform.PcrPlatform, []error){
+    db := getDB()
+    defer db.Close()
+    var pcrs []pcr_platform.PcrPlatform = nil
+    var errs []error = nil
+
+    for _, name := range names{
+        st, err := getOrCreatePcrPlatform(strings.TrimSpace(name))
+        if(err == nil){
+            pcrs = append(pcrs, *st)
+        } else {
+            errs = append(errs, err)
+        }
+    }
+
+    return pcrs, errs
+}
+
 func getTargetTypes(names []string)([]diagnostic_target_type.DiagnosticTargetType, []error){
     db := getDB()
     defer db.Close()
@@ -183,7 +221,7 @@ func getTargetTypes(names []string)([]diagnostic_target_type.DiagnosticTargetTyp
     var errs []error
 
     for _, name := range names{
-        tt, err := getOrCreateTargetType(name)
+        tt, err := getOrCreateTargetType(strings.TrimSpace(name))
         if(err == nil){
             types = append(types, *tt)
         } else {
@@ -242,7 +280,7 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
     
     tts := strings.Split(row[mapping["gene_target"]], ",")
     sts := strings.Split(row[mapping["sample_type"]], ",")
-    log.Println(sts)
+    pcrs := strings.Split(row[mapping["pcr_platform"]], ",")
     targetTypes, errs := getTargetTypes(tts)
     if(len(errs) > 0){
         for _, e := range errs{
@@ -257,7 +295,15 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
         }
         return nil, errs[0]
     }
-    log.Println(sampleTypes)
+
+    pcrPlatforms, errs := getPcrPlatforms(pcrs)
+    if(len(errs) > 0){
+        for _, e := range errs{
+            log.Println(e)
+        }
+        return nil, errs[0]
+    }
+    
     diagnosticType, err := getDiagnosticType("molecular assays")
     approvals, err := getApprovals(strings.TrimSpace(row[mapping["regulatory_status"]]))
 
@@ -270,6 +316,14 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
     prepIntegrated := Index(positives, strings.ToLower(strings.TrimSpace(row[mapping["prep_integrated"]]))) >= 0
     tpr, _ := strconv.ParseInt(row[mapping["tests_per_run"]], 10, 64)
     tpk, _ := strconv.ParseInt(row[mapping["tests_per_kit"]], 10, 64)
+    sensitivity, _ := strconv.ParseFloat(row[mapping["sensitivity"]], 64)
+    specificity, _ := strconv.ParseFloat(row[mapping["specificity"]], 64)
+    sourceOfPerfData := strings.TrimSpace(row[mapping["source"]])
+    catalogNo := strings.TrimSpace(row[mapping["product_no"]])
+    pointOfCare := Index(positives, strings.ToLower(strings.TrimSpace(row[mapping["point_of_care"]]))) >= 0
+    costPerKit, _ := strconv.ParseFloat(row[mapping["Cost_per_kit"]], 64)
+    inStock := Index(positives, strings.ToLower(strings.TrimSpace(row[mapping["in_stock"]]))) >= 0 
+    leadTime, _ := strconv.ParseInt(row[mapping["lead_time"]], 10, 64)
 
     dx, dxErr := createDiagnostic(
         strings.TrimSpace(row[mapping["test_name"]]),
@@ -283,9 +337,18 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
         prepIntegrated,
         tpr,
         tpk,
+        sensitivity,
+        specificity,
+        sourceOfPerfData,
+        catalogNo,
+        pointOfCare,
+        costPerKit,
+        inStock,
+        leadTime,
         approvals,
         targetTypes,
         sampleTypes,
+        pcrPlatforms,
     )
 
     return dx, dxErr

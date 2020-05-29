@@ -16,6 +16,8 @@ replace gitlab.iqt.org/rashley/covid-test-db/models/regulatory_approval_type => 
 
 replace gitlab.iqt.org/rashley/covid-test-db/models/sample_type => ../models/sample-type/
 
+replace gitlab.iqt.org/rashley/covid-test-db/models/pcr_platform => ../models/pcr-platform/
+
 require (
 	github.com/google/uuid v1.1.1
 	github.com/gorilla/handlers v1.4.2
@@ -26,6 +28,7 @@ require (
 	gitlab.iqt.org/rashley/covid-test-db/models/diagnostic v0.0.0-00010101000000-000000000000
 	gitlab.iqt.org/rashley/covid-test-db/models/diagnostic_target_type v0.0.0-00010101000000-000000000000 // indirect
 	gitlab.iqt.org/rashley/covid-test-db/models/diagnostic_type v0.0.0-00010101000000-000000000000 // indirect
+	gitlab.iqt.org/rashley/covid-test-db/models/pcr_platform v0.0.0-00010101000000-000000000000 // indirect
 	gitlab.iqt.org/rashley/covid-test-db/models/poc v0.0.0-00010101000000-000000000000
 	gitlab.iqt.org/rashley/covid-test-db/models/regulatory_approval_type v0.0.0-00010101000000-000000000000 // indirect
 	gitlab.iqt.org/rashley/covid-test-db/models/sample_type v0.0.0-00010101000000-000000000000

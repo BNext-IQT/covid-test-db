@@ -127,9 +127,11 @@ func createDiagnostic(w http.ResponseWriter, r *http.Request) {
     }
 
 	created, err := diagnostic.Create(db, d.Name, d.Description, d.TestUrl, d.Company,
-			 d.DiagnosticType, d.Poc, d.VerifiedLod, d.AvgCt,          
-			 d.PrepIntegrated, d.TestsPerRun, d.TestsPerKit,
-			 d.RegulatoryApprovals, d.DiagnosticTargets, d.SampleTypes,
+			 d.DiagnosticType, d.Poc, d.VerifiedLod, d.AvgCt, d.PrepIntegrated,
+			 d.TestsPerRun, d.TestsPerKit, d.Sensitivity, d.Specificity,
+             d.SourceOfPerfData, d.CatalogNo, d.PointOfCare, d.CostPerKit,
+             d.InStock, d.LeadTime,
+			 d.RegulatoryApprovals, d.DiagnosticTargets, d.SampleTypes, d.PcrPlatforms,
 	)
 	if err != nil {
         log.Print(err)
