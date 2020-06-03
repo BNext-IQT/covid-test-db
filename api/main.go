@@ -19,6 +19,8 @@ import (
     "gitlab.iqt.org/rashley/covid-test-db/models/poc"
     "gitlab.iqt.org/rashley/covid-test-db/models/diagnostic"
     "gitlab.iqt.org/rashley/covid-test-db/models/sample_type"
+    "gitlab.iqt.org/rashley/covid-test-db/models/regulatory_approval_type"
+    "gitlab.iqt.org/rashley/covid-test-db/models/pcr_platform"
 )
 
 func getDB () *gorm.DB {
@@ -200,6 +202,32 @@ func getSampleTypeList(w http.ResponseWriter, r *http.Request) {
     sendJsonResponse(w, results)
 }
 
+//Regulatory Approvals
+func getRegulatoryApprovalList(w http.ResponseWriter, r *http.Request) {
+	db := getDB()
+	defer db.Close()
+
+	results, err := regulatory_approval_type.FetchList(db)
+	if err != nil {
+        log.Print(err)
+    }
+	
+    sendJsonResponse(w, results)
+}
+
+//PCR Platforms
+func getPcrPlatformList(w http.ResponseWriter, r *http.Request) {
+	db := getDB()
+	defer db.Close()
+
+	results, err := pcr_platform.FetchList(db)
+	if err != nil {
+        log.Print(err)
+    }
+	
+    sendJsonResponse(w, results)
+}
+
 func main() {
 	logFile, err := os.OpenFile("api.log", os.O_CREATE | os.O_APPEND | os.O_RDWR, 0666)
 	if err != nil {
@@ -235,5 +263,7 @@ func main() {
 	router.HandleFunc("/diagnostics/{id}", getDiagnostic).Methods("GET")
 	router.HandleFunc("/diagnostics/{id}", updateDiagnostic).Methods("PUT")
 	router.HandleFunc("/sampletypes", getSampleTypeList).Methods("GET")
+	router.HandleFunc("/regulatoryapprovals", getRegulatoryApprovalList).Methods("GET")
+	router.HandleFunc("/pcrplatforms", getPcrPlatformList).Methods("GET")
 	log.Fatal(http.ListenAndServe(":5000", handlers.CORS()(router)))
 }
