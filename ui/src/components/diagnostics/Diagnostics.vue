@@ -23,7 +23,7 @@
     methods: {
       getData(){
         axios
-        .get("http://localhost:5000/diagnostics", {crossdomain: true})
+        .get("/api/diagnostics")
         .then((res) => {
           this.diagnostics = res.data;
         })
@@ -32,7 +32,7 @@
         })
 
         axios
-        .get("http://localhost:5000/sampletypes", {crossdomain: true})
+        .get("/api/sampletypes")
         .then((res) => {
           this.sampleTypeList = JSON.parse(JSON.stringify(res.data));
         })
