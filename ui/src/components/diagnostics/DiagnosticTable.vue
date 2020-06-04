@@ -49,6 +49,9 @@
         const stl = this.sampleTypeList.length > 0 ? this.sampleTypeList.map((i) => {
           return {'value': i.id, 'text':i.name}
         }) : ['Loading...'];
+        const pcr = this.pcrPlatformList.length > 0 ? this.pcrPlatformList.map((i) => {
+          return {'value': i.id, 'text':i.name}
+        }) : ['Loading...'];
         return [
           { 
             'label': 'Company',
@@ -71,15 +74,17 @@
             'field':'pcrPlatforms',
             'filterOptions':{
               'enabled': true,
-              'filterDropdownItems': stl,
+              'placeholder': 'All',
+              'filterDropdownItems': pcr,
               'filterFn': (data, filterString) => {
-                return data.filter(st => st.id === filterString).length > 0
+                return data.filter(p => p.id === filterString).length > 0
               }
             }
           },
           { 
             'label': 'Sensitivity',
             'field':'sensitivity',
+            'width': '50px',
             'sortable': true,
             'filterOptions':{
               'enabled': true
@@ -88,6 +93,7 @@
            { 
             'label': 'Specificity',
             'field':'specificity',
+            'width': '50px',
             'sortable': true,
             'filterOptions':{
               'enabled': true
@@ -99,6 +105,9 @@
             'sortable': true,
             'filterOptions':{
               'enabled': true,
+              'filterFn': (data, filterString) => {
+                return data.filter(ra => ra.name.includes(filterString)).length > 0
+              }
             }
           },
           { 
@@ -106,6 +115,7 @@
             'field':'sampleTypes',
             'filterOptions':{
               'enabled': true,
+              'placeholder': 'All',
               'filterDropdownItems': stl,
               'filterFn': (data, filterString) => {
                 return data.filter(st => st.id === filterString).length > 0
@@ -147,6 +157,7 @@
       diagnostics: Array,
       selectedDx: Object,
       sampleTypeList: Array,
+      pcrPlatformList: Array,
     },
     components: {
       VueGoodTable,
