@@ -1,8 +1,7 @@
 <template>
   <div class="diagnostics">
-      <DiagnosticTable :diagnostics="diagnostics" :sampleTypeList="sampleTypeList" :pcrPlatformList="pcrPlatformList" :selectedDx="selectedDx" @select:poc="setSelectedDx" />
-     <!--  <hr>
-      <PocForm :poc="selectedPoc" @update:poc="updatePoc" @clear:poc="clearSelection" /> -->
+      <DiagnosticTable :diagnostics="diagnostics" :sampleTypeList="sampleTypeList" :pcrPlatformList="pcrPlatformList" :selectedDx="selectedDx" @select:dx="setSelectedDx" />
+     <DiagnosticDetail :diagnostic="selectedDx"/>
   </div>
 </template>
 
@@ -10,7 +9,7 @@
   import axios from "axios";
 
   import DiagnosticTable from '@/components/diagnostics/DiagnosticTable.vue';
-  //import PocForm from '@/components/pocs/PocForm.vue';
+  import DiagnosticDetail from '@/components/diagnostics/DiagnosticDetail.vue';
 
   export default {
     data (){
@@ -52,6 +51,8 @@
       },
       setSelectedDx(dx) {
         this.selectedDx = dx;
+        console.log("set selected called with dx = %o", dx);
+        this.$modal.show('diagnostic-detail', {'diagnostic': dx})
       },
       clearSelection() {
         this.selectedDx = {};
@@ -63,7 +64,7 @@
     name: 'Diagnostics',
     components: {
       DiagnosticTable,
-      //PocForm,
+      DiagnosticDetail
     }
   }
 </script>

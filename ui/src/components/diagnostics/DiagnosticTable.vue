@@ -7,6 +7,7 @@
         enabled: true,
         skipDiacritics: true,
       }"
+      @on-row-click="select"
     >
       <template slot="table-row" slot-scope="props">
         <span v-if="props.column.field == 'name' && props.row.testUrl">
@@ -34,8 +35,9 @@
 
   export default {
     methods: {
-      select(dx) {
-        this.$emit('select:poc', dx);
+      select(params) {
+        const dx = params.row
+        this.$emit('select:dx', dx);
       },
       convertBoolToYN(value) {
         return value ? "Y" : "N"
