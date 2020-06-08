@@ -1,9 +1,12 @@
 <template>
   <modal 
-      name="diagnostic-detail"
-      :min-width="200"
-      :min-height="500"
-      :draggable="true">
+        name="diagnostic-detail"
+        :draggable="true"
+        :adaptive="true"
+        :scrollable="true"
+        :reset="true"
+        width="60%"
+        height="auto">
     <div class="content">
       <div class="left-col">
         <div>
@@ -28,7 +31,7 @@
             <strong>Tests per Run: </strong> {{this.diagnostic.testsPerRun}}
         </div>
         <div>
-            <strong>Tests per Run: </strong> {{this.diagnostic.testsPerKit}}
+            <strong>Tests per Kit: </strong> {{this.diagnostic.testsPerKit}}
         </div>
         <div>
             <strong>Point of Care: </strong> {{this.convertBoolToYN(this.diagnostic.pointOfCare)}}
@@ -45,9 +48,17 @@
         <div>
             <strong>Lead Time: </strong> {{this.diagnostic.costPerKit}}
         </div>
+        <div v-if="this.diagnostic.regulatoryApprovals !== null" class="regulatory-data">
+            <strong>Regulatory Status </strong>
+            <div v-for="ra in this.diagnostic.regulatoryApprovals" :key="ra.id">{{ ra.name }}</div>
+        </div>
+        <div v-if="this.diagnostic.pcrPlatforms !== null" class="platform-data">
+            <strong>PCR Platforms </strong>
+            <div v-for="pp in this.diagnostic.pcrPlatforms" :key="pp.id">{{ pp.name }}</div>
+        </div>
       </div>
       <div class="right-col">
-        <div v-if="this.diagnostic.company !== null" class="company-data">
+        <div v-if="this.diagnostic.company" class="company-data">
             <strong>Company Data </strong>
             <div>
                 {{this.diagnostic.company.name}}
@@ -59,7 +70,7 @@
                 {{this.diagnostic.company.city}}, {{this.diagnostic.company.state}} {{this.diagnostic.company.country}}
             </div>
         </div>
-        <div v-if="this.diagnostic.poc !== null" class="contact-data">
+        <div v-if="this.diagnostic.poc" class="contact-data">
             <strong>Contact </strong>
             <div>
                 {{this.diagnostic.poc.name}}
@@ -70,6 +81,10 @@
             <div>
                 {{this.diagnostic.poc.email}}
             </div>
+        </div>
+        <div v-if="this.diagnostic.sampleTypes !== null" class="sample-data">
+            <strong>Sample Types </strong>
+            <div v-for="st in this.diagnostic.sampleTypes" :key="st.id">{{ st.name }}</div>
         </div>
       </div>
     </div>
@@ -106,6 +121,7 @@
     justify-content: flex-start;
     align-content: flex-start;
     align-self: flex-start;
+    text-align: left;
 }
 .right-col {
     flex: 1;
@@ -116,6 +132,7 @@
     justify-content: flex-start;
     align-content: flex-start;
     align-self: flex-start;
+    text-align: left;
 }
 .company-data {
     flex: 1;
@@ -135,6 +152,36 @@
     justify-content: flex-start;
     align-content: flex-start;
     align-self: flex-start;
+}
+.regulatory-data {
+    flex: 1;
+    border: 2px solid navy;
+    flex-flow: column;
+    padding: 0.5em;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-self: flex-start;
+
+}
+.sample-data {
+    flex: 1;
+    border: 2px solid navy;
+    flex-flow: column;
+    padding: 0.5em;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-self: flex-start;
+
+}
+.platform-data {
+    flex: 1;
+    border: 2px solid navy;
+    flex-flow: column;
+    padding: 0.5em;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-self: flex-start;
+
 }
 h3 {
   margin: 40px 0 0;
