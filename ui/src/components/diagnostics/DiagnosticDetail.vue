@@ -13,15 +13,6 @@
             <strong>Name: </strong> {{this.diagnostic.name}}
         </div>
         <div>
-            <strong>Product No: </strong> {{this.diagnostic.catalogNo}}
-        </div>
-        <div>
-            <strong>Sensitivity: </strong> {{this.diagnostic.sensitivity}}
-        </div>
-        <div>
-            <strong>Specificity: </strong> {{this.diagnostic.specificity}}
-        </div>
-        <div>
             <strong>Verified LoD: </strong> {{this.diagnostic.verifiedLod}}
         </div>
         <div>
@@ -29,9 +20,6 @@
         </div>
         <div>
             <strong>Tests per Run: </strong> {{this.diagnostic.testsPerRun}}
-        </div>
-        <div>
-            <strong>Tests per Kit: </strong> {{this.diagnostic.testsPerKit}}
         </div>
         <div>
             <strong>Point of Care: </strong> {{this.convertBoolToYN(this.diagnostic.pointOfCare)}}
@@ -114,7 +102,6 @@
 }
 .left-col {
     flex: 1;
-    border: 2px solid black;
     flex-flow: column;
     padding: 0.5em;
     margin: 0.5em;
@@ -125,7 +112,6 @@
 }
 .right-col {
     flex: 1;
-    border: 2px solid black;
     flex-flow: column;
     padding: 0.5em;
     margin: 0.5em;
@@ -136,7 +122,6 @@
 }
 .company-data {
     flex: 1;
-    border: 2px solid navy;
     flex-flow: column;
     padding: 0.5em;
     justify-content: flex-start;
@@ -146,7 +131,6 @@
 }
 .poc-data {
     flex: 1;
-    border: 2px solid navy;
     flex-flow: column;
     padding: 0.5em;
     justify-content: flex-start;
@@ -155,7 +139,6 @@
 }
 .regulatory-data {
     flex: 1;
-    border: 2px solid navy;
     flex-flow: column;
     padding: 0.5em;
     justify-content: flex-start;
@@ -165,7 +148,6 @@
 }
 .sample-data {
     flex: 1;
-    border: 2px solid navy;
     flex-flow: column;
     padding: 0.5em;
     justify-content: flex-start;
@@ -175,7 +157,6 @@
 }
 .platform-data {
     flex: 1;
-    border: 2px solid navy;
     flex-flow: column;
     padding: 0.5em;
     justify-content: flex-start;
@@ -195,6 +176,9 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #8bc53f;
+}
+strong {
+    color: #00adee;
 }
 </style>

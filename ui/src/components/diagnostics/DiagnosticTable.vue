@@ -7,6 +7,7 @@
         enabled: true,
         skipDiacritics: true,
       }"
+      styleClass="vgt-table bn"
       @on-row-click="select"
     >
       <template slot="table-row" slot-scope="props">
@@ -20,7 +21,14 @@
           <div v-for="p in props.row.pcrPlatforms" :key="p.id">{{ p.name }}</div>
         </span>
         <span v-else-if="props.column.field == 'regulatoryApprovals'">
-          <div v-for="ra in props.row.regulatoryApprovals" :key="ra.id">{{ ra.name }}</div>
+          <div v-for="ra in props.row.regulatoryApprovals" :key="ra.id">
+            <div v-if="props.row.sourceOfPerfData">
+              <a :href="props.row.sourceOfPerfData">{{ ra.name }}</a>
+            </div>
+            <div v-else>
+              {{ ra.name }}
+            </div>
+        </div>
         </span>
         <span v-else>
           {{props.formattedRow[props.column.field]}}
@@ -32,6 +40,8 @@
 
 <script>
   import { VueGoodTable } from 'vue-good-table';
+  // import the styles
+  import 'vue-good-table/dist/vue-good-table.css'
 
   export default {
     methods: {
@@ -59,6 +69,7 @@
             'label': 'Company',
             'field':'company.name',
             'sortable': true,
+            'thClass':'bn',
             'filterOptions':{
               'enabled': true
             }
@@ -169,7 +180,7 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="css" scoped>
 h3 {
   margin: 40px 0 0;
 }
@@ -182,6 +193,10 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #8bc53f;
+}
+.vgt-left-align .bn .sortable{
+  background-color: #213964 !important;
+  background: none !important;
 }
 </style>

@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <div class="logos">
+      <img src="./assets/b.next logo.png" height="50px">
+      <img src="./assets/IQT_logo_color_CMYK.png" height="50px">
+    </div>
     <h1>COVID-19 Testing Database</h1>
     <Diagnostics />
   </div>
@@ -24,5 +28,19 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+h1 {
+  color: #213964;
+}
+
+.logos {
+  width:100%;
+  display: flex;
+  flex-flow: row;
+  padding: 0.5em;
+  justify-content: flex-end;
+  align-content: flex-end;
+  align-self: flex-end;
 }
 </style>
