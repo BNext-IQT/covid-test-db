@@ -102,7 +102,7 @@
             }
           },
           { 
-            'label': 'PCR Platform',
+            'label': 'Instrument/Platform',
             'field':'pcrPlatforms',
             'filterOptions':{
               'enabled': true,
@@ -114,7 +114,7 @@
             }
           },
           { 
-            'label': 'Regulatory Status',
+            'label': 'IFU/EUA',
             'field': 'regulatoryApprovals',
             'sortable': true,
             'filterOptions':{
@@ -137,7 +137,7 @@
             }
           },
           { 
-            'label': 'Point of Care',
+            'label': 'Point-of-Care',
             'field':'pointOfCare',
             'sortable': true,
             'filterOptions':{
