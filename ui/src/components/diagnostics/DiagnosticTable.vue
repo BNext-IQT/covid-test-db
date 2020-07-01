@@ -14,6 +14,9 @@
         <span v-if="props.column.field == 'name' && props.row.testUrl">
           <a :href="props.row.testUrl">{{ props.row.name }}</a>
         </span>
+        <span v-else-if="props.column.field == 'diagnosticType'">
+          <div>{{ props.row.diagnosticType.name }}</div>
+        </span>
         <span v-else-if="props.column.field == 'sampleTypes'">
           <div v-for="st in props.row.sampleTypes" :key="st.id">{{ st.name }}</div>
         </span>
@@ -64,6 +67,9 @@
         const pcr = this.pcrPlatformList.length > 0 ? this.pcrPlatformList.map((i) => {
           return {'value': i.id, 'text':i.name}
         }) : ['Loading...'];
+        const dt = this.diagnosticTypeList.length > 0 ? this.diagnosticTypeList.map((i) => {
+          return {'value': i.id, 'text':i.name}
+        }) : ['Loading...'];
         return [
           { 
             'label': 'Company',
@@ -75,11 +81,24 @@
             }
           },
           { 
-            'label': 'Name',
+            'label': 'Test Name',
             'field':'name',
             'sortable': true,
             'filterOptions':{
               'enabled': true
+            }
+          },
+          { 
+            'label': 'Type',
+            'field': 'diagnosticType',
+            'sortable': true,
+            'filterOptions':{
+              'enabled': true,
+              'placeholder': 'All',
+              'filterDropdownItems': dt,
+              'filterFn': (data, filterString) => {
+                return data.filter(dt => dt.id === filterString).length > 0
+              }
             }
           },
           { 
@@ -92,24 +111,6 @@
               'filterFn': (data, filterString) => {
                 return data.filter(p => p.id === filterString).length > 0
               }
-            }
-          },
-          { 
-            'label': 'Sensitivity',
-            'field':'sensitivity',
-            'width': '50px',
-            'sortable': true,
-            'filterOptions':{
-              'enabled': true
-            }
-          },
-           { 
-            'label': 'Specificity',
-            'field':'specificity',
-            'width': '50px',
-            'sortable': true,
-            'filterOptions':{
-              'enabled': true
             }
           },
           { 
@@ -169,6 +170,7 @@
     props: {
       diagnostics: Array,
       selectedDx: Object,
+      diagnosticTypeList: Array,
       sampleTypeList: Array,
       pcrPlatformList: Array,
     },

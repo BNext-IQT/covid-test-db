@@ -156,8 +156,8 @@ CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostic_pcr_platforms (
 );
 
 /* fill in reference tables */
-INSERT INTO covid_diagnostics.diagnostic_types (name, created_by, updated_by) VALUES ('Immunoassays/serology', 'initialize.sql', 'initialize.sql');
-INSERT INTO covid_diagnostics.diagnostic_types (name, created_by, updated_by) VALUES ('molecular assays', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_diagnostics.diagnostic_types (name, created_by, updated_by) VALUES ('Molecular Test Kit', 'initialize.sql', 'initialize.sql');
+INSERT INTO covid_diagnostics.diagnostic_types (name, created_by, updated_by) VALUES ('Lab-performed test or service', 'initialize.sql', 'initialize.sql');
 
 INSERT INTO covid_diagnostics.diagnostic_target_types (name, created_by, updated_by) VALUES ('IgG', 'initialize.sql', 'initialize.sql');
 INSERT INTO covid_diagnostics.diagnostic_target_types (name, created_by, updated_by) VALUES ('IgM', 'initialize.sql', 'initialize.sql');

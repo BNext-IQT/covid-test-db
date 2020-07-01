@@ -26,8 +26,8 @@ func molecularColumnMapping () map[string]int{
         "company_name":  0,
         "test_name":   1,
         "pcr_platform": 2, 
-        "sensitivity": 33,
-        "specificity": 34,
+        "sensitivity": 34,
+        "specificity": 35,
         "source": 3,
         "test_url": 4,
         "regulatory_status": 5,
@@ -58,6 +58,8 @@ func molecularColumnMapping () map[string]int{
         "turn_around_time": 30,
         "tests_per_run": 31,
         "tests_per_kit": 32,
+        "abi_7500": 33,
+        "test_type": 36,
     }
 } 
 
@@ -304,7 +306,12 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
         return nil, errs[0]
     }
     
-    diagnosticType, err := getDiagnosticType("molecular assays")
+    diagnosticType, err := getDiagnosticType(strings.TrimSpace(row[mapping["test_type"]]))
+    if(err != nil){
+        log.Println(err)
+        return nil, err
+    }
+
     approvals, err := getApprovals(strings.TrimSpace(row[mapping["regulatory_status"]]))
 
     if(err != nil){
@@ -370,8 +377,9 @@ func main() {
         log.Println(err.Error())
         return
     }
-    rows := f.GetRows("Molecular test fields")
-    for _, row := range rows {
+    rows := f.GetRows("Combined Molecular Tests")
+    for idx, row := range rows {
+        log.Printf("Processing row %d of %d \n", idx, len(rows))
         _, dxErr := getDiagnosticFromRow(row)
 
         if(dxErr != nil){
