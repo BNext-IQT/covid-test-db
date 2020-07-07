@@ -3,10 +3,7 @@
     <vue-good-table
       :columns="getColumns()"
       :rows="diagnostics"
-      :search-options="{
-        enabled: true,
-        skipDiacritics: true,
-      }"
+      :fixed-header="true"
       styleClass="vgt-table bn"
       @on-row-click="select"
     >
