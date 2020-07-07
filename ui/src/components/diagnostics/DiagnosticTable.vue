@@ -26,10 +26,10 @@
         <span v-else-if="props.column.field == 'regulatoryApprovals'">
           <div v-for="ra in props.row.regulatoryApprovals" :key="ra.id">
             <div v-if="props.row.sourceOfPerfData">
-              <a :href="props.row.sourceOfPerfData">{{ ra.name }}</a>
+              <a :href="props.row.sourceOfPerfData">IFU/EUA</a>
             </div>
             <div v-else>
-              {{ ra.name }}
+              IFU/EUA
             </div>
         </div>
         </span>
@@ -62,14 +62,14 @@
       },
       getColumns(){
         const stl = this.sampleTypeList.length > 0 ? this.sampleTypeList.map((i) => {
-          return {'value': i.id, 'text':i.name}
-        }) : ['Loading...'];
+          return i.name
+        }).sort() : ['Loading...'];
         const pcr = this.pcrPlatformList.length > 0 ? this.pcrPlatformList.map((i) => {
-          return {'value': i.id, 'text':i.name}
-        }) : ['Loading...'];
+          return i.name
+        }).sort() : ['Loading...'];
         const dt = this.diagnosticTypeList.length > 0 ? this.diagnosticTypeList.map((i) => {
-          return {'value': i.id, 'text':i.name}
-        }) : ['Loading...'];
+          return i.name
+        }).sort() : ['Loading...'];
         return [
           { 
             'label': 'Company',
@@ -97,7 +97,7 @@
               'placeholder': 'All',
               'filterDropdownItems': dt,
               'filterFn': (data, filterString) => {
-                return data.filter(dt => dt.id === filterString).length > 0
+                return data.name === filterString;
               }
             }
           },
@@ -109,7 +109,7 @@
               'placeholder': 'All',
               'filterDropdownItems': pcr,
               'filterFn': (data, filterString) => {
-                return data.filter(p => p.id === filterString).length > 0
+                return data.filter(p => p.name === filterString).length > 0
               }
             }
           },
@@ -118,10 +118,7 @@
             'field': 'regulatoryApprovals',
             'sortable': true,
             'filterOptions':{
-              'enabled': true,
-              'filterFn': (data, filterString) => {
-                return data.filter(ra => ra.name.includes(filterString)).length > 0
-              }
+              'enabled': false,
             }
           },
           { 
@@ -132,7 +129,7 @@
               'placeholder': 'All',
               'filterDropdownItems': stl,
               'filterFn': (data, filterString) => {
-                return data.filter(st => st.id === filterString).length > 0
+                return data.filter(st => st.name === filterString).length > 0
               }
             }
           },

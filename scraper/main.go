@@ -63,6 +63,13 @@ func molecularColumnMapping () map[string]int{
     }
 } 
 
+//removes all whitespace and converts to lowercase
+//to be used for string comparisons
+func StompText(text string) string{
+    var stomped string = strings.ToLower(strings.Join(strings.Fields(text),""))
+    return stomped
+}
+
 func Index(vs []string, t string) int {
     for i, v := range vs {
         if v == t {
@@ -105,7 +112,16 @@ func getOrCreateCompany(name string, streetAddress string, city string, state st
     db := getDB()
     defer db.Close()
     var result *company.Company = nil
-    existing, err := company.FetchByName(db, name)
+    list, err := company.FetchList(db)
+    var existing *company.Company = nil
+    stompedName := StompText(name);
+    for _,c := range list {
+        if(stompedName == StompText(c.Name)){
+            existing = &c;
+            break;
+        }
+    }
+
     if(existing != nil && !gorm.IsRecordNotFoundError(err)){
         result = existing
     } else {
@@ -119,7 +135,16 @@ func getOrCreateTargetType(name string)(*diagnostic_target_type.DiagnosticTarget
     db := getDB()
     defer db.Close()
     var result *diagnostic_target_type.DiagnosticTargetType = nil
-    existing, err := diagnostic_target_type.FetchByName(db, name)
+    list, err := diagnostic_target_type.FetchList(db)
+    var existing *diagnostic_target_type.DiagnosticTargetType = nil
+    stompedName := StompText(name);
+    for _,dt := range list {
+        if(stompedName == StompText(dt.Name)){
+            existing = &dt;
+            break;
+        }
+    }
+
     if(existing != nil && !gorm.IsRecordNotFoundError(err)){
         result = existing
     } else {
@@ -133,7 +158,16 @@ func getOrCreateSampleType(name string)(*sample_type.SampleType, error){
     db := getDB()
     defer db.Close()
     var result *sample_type.SampleType = nil
-    existing, err := sample_type.FetchByName(db, name)
+    list, err := sample_type.FetchList(db)
+    var existing *sample_type.SampleType = nil
+    stompedName := StompText(name);
+    for _,st := range list {
+        if(stompedName == StompText(st.Name)){
+            existing = &st;
+            break;
+        }
+    }
+
     if(existing != nil && !gorm.IsRecordNotFoundError(err)){
         result = existing
     } else {
@@ -147,7 +181,16 @@ func getOrCreatePcrPlatform(name string)(*pcr_platform.PcrPlatform, error){
     db := getDB()
     defer db.Close()
     var result *pcr_platform.PcrPlatform = nil
-    existing, err := pcr_platform.FetchByName(db, name)
+    list, err := pcr_platform.FetchList(db)
+    var existing *pcr_platform.PcrPlatform = nil
+    stompedName := StompText(name);
+    for _,p := range list {
+        if(stompedName == StompText(p.Name)){
+            existing = &p;
+            break;
+        }
+    }
+
     if(existing != nil && !gorm.IsRecordNotFoundError(err)){
         result = existing
     } else {
