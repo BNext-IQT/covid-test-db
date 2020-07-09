@@ -1,0 +1,4 @@
+archive
+*.RData
+*.csv
+data_dictionary.txt
