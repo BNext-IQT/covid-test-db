@@ -3,16 +3,16 @@
     <vue-good-table
       :columns="getColumns()"
       :rows="diagnostics"
-      :search-options="{
-        enabled: true,
-        skipDiacritics: true,
-      }"
+      :fixed-header="true"
       styleClass="vgt-table bn"
       @on-row-click="select"
     >
       <template slot="table-row" slot-scope="props">
         <span v-if="props.column.field == 'name' && props.row.testUrl">
           <a :href="props.row.testUrl">{{ props.row.name }}</a>
+        </span>
+        <span v-else-if="props.column.field == 'diagnosticType'">
+          <div>{{ props.row.diagnosticType.name }}</div>
         </span>
         <span v-else-if="props.column.field == 'sampleTypes'">
           <div v-for="st in props.row.sampleTypes" :key="st.id">{{ st.name }}</div>
@@ -23,10 +23,10 @@
         <span v-else-if="props.column.field == 'regulatoryApprovals'">
           <div v-for="ra in props.row.regulatoryApprovals" :key="ra.id">
             <div v-if="props.row.sourceOfPerfData">
-              <a :href="props.row.sourceOfPerfData">{{ ra.name }}</a>
+              <a :href="props.row.sourceOfPerfData">IFU/EUA</a>
             </div>
             <div v-else>
-              {{ ra.name }}
+              IFU/EUA
             </div>
         </div>
         </span>
@@ -59,11 +59,14 @@
       },
       getColumns(){
         const stl = this.sampleTypeList.length > 0 ? this.sampleTypeList.map((i) => {
-          return {'value': i.id, 'text':i.name}
-        }) : ['Loading...'];
+          return i.name
+        }).sort() : ['Loading...'];
         const pcr = this.pcrPlatformList.length > 0 ? this.pcrPlatformList.map((i) => {
-          return {'value': i.id, 'text':i.name}
-        }) : ['Loading...'];
+          return i.name
+        }).sort() : ['Loading...'];
+        const dt = this.diagnosticTypeList.length > 0 ? this.diagnosticTypeList.map((i) => {
+          return i.name
+        }).sort() : ['Loading...'];
         return [
           { 
             'label': 'Company',
@@ -75,7 +78,7 @@
             }
           },
           { 
-            'label': 'Name',
+            'label': 'Test Name',
             'field':'name',
             'sortable': true,
             'filterOptions':{
@@ -83,44 +86,36 @@
             }
           },
           { 
-            'label': 'PCR Platform',
+            'label': 'Type',
+            'field': 'diagnosticType',
+            'sortable': true,
+            'filterOptions':{
+              'enabled': true,
+              'placeholder': 'All',
+              'filterDropdownItems': dt,
+              'filterFn': (data, filterString) => {
+                return data.name === filterString;
+              }
+            }
+          },
+          { 
+            'label': 'Instrument/Platform',
             'field':'pcrPlatforms',
             'filterOptions':{
               'enabled': true,
               'placeholder': 'All',
               'filterDropdownItems': pcr,
               'filterFn': (data, filterString) => {
-                return data.filter(p => p.id === filterString).length > 0
+                return data.filter(p => p.name === filterString).length > 0
               }
             }
           },
           { 
-            'label': 'Sensitivity',
-            'field':'sensitivity',
-            'width': '50px',
-            'sortable': true,
-            'filterOptions':{
-              'enabled': true
-            }
-          },
-           { 
-            'label': 'Specificity',
-            'field':'specificity',
-            'width': '50px',
-            'sortable': true,
-            'filterOptions':{
-              'enabled': true
-            }
-          },
-          { 
-            'label': 'Regulatory Status',
+            'label': 'IFU/EUA',
             'field': 'regulatoryApprovals',
             'sortable': true,
             'filterOptions':{
-              'enabled': true,
-              'filterFn': (data, filterString) => {
-                return data.filter(ra => ra.name.includes(filterString)).length > 0
-              }
+              'enabled': false,
             }
           },
           { 
@@ -131,12 +126,12 @@
               'placeholder': 'All',
               'filterDropdownItems': stl,
               'filterFn': (data, filterString) => {
-                return data.filter(st => st.id === filterString).length > 0
+                return data.filter(st => st.name === filterString).length > 0
               }
             }
           },
           { 
-            'label': 'Point of Care',
+            'label': 'Point-of-Care',
             'field':'pointOfCare',
             'sortable': true,
             'filterOptions':{
@@ -169,6 +164,7 @@
     props: {
       diagnostics: Array,
       selectedDx: Object,
+      diagnosticTypeList: Array,
       sampleTypeList: Array,
       pcrPlatformList: Array,
     },

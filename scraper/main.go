@@ -26,8 +26,8 @@ func molecularColumnMapping () map[string]int{
         "company_name":  0,
         "test_name":   1,
         "pcr_platform": 2, 
-        "sensitivity": 33,
-        "specificity": 34,
+        "sensitivity": 34,
+        "specificity": 35,
         "source": 3,
         "test_url": 4,
         "regulatory_status": 5,
@@ -58,8 +58,17 @@ func molecularColumnMapping () map[string]int{
         "turn_around_time": 30,
         "tests_per_run": 31,
         "tests_per_kit": 32,
+        "abi_7500": 33,
+        "test_type": 36,
     }
 } 
+
+//removes all whitespace and converts to lowercase
+//to be used for string comparisons
+func StompText(text string) string{
+    var stomped string = strings.ToLower(strings.Join(strings.Fields(text),""))
+    return stomped
+}
 
 func Index(vs []string, t string) int {
     for i, v := range vs {
@@ -103,7 +112,16 @@ func getOrCreateCompany(name string, streetAddress string, city string, state st
     db := getDB()
     defer db.Close()
     var result *company.Company = nil
-    existing, err := company.FetchByName(db, name)
+    list, err := company.FetchList(db)
+    var existing *company.Company = nil
+    stompedName := StompText(name);
+    for _,c := range list {
+        if(stompedName == StompText(c.Name)){
+            existing = &c;
+            break;
+        }
+    }
+
     if(existing != nil && !gorm.IsRecordNotFoundError(err)){
         result = existing
     } else {
@@ -117,7 +135,16 @@ func getOrCreateTargetType(name string)(*diagnostic_target_type.DiagnosticTarget
     db := getDB()
     defer db.Close()
     var result *diagnostic_target_type.DiagnosticTargetType = nil
-    existing, err := diagnostic_target_type.FetchByName(db, name)
+    list, err := diagnostic_target_type.FetchList(db)
+    var existing *diagnostic_target_type.DiagnosticTargetType = nil
+    stompedName := StompText(name);
+    for _,dt := range list {
+        if(stompedName == StompText(dt.Name)){
+            existing = &dt;
+            break;
+        }
+    }
+
     if(existing != nil && !gorm.IsRecordNotFoundError(err)){
         result = existing
     } else {
@@ -131,7 +158,16 @@ func getOrCreateSampleType(name string)(*sample_type.SampleType, error){
     db := getDB()
     defer db.Close()
     var result *sample_type.SampleType = nil
-    existing, err := sample_type.FetchByName(db, name)
+    list, err := sample_type.FetchList(db)
+    var existing *sample_type.SampleType = nil
+    stompedName := StompText(name);
+    for _,st := range list {
+        if(stompedName == StompText(st.Name)){
+            existing = &st;
+            break;
+        }
+    }
+
     if(existing != nil && !gorm.IsRecordNotFoundError(err)){
         result = existing
     } else {
@@ -145,7 +181,16 @@ func getOrCreatePcrPlatform(name string)(*pcr_platform.PcrPlatform, error){
     db := getDB()
     defer db.Close()
     var result *pcr_platform.PcrPlatform = nil
-    existing, err := pcr_platform.FetchByName(db, name)
+    list, err := pcr_platform.FetchList(db)
+    var existing *pcr_platform.PcrPlatform = nil
+    stompedName := StompText(name);
+    for _,p := range list {
+        if(stompedName == StompText(p.Name)){
+            existing = &p;
+            break;
+        }
+    }
+
     if(existing != nil && !gorm.IsRecordNotFoundError(err)){
         result = existing
     } else {
@@ -304,7 +349,12 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
         return nil, errs[0]
     }
     
-    diagnosticType, err := getDiagnosticType("molecular assays")
+    diagnosticType, err := getDiagnosticType(strings.TrimSpace(row[mapping["test_type"]]))
+    if(err != nil){
+        log.Println(err)
+        return nil, err
+    }
+
     approvals, err := getApprovals(strings.TrimSpace(row[mapping["regulatory_status"]]))
 
     if(err != nil){
@@ -370,8 +420,9 @@ func main() {
         log.Println(err.Error())
         return
     }
-    rows := f.GetRows("Molecular test fields")
-    for _, row := range rows {
+    rows := f.GetRows("Combined Molecular Tests")
+    for idx, row := range rows {
+        log.Printf("Processing row %d of %d \n", idx, len(rows))
         _, dxErr := getDiagnosticFromRow(row)
 
         if(dxErr != nil){

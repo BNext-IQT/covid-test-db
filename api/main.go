@@ -18,6 +18,7 @@ import (
 
     "gitlab.iqt.org/rashley/covid-test-db/models/poc"
     "gitlab.iqt.org/rashley/covid-test-db/models/diagnostic"
+    "gitlab.iqt.org/rashley/covid-test-db/models/diagnostic_type"
     "gitlab.iqt.org/rashley/covid-test-db/models/sample_type"
     "gitlab.iqt.org/rashley/covid-test-db/models/regulatory_approval_type"
     "gitlab.iqt.org/rashley/covid-test-db/models/pcr_platform"
@@ -189,6 +190,19 @@ func getDiagnostic(w http.ResponseWriter, r *http.Request) {
     sendJsonResponse(w, result)
 }
 
+//diagnosticType endpoints
+func getDiagnosticTypeList(w http.ResponseWriter, r *http.Request) {
+	db := getDB()
+	defer db.Close()
+
+	results, err := diagnostic_type.FetchList(db)
+	if err != nil {
+        log.Print(err)
+    }
+	
+    sendJsonResponse(w, results)
+}
+
 //sampleType endpoints
 func getSampleTypeList(w http.ResponseWriter, r *http.Request) {
 	db := getDB()
@@ -262,6 +276,7 @@ func main() {
 	router.HandleFunc("/api/diagnostics", createDiagnostic).Methods("POST")
 	router.HandleFunc("/api/diagnostics/{id}", getDiagnostic).Methods("GET")
 	router.HandleFunc("/api/diagnostics/{id}", updateDiagnostic).Methods("PUT")
+	router.HandleFunc("/api/diagnostictypes", getDiagnosticTypeList).Methods("GET")
 	router.HandleFunc("/api/sampletypes", getSampleTypeList).Methods("GET")
 	router.HandleFunc("/api/regulatoryapprovals", getRegulatoryApprovalList).Methods("GET")
 	router.HandleFunc("/api/pcrplatforms", getPcrPlatformList).Methods("GET")

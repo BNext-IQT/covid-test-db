@@ -1,6 +1,6 @@
 <template>
   <div class="diagnostics">
-      <DiagnosticTable :diagnostics="diagnostics" :sampleTypeList="sampleTypeList" :pcrPlatformList="pcrPlatformList" :selectedDx="selectedDx" @select:dx="setSelectedDx" />
+      <DiagnosticTable :diagnostics="diagnostics" :diagnosticTypeList="diagnosticTypeList" :sampleTypeList="sampleTypeList" :pcrPlatformList="pcrPlatformList" :selectedDx="selectedDx" @select:dx="setSelectedDx" />
      <DiagnosticDetail :diagnostic="selectedDx"/>
   </div>
 </template>
@@ -18,6 +18,7 @@
         selectedDx: { },
         sampleTypeList: [],
         pcrPlatformList: [],
+        diagnosticTypeList: [],
       }
     },
     methods: {
@@ -26,6 +27,15 @@
         .get("/api/diagnostics")
         .then((res) => {
           this.diagnostics = res.data;
+        })
+        .catch((err) => {
+          console.log("error: %o", err);
+        })
+
+        axios
+        .get("/api/diagnostictypes")
+        .then((res) => {
+          this.diagnosticTypeList = JSON.parse(JSON.stringify(res.data));
         })
         .catch((err) => {
           console.log("error: %o", err);
