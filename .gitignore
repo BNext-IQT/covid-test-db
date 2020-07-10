@@ -36,3 +36,4 @@ web/venv/
 ui/node_modules
 ui/build
 *.swp
+.Rproj.user
