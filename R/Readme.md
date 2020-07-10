@@ -31,6 +31,7 @@ Open issues include:
 Asterisks denote columns, which when combined, uniquely identify each row.
 
 ## combined_performance.csv
+
 *company: manufacturer name
 *test_name: test name
 test_type: type of test (should be PCR for all tests right now)
@@ -55,6 +56,7 @@ specificity_95ci_high: upper bound of the 95% CI on specificity
 source: One of FindDx or FDA EUA - depending on where we got the data
 
 ## combined_ppv_npv_mat.csv
+
 *company: manufacturer name
 *test_name: test name
 *prevalence: prevalence of covid-19 (x axis of plots)
