@@ -6,9 +6,6 @@ services:
     restart: always
     image: 'cockroachdb/cockroach:latest'
     command: start --insecure
-    ports:
-      - 26257:26257
-      - 8080:8080
     networks:
       - database
     volumes:
@@ -49,6 +46,5 @@ networks:
     name: admin
   database:
     name: database
-    driver: bridge
   api:
     name: api
