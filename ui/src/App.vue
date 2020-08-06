@@ -2,7 +2,7 @@
   <div id="app">
     <div class="logos">
       <img src="./assets/b.next logo.png" height="50px">
-      <img src="./assets/IQT_logo_color_CMYK.png" height="50px">
+      <img src="./assets/IQT_Logo.png" height="50px">
     </div>
     <h1>COVID-19 Testing Database</h1>
     <Diagnostics />
