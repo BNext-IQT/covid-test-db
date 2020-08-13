@@ -7,6 +7,7 @@ gunicorn
 xlsxwriter
 requests
 flask
+httpx
 dash
 dash_auth
 dash-html-components

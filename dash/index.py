@@ -7,7 +7,7 @@ import dash_bootstrap_components as dbc
 
 from app import app
 # import pages for the app
-from apps import home, page_table, page_results
+from apps import home, page_table, page_dx_table, page_results
 
 server = app.server
 
@@ -18,6 +18,8 @@ dropdown = dbc.Navbar(children=[
                 dbc.NavItem(dbc.NavLink("Results Tool", href="{}/page_results".format(APP_PATH), external_link=True)),
                 dbc.NavItem(dbc.NavLink("|", active=False, disabled=True)),
                 dbc.NavItem(dbc.NavLink("Data Table", href="{}/page_table".format(APP_PATH), external_link=True)),
+                dbc.NavItem(dbc.NavLink("|", active=False, disabled=True)),
+                dbc.NavItem(dbc.NavLink("Diagnostic Data", href="{}/page_dx_table".format(APP_PATH), external_link=True)),
                ],
                color="dark",
                dark=True,
@@ -113,11 +115,13 @@ app.layout = html.Div([
 def display_page(pathname):
     if pathname == '{}/page_table'.format(APP_PATH):
         return page_table.layout
+    if pathname == '{}/page_dx_table'.format(APP_PATH):
+        return page_dx_table.layout
     elif pathname == '{}/page_results'.format(APP_PATH):
         return page_results.layout
     else:
         return home.layout
 
 if __name__ == '__main__':
-    app.run_server(port=PORT, debug=False)
-    #app.run_server(host='127.0.0.1', debug=True)
+    #app.run_server(port=PORT, debug=False)
+    app.run_server(host='127.0.0.1', debug=True)
