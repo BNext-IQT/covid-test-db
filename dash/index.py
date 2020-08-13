@@ -7,7 +7,7 @@ import dash_bootstrap_components as dbc
 
 from app import app
 # import pages for the app
-from apps import home, page_table, page_dx_table, page_results
+from apps import home, page_table, page_results
 
 server = app.server
 
@@ -18,8 +18,8 @@ dropdown = dbc.Navbar(children=[
                 dbc.NavItem(dbc.NavLink("Results Tool", href="{}/page_results".format(APP_PATH), external_link=True)),
                 dbc.NavItem(dbc.NavLink("|", active=False, disabled=True)),
                 dbc.NavItem(dbc.NavLink("Data Table", href="{}/page_table".format(APP_PATH), external_link=True)),
-                dbc.NavItem(dbc.NavLink("|", active=False, disabled=True)),
-                dbc.NavItem(dbc.NavLink("Diagnostic Data", href="{}/page_dx_table".format(APP_PATH), external_link=True)),
+                # dbc.NavItem(dbc.NavLink("|", active=False, disabled=True)),
+                # dbc.NavItem(dbc.NavLink("Diagnostic Data", href="{}/page_dx_table".format(APP_PATH), external_link=True)),
                ],
                color="dark",
                dark=True,
