@@ -27,6 +27,13 @@
         .get("/api/diagnostics")
         .then((res) => {
           this.diagnostics = res.data;
+
+          for(const dx of this.diagnostics){
+            const url = new URL('performance/page_results', window.location);
+            url.searchParams.append('company', dx.company.name);
+            url.searchParams.append('test', dx.name);
+            dx['performanceUrl'] = url
+          }
         })
         .catch((err) => {
           console.log("error: %o", err);
