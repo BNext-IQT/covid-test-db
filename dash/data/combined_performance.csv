@@ -1,0 +1,171 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,target_specimen,notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Abbott Molecular Inc.,Alinity m SARS-CoV-2 assay,Molecular,clinical and LOD,47/47,55/57,NPS,,47,2,55,0,47,57,,1,0.9649122807017544,0.9244398288016114,1,0.8807899619581051,0.9903245386467442,FDA EUA
+"Applied DNA Sciences, Inc.",Linea COVID-19 Assay Kit,Molecular,clinical and LOD,62/63,62/67,"NPS, OPS",combined PPA/NPA for both specimens,62,5,62,1,63,67,,0.9841269841269841,0.9253731343283582,0.9154127455383438,0.9971925780924489,0.8369075523798613,0.967704427022072,FDA EUA
+BGI Genomics Co. Ltd,Real-Time Fluorescent RT-PCR Kit for Detecting SARS-CoV-2,Molecular,clinical and LOD,"BALF = 47/58
+Throat = 31/34
+RNA = 33/34
+Total = 111/126","BALF = 165/165
+Throat = 67/67
+RNA = 25/26
+Total = 257/258","BALF, throat swab, RNA-BALF",,111,1,257,15,126,258,Total,0.8809523809523809,0.9961240310077519,0.8128484274160289,0.9265139957210858,0.9783748428746022,0.9993154859348767,FDA EUA
+"BioCore Co., Ltd.",BioCore 2019-nCoV Real Time PCR Kit,Molecular,clinical and LOD,"sputum = 20/20
+OP/NP = 20/20","sputum = 40/40
+OP/NP = 40/40","sputum, OP/NP",combined PPA/NPA for OP and NP,40,0,80,0,40,80,Sputum,1,1,0.9123754607496077,1,0.9541802637354249,1,FDA EUA
+"BioFire Defense, LLC",BioFire COVID-19 Test,Molecular,clinical and LOD,9/10,5/5,NPS,,9,0,5,1,10,5,,0.9,1,0.595843614502428,0.9821242504842789,0.565508505247919,1,FDA EUA
+"BioFire Diagnostics, LLC",BioFire Respiratory Panel 2.1 (RP2.1),Molecular,clinical and LOD,"Site 1 = 14/15
+Site 2 = 15/15
+Site 3 = 20/20
+Total = 48/49","Site 1 = n/a
+Site 2 = n/a
+Site 3 = n/a
+Total = 49/49",NPS,"NPA was calculated using observed test result negative specimens to the
+expected result of Not Detected",48,0,49,1,49,49,Total,0.9795918367346939,1,0.8930623153224585,0.9963884204614694,0.927299703264095,1,FDA EUA
+"Bio-Rad Laboratories, Inc",Bio-Rad SARS-CoV-2 ddPCR Test,Molecular,clinical and LOD,"Thermo MagMAX = 37/39
+QIAamp = 35/37","Thermo MagMAX = 37/39
+QIAamp = 38/40",NPS,used 2 types of extraction on the same samples (i.e. 2 rounds of testing),72,4,75,4,76,79,Thermo Magmax,0.9473684210526315,0.9493670886075949,0.8723414339669252,0.9793449049841981,0.8769210451713462,0.9801362786852669,FDA EUA
+Center for Disease Control and Prevention,CDC 2019-nCoV Real-Time RT-PCR Diagnostic Panel (CDC),Molecular,clinical and LOD,13/13,104/104,"bronchial fluid/wash, buccal swab, nasal wash, NPS, throat
+swab, oral swab, sputum, OP swab",they have a lot more samples but gave specific PPA/NPA data on 117 respiratory specimens,13,0,104,0,13,104,,1,1,0.7718981569447083,1,0.9643773831248794,1,FDA EUA
+Fast Track Diagnostics Luxembourg S.á.r.l. (a Siemens Healthineers Company),FTD SARS-CoV-2,Molecular,clinical and LOD,44/44,30/30,NPS,,44,0,30,0,44,30,,1,1,0.919701682217986,1,0.8864829086095221,1,FDA EUA
+Fosun Pharma USA Inc.,Fosun COVID-19 RT-PCR Detection Kit,Molecular,clinical and LOD,"Sputum = 124/125
+throat = 79/79
+total = 203/204","sputum = 166/180
+tnroat = 213/213
+total = 379/393","sputum, throat swab",,203,14,379,1,204,393,Total,0.9950980392156863,0.9643765903307888,0.972759799694777,0.9991341811059866,0.9410989496377569,0.9786634946221191,FDA EUA
+Gnomegen LLC,Gnomegen COVID-19 RT-qPCR Detection Kit,Molecular,clinical and LOD,30/30,30/30,Upper Respiratory,doesn't say specific specimen target,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+"NeuMoDx Molecular, Inc.",NeuMoDx SARS-CoV-2 Assay,Molecular,clinical and LOD,"N288 = 10/10
+N96 = 5/5","N288 = 9/9
+N96 = 6/6",NPS,gave data for two different platforms (N288 and N96),15,0,15,0,15,15,N288,1,1,0.7961107336956521,1,0.7961107336956521,1,FDA EUA
+QIAGEN GmbH,QIAstat-Dx Respiratory SARS-CoV-2 Panel,Molecular,clinical and LOD,10/10,30/30,NPS,their total PPA also includes LOD samples so I just used the 10 samples that were not contrived/LOD,10,0,30,0,10,30,,1,1,0.7224598312333834,1,0.8864829086095221,1,FDA EUA
+Sansure BioTech Inc.,Novel Coronavirus (2019-nCoV) Nucleic Acid Diagnostic Kit(PCR-Fluorescence Probing),Molecular,clinical and LOD,50/53,191/193,OP,,50,2,191,3,53,193,,0.9433962264150944,0.9896373056994818,0.8462955106387369,0.9805636910726858,0.9630092727000983,0.9971536196966306,FDA EUA
+"Seasun Biomaterials, Inc.",AQ-TOP COVID-19 Rapid Detection Kit,Molecular,clinical and LOD,"NPS = 20/20
+sputum = 15/15","NPS = 25/25
+sputum = 15/15","NPS, sputum",,35,0,40,0,35,40,Nps,1,1,0.9010957324106112,1,0.9123754607496077,1,FDA EUA
+"Seegene, Inc.",Allplex 2019-nCoV Assay,Molecular,clinical and LOD,"NP/OP = 49/49
+sputum = 49/49","NP/OP = 94/101
+sputum = 92/95","NP/OP, sputum",,98,10,186,0,98,196,Np/Op,1,0.9489795918367347,0.9622786759045419,1,0.9086434180626701,0.9720540943671743,FDA EUA
+"SolGent Co., Ltd",DiaPlexQ Novel Coronavirus (2019-nCoV) Detection Kit,Molecular,clinical and LOD,sputum = 30/30,sputum = 30/30,sputum,,30,0,30,0,30,30,Sputum,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+dba SpectronRX,Hymon SARS-CoV-2 Test Kit,Molecular,clinical and LOD,31/31,45/45,"NP, OP",combined NP + OP data,31,0,45,0,31,45,,1,1,0.8897409992652461,1,0.9213457380593593,1,FDA EUA
+"Genetron Health (Beijing) Co., Ltd.",Genetron SARS-CoV-2 RNA Test,Molecular,clinical and LOD,50/50,34/35,OP,,50,1,34,0,50,35,,1,0.9714285714285714,0.9286499658256813,1,0.8546659090672869,0.9949386386341467,FDA EUA
+"Euroimmun US, Inc.",EURORealTime SARS-Cov-2,Molecular,clinical and LOD,48/50,30/30,OP,,48,0,30,2,50,30,,0.96,1,0.8653966212204534,0.9889613473391734,0.8864829086095221,1,FDA EUA
+"Illumina, Inc.",Illumina COVIDSeq Test,Molecular,clinical and LOD,53/54,38/39,NPS,,53,1,38,1,54,39,,0.9814814814814815,0.9743589743589743,0.902283346415128,0.996723596684648,0.8681871352137286,0.9954594139347627,FDA EUA
+Cue Health Inc,Cue COVID-19 Test,Molecular,clinical and LOD,6/6,35/38,unclear,"they list 3 clinical tests: a) prospective clinical study, b) study w/ contrived samples, and c) retrospective study. The one I chose was the prospective clinical study",6,3,35,0,6,38,,1,0.9210526315789473,0.6096569663469356,1,0.792003210797347,0.97278589860573506,FDA EUA
+TBG Biotechnology Corp.,ExProbe SARS-CoV-2 Testing Kit,Molecular,clinical and LOD,5/5,199/200,OP,,5,1,199,0,5,200,,1,0.995,0.565508505247919,1,0.9722256001302284,0.9991168540106338,FDA EUA
+RTA Laboratories Biological Products Pharmaceutical and Machinery Industry,Diagnovital SARS-CoV-2 Real-Time PCR Kit,Molecular,clinical and LOD,30/30,30/30,NPS,,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+"3B Blackbio Biotech India Ltd., a subsidiary of Kilpest India Ltd.",TRUPCR SARS-CoV-2 Kit,Molecular,clinical and LOD,30/31,29/30,"OP, NP",,30,1,29,1,31,30,,0.967741935483871,0.9666666666666667,0.8380554282383038,0.9942829259130556,0.8332924860304113,0.9940915620051426,FDA EUA
+"Jiangsu Bioperfectus Technologies Co., Ltd.",COVID-19 Coronavirus Real Time PCR Kit,Molecular,clinical and LOD,"NPS = 185/185
+throat = 153/153
+sputum = 82/82
+total = 420/420","NPS = 127/141
+throat = 276/280
+sputum = 120/129
+total = 523/550","NPS, sputum, throat swab",,420,27,523,0,420,550,Total,1,0.9509090909090909,0.9909362365562984,1,0.9295174382780369,0.9660454807948533,FDA EUA
+AAZ LMB,COVID-DUO®,Antibody,,98/134,71/71,IgG; IgM,,98,0,71,36,134,71,,0.7313432835820896,1,0.6506165480883507,0.7991750968142041,0.9486702582520952,1,FindDx
+AAZ LMB,COVID-PRESTO®,Antibody,,102/150,72/72,IgG; IgM,,102,0,72,48,150,72,,0.68,1,0.6016545135045652,0.749355876402976,0.9493470601886036,1,FindDx
+Advanced Biological Laboratories SA,UltraGene Combo2Screen SARS-CoV-2 Assay,Molecular,,8/10,2/2,Frozen RNA,Ct value reported was highest for a positively detected sample,8,0,2,2,10,2,,0.8,1,0.49015684672072335,0.9433190520193067,0.34237195288961925,1,FindDx
+Anatolia Geneworks,Bosphore Novel Coronavirus (2019-nCoV) Detection Kit,Molecular,,8/10,3/3,Frozen RNA,"Some samples needed repeating; results given are final outcomes from Table 1 & 2
+Ct given is highest value for a positively detected sample",8,0,3,2,10,3,,0.8,1,0.49015684672072335,0.9433190520193067,0.4384939195509822,1,FindDx
+"Anhui Deep Blue Medical Technology Co., Ltd",,Antibody,,7/21,440/604,IgG; IgM,,7,164,440,14,21,604,,0.3333333333333333,0.7284768211920529,0.17194536432683694,0.5462692434278971,0.6916466202740057,0.7624190442017393,FindDx
+"Assure Tech. (Hangzhou) Co., Ltd",COVID-19 IgG/IgM Rapid Test Device,Antibody,,25/32,13/13,IgG; IgM,Control: samples of individuals with selected PCR- or serologically-confirmed infections,25,0,13,7,32,13,,0.78125,1,0.6124466920955516,0.8897630306846815,0.7718981569447083,1,FindDx
+AutoBio Diagnostics,2019-nCoV IgG/IgM Rapid Test Cassette,Antibody,,184/249,233/248,IgG; IgM,,184,15,233,65,249,248,,0.7389558232931727,0.9395161290322581,0.6810661143099427,0.789584284991438,0.9026162387993176,0.963007232461983,FindDx
+AutoBio Diagnostics,Anti-SARS-CoV-2 Rapid Test,Antibody,,28/30,32/32,IgG; IgM,"Weak signals for IgM and IgG, together or separate, was considered positive.",28,0,32,2,30,32,,0.9333333333333333,1,0.7867618227892791,0.9815233646723066,0.8928172849426366,1,FindDx
+"Beijing Diagreat Biotechnologies Co., Ltd",2019-nCoV IgG/IgM Rapid Testing Kit,Antibody,,19/23,13/14,IgG; IgM,The time from symptoms onset to antibody testing ranged from 3 to 34 days.,19,1,13,4,23,14,,0.8260869565217391,0.9285714285714286,0.6286194521470433,0.9302145964938723,0.6853073044604219,0.9872781138877083,FindDx
+"Beijing Savant Biotechnology Co., Ltd",SARS-Cov-2 Antigen Fluorescence Rapid Detection Kit,Antigen,,13/78,31/31,Nucleocapsid protein,"Sensitivity analysis of subgroups with high and low viral loads
+
+Positive samples with:
+- Ct <25: 11/52 = 21.2%
+- Ct >25: 2/26 = 7.7%",13,0,31,65,78,31,,0.16666666666666666,1,0.10006850973163446,0.2645577927844454,0.8897409992652461,1,FindDx
+"Beijing Wantai Biological Pharmacy Enterprise Co., Ltd",Wantai SARS-CoV-2 IgG Rapid Test,Antibody,,69/80,208/209,IgG,,69,1,208,11,80,209,,0.8625,0.9952153110047847,0.7703270280036945,0.9214536632044885,0.9733993307735972,0.9991549067438804,FindDx
+"Beijing Wantai Biological Pharmacy Enterprise Co., Ltd",Wantai SARS-CoV-2 IgM Rapid Test,Antibody,,71/80,205/209,IgM,,71,4,205,9,80,209,,0.8875,0.9808612440191388,0.7998158913432244,0.9396738130517298,0.9518313764273897,0.9925328831910306,FindDx
+BGI Health (HK) Co. Ltd.,Real-time fluorescent RT-PCR kit for detecting 2019 nCoV,Molecular,,14/20,7/7,,LoD: 0.1 copies/uL on Ngene; 0.15 copies/uL on RdRP; 1.3 c/uL Egene,14,0,7,6,20,7,,0.7,1,0.4810232237710206,0.854524726031006,0.6456611570247934,1,FindDx
+BioGX,BioGX SARS-CoV-2 Open System Reagents for BD MAX™,Molecular,,7/7,3/3,Specimen without RNA extraction,,7,0,3,0,7,3,,1,1,0.6456611570247934,1,0.4384939195509822,1,FindDx
+BIOMAXIMA S.A.,SARS-CoV-2 Real Time PCR LAB-KIT™,Molecular,,7/7,1/1,Frozen RNA,Ct value reported for lowest detectable concentration of pooled sample,7,0,1,0,7,1,,1,1,0.6456611570247934,1,0.2065432914738929,1,FindDx
+bioMérieux SA,BioFire COVID-19 Test,Molecular,,11/11,4/4,Specimen without RNA extraction,Positive results corresponded to Ct range 19-35.9 on reference method,11,0,4,0,11,4,,1,1,0.7411599827511859,1,0.5100999795960008,1,FindDx
+bioMérieux SA,SARS-COV-2 R-GENE® (ref 423717),Molecular,,6/6,3/3,Specimen without RNA extraction,,6,0,3,0,6,3,,1,1,0.6096569663469356,1,0.4384939195509822,1,FindDx
+biosellal,Bio-T kit SARS-CoV-2,Molecular,,8/8,1/1,Frozen RNA,"Ct value reported is for weakest sample pool
+
+Amplification on ABI 7500 Fast
+
+Target: Gene E; ORF1ab",8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
+Boson Biotech,Rapid 2019-nCoV IgG/IgM Combo Test Card,Antibody,,10/20,5/5,IgG; IgM,,10,0,5,10,20,5,,0.5,1,0.2992949144298199,0.7007050855701801,0.565508505247919,1,FindDx
+"Cancer Rop Co., Ltd.",Q-Sens® 2019-nCoV Detection Kit,Molecular,,8/8,1/1,Frozen RNA,"Test provider: Medlane France
+
+Amplification on ABI 7500",8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
+"CerTest Biotec, S.L.",VIASURE SARS-CoV-2 Real Time PCR Detection Kit,Molecular,,17/18,2/2,Frozen RNA,Ct value is highest value across either loci detected positive.,17,0,2,1,18,2,,0.9444444444444444,1,0.7424220019799246,0.9901250641690755,0.34237195288961925,1,FindDx
+"CerTest Biotec, S.L.",VIASURE SARS-CoV-2 S gene Real Time PCR Detection Kit adapted for BD MAX™ System,Molecular,,5/7,3/3,Specimen without RNA extraction,,5,0,3,2,7,3,,0.7142857142857143,1,0.3589290901482126,0.9177828342909845,0.4384939195509822,1,FindDx
+"CTK Biotech, Inc.",OnSite COVID-19 IgG/IgM Rapid Test,Antibody,,27/30,32/32,IgG; IgM,"Weak signals for IgM and IgG, together or separate, was considered positive.",27,0,32,3,30,32,,0.9,1,0.7437855868473338,0.9654007400402838,0.8928172849426366,1,FindDx
+Diagnostics for the Real World Ltd,SAMBA II COVID-19 Test (near-POC NAT),Molecular,,90/91,81/81,Specimen without RNA extraction,,90,0,81,1,91,81,,0.989010989010989,1,0.9403491964093861,0.998057578676652,0.9547203258778711,1,FindDx
+"Dynamiker Biotechnology (Tianjin) Co., Ltd.",2019-nCoV IgG/IgM Rapid Test,Antibody,,2/20,5/5,IgG; IgM,,2,0,5,18,20,5,,0.1,1,0.027865893984153234,0.30103820641179335,0.565508505247919,1,FindDx
+EMG / MSE,SmartAmp Covid-19 (Lamp system),Molecular,,7/8,1/1,Fresh RNA extracted,Amplification compared between: LifeCase and LightCycler 480: same performance,7,0,1,1,8,1,,0.875,1,0.5291051942301386,0.9775830911367038,0.2065432914738929,1,FindDx
+"Epitope Diagnostics, Inc.",EDI™ Novel Coronavirus COVID-19 IgG ELISA Kit,Antibody,,96/130,98/108,IgG,,96,10,98,34,130,108,,0.7384615384615385,0.9074074074074074,0.6568484192537412,0.8063857321610657,0.8378998633039447,0.948927220714882,FindDx
+"Epitope Diagnostics, Inc.",EDI™ Novel Coronavirus COVID-19 IgM ELISA Kit,Antibody,,74/130,105/108,IgM,,74,3,105,56,130,108,,0.5692307692307692,0.9722222222222222,0.483326884526903,0.6511604497548151,0.9214952880548755,0.9905088320578554,FindDx
+"Epitope Diagnostics, Inc.",EDI™ Novel Coronavirus COVID-19 IgM ELISA Kit; EDI™ Novel Coronavirus COVID-19 IgG ELISA Kit,Antibody,,98/130,97/108,IgG; IgM,,98,11,97,32,130,108,,0.7538461538461538,0.8981481481481481,0.6732170876497237,0.8199031380499093,0.8267733718798517,0.9421712784112745,FindDx
+Eurobio Scientific,EurobioPlex SARS-CoV-2 Multiplex,Molecular,,7/7,1/1,Frozen RNA,,7,0,1,0,7,1,,1,1,0.6456611570247934,1,0.2065432914738929,1,FindDx
+EUROIMMUN AG,EI SARS-Cov-2 IgG assay,Antibody,,64/103,145/153,IgG,"Controls: symptomatic but PCR negative for SARS-CoV-2; pre-pandemic controls; patients  with  other  coronaviruses confirmed  by  molecular  testing  but  PCR  negative  for  COVID-19;  patients with Influenza A or B; specimens with potentially interfering antibodies 
+
+Analysis on an automated Inova QUANTA-Lyser 240 (Inova Diagnostics Inc.)",64,8,145,39,103,153,,0.6213592233009708,0.9477124183006536,0.5249169306073664,0.7090743237355113,0.9002224758254797,0.9732702709967919,FindDx
+EXCILONE SARL,Corona Virus Disease 2019 (COVID-19) Nucleic Acid Detection Kit,Molecular,,7/8,1/1,Frozen RNA,"Ct value reported for lowest detectable concentration of pooled sample
+
+Amplification by LightCycler 480 II outperformed ABI 7500; results here given for LightCycler 480 II",7,0,1,1,8,1,,0.875,1,0.5291051942301386,0.9775830911367038,0.2065432914738929,1,FindDx
+Fluxergy LLC,Fluxergy Sample-to-Answer SARS-CoV-2 RT-PCR,Molecular,,29/31,58/61,Specimen without RNA extraction,,29,3,58,2,31,61,,0.9354838709677419,0.9508196721311475,0.7928101168125357,0.9821255922249368,0.8650865720629857,0.9831343231647693,FindDx
+GeneFirst Ltd,The Novel Coronavirus (2019-nCoV) Nucleic Acid Test Kit,Molecular,,8/8,2/2,Frozen RNA,Ct value reported is for weakest sample pool,8,0,2,0,8,2,,1,1,0.6755843804891231,1,0.34237195288961925,1,FindDx
+GenMark Diagnostics,ePlex® SARS-CoV-2 Test,Molecular,,53/58,50/50,Specimen without RNA extraction,,53,0,50,5,58,50,,0.9137931034482759,1,0.8135613862273433,0.9626151680662066,0.9286499658256813,1,FindDx
+"Guangzhou Darui Biotechnology Co.,Ltd",2019 Novel Coronavirus (2019-nCoV) IgG Antibody Detection Kit (ELISA Method),Antibody,,15/65,64/64,IgG,,15,0,64,50,65,64,,0.23076923076923078,1,0.1451370845098885,0.3464493980820327,0.9433739770288436,1,FindDx
+"Guangzhou Darui Biotechnology Co.,Ltd",2019 Novel Coronavirus (2019-nCoV) IgM Antibody Detection Kit (ELISA Method),Antibody,,30/65,50/64,IgM,,30,14,50,35,65,64,,0.46153846153846156,0.78125,0.34590137149936684,0.5814681260137647,0.665669836692222,0.8649780253865025,FindDx
+"Guangzhou Wondfo Biotech Co., Ltd",Finecare SARS-CoV-2 Antibody test,Antibody,,195/249,244/248,Total Ig,,195,4,244,54,249,248,,0.7831325301204819,0.9838709677419355,0.7278508701128504,0.8298105273787014,0.9592695476883334,0.9937104206727315,FindDx
+"Hangzhou Clongene Biotech Co., Ltd",2019-nCoV IgG/IgM Rapid Test,Antibody,,11/31,840/998,IgG; IgM,,11,158,840,20,31,998,,0.3548387096774194,0.8416833667334669,0.21116447741565816,0.530523619571851,0.817730767247179,0.8630155702975986,FindDx
+ID.VET,ID HRM SARS-COV-2 Triplex,Molecular,,8/8,1/1,Frozen RNA,"Analysis of results through online software; no Ct values given, only binary outcome",8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
+idSOLUTIONS,IDNCOV-2,Molecular,,8/8,1/1,Frozen RNA,Ct value reported for lowest detectable concentration of pooled sample,8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
+ionebio,iLAMP Novel-CoV19 Test Kit,Molecular,,3/8,1/1,Frozen RNA,Ct value reported for lowest concentration pooled sample detected,3,0,1,5,8,1,,0.375,1,0.13684175946152105,0.6942621454161981,0.2065432914738929,1,FindDx
+Jiangsu Medomics Medical Technologies,SARS-CoV-2 rapid IgG-IgM Viva-DiagTM Test combined antibody test kit,Antibody,,21/70,107/120,IgG; IgM,,21,13,107,49,70,120,,0.3,0.8916666666666667,0.2053645673851015,0.4154453825618119,0.8234449199472612,0.9355892010589274,FindDx
+Luminex Corporation,NxTAG CoV Extended Panel,Molecular,,89/91,123/123,Frozen RNA,,89,0,123,2,91,123,,0.978021978021978,1,0.9233668616945964,0.9939521206928791,0.9697134063272617,1,FindDx
+Maccura Biotechnology,SARS-CoV-2 IgM/IgG,Antibody,,40/67,67/76,IgG; IgM,,40,9,67,27,67,76,,0.5970149253731343,0.881578947368421,0.4774111146058889,0.7060968806963065,0.7900058191184284,0.9364325288104708,FindDx
+Mammoth Biosciences,SARS-CoV-2 DETECTR,Molecular,,9/10,11/11,Fresh RNA extracted,"Note, manufacturer is among authors.",9,0,11,1,10,11,,0.9,1,0.595843614502428,0.9821242504842789,0.7411599827511859,1,FindDx
+Mesa Biotech Inc.,Accula SARS-CoV-2 POCT,Molecular,,34/50,50/50,Specimen without RNA extraction,,34,0,50,16,50,50,,0.68,1,0.5418944286372392,0.7924195590600059,0.9286499658256813,1,FindDx
+Mobidiag,Amplidiag COVID-19 Kit,Molecular,,8/8,2/2,Specimen without RNA extraction,"Ct value given is for weakest dilution pool.
+
+Amplification with BioRad CFX96",8,0,2,0,8,2,,1,1,0.6755843804891231,1,0.34237195288961925,1,FindDx
+Mobidiag,Novadiag® COVID-19 + InfA/B (lab-based & near-POC),Molecular,,7/8,1/1,Specimen without RNA extraction,"Binary result, no Ct",7,0,1,1,8,1,,0.875,1,0.5291051942301386,0.9775830911367038,0.2065432914738929,1,FindDx
+Mologic Ltd,SARS-CoV-2 ELISA Serology,Antibody,,238/270,549/564,IgG,"Note, manufacturer is among authors.
+
+Sensitivity: Total SARS-CoV-2 positive samples ranging from day 0 - 42 post laboratory diagnosis with RT-PCR
+
+Specificity: Total SARS-CoV-2 negative samples ranging from 2018 - 2019",238,15,549,32,270,564,,0.8814814814814815,0.973404255319149,0.837474595514217,0.9147851049841734,0.9565854066150538,0.9838176917137761,FindDx
+OPTIMedical,OPTI SARS-CoV-2 RT-PCR Test,Molecular,,8/8,1/1,Frozen RNA,"Ct value reported for lowest detectable concentration of pooled sample
+
+Amplification on LightCycler480",8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
+Ortho Clinical Diagnostics Inc.,VITROS® Immunodiagnostic Products Anti-SARS-CoV-2 IgG,Antibody,,72/93,488/490,IgG,"Data reported for early/intermediate/late phases likely refer to time since hospital admission rather than symptom onset.
+
+Controls: Negative samples; confounder + RIPL samples",72,2,488,21,93,490,,0.7741935483870968,0.9959183673469387,0.6793336026404616,0.8472995797935338,0.9852412462999619,0.9988799779954397,FindDx
+Ortho Clinical Diagnostics,VITROS® Immunodiagnostic Products Anti-SARS-CoV-2 Total,Antibody,,56/79,57/57,IgG; IgM,,56,0,57,23,79,57,,0.7088607594936709,1,0.6008691203651904,0.7974814667794325,0.9368589912165362,1,FindDx
+Prometheus Bio Inc.,2019-nCOV IgG/IgM Test Cassette (Whole blood/Serum/Plasma),Antibody,,4/20,5/5,IgG; IgM,,4,0,5,16,20,5,,0.2,1,0.08065635327120008,0.4160217220257599,0.565508505247919,1,FindDx
+QIAGEN GmbH,QIAstat-Dx Respiratory Panel 2019-nCoV,Molecular,,40/40,27/29,Specimen without RNA extraction,,40,2,27,0,40,29,,1,0.9310344827586207,0.9123754607496077,1,0.7803505240414808,0.9808791359020055,FindDx
+"RainSure Scientific Co., Ltd",RainSure COVID-19 dPCR Detection Kit (lab-based),Molecular,,25/28,76/80,,Target gene: ORF1ab,25,4,76,3,28,80,,0.8928571428571429,0.95,0.7280377463234292,0.9628823079452006,0.878375474489178,0.9803867628727044,FindDx
+RapiGEN Inc.,BIOCREDIT COVID-19 Ag,Antigen,,49/79,30/30,,"Note off-label use of universal transport medium with nasopharyngeal swab for index testing.
+
+Sensitivity analysis of subgroups with high and low viral loads
+
+Positive samples with:
+- Ct <25: 45/53 = 84.9%
+- Ct >25: 4/26 = 15.4%",49,0,30,30,79,30,,0.620253164556962,1,0.5100166778257305,0.7193366905302645,0.8864829086095221,1,FindDx
+Roche,Elecsys Anti‐SARS‐CoV‐2,Antibody,,78/93,0/472,IgG; IgM,,78,472,0,15,93,472,,0.8387096774193549,0,0.7507967733749072,0.8997500990435576,0,0.008073274804052441,FindDx
+Roche Ltd,Coronavirus LightMix® Modular SARS and Wuhan CoV E-gene assay,Molecular,,15/15,150/150,,,15,0,150,0,15,150,,1,1,0.7961107336956521,1,0.9750288608542812,1,FindDx
+"Sansure Biotech, Inc.",COVID-19 Nucleic Acid Detection Kit (Multiplex Real Time PCR),Molecular,,15/16,4/5,,,15,1,4,1,16,5,,0.9375,0.8,0.7167073163197013,0.9888809426916687,0.37552826411853873,0.9637768390302126,FindDx
+"Seegene, Inc.",Allplex 2019-nCoV assay,Molecular,,64/65,23/23,Frozen RNA,,64,0,23,1,65,23,,0.9846153846153847,1,0.9178652058620286,0.9972791254725134,0.8568788745827371,1,FindDx
+"Shanghai Fosun Long March Medical Science Co.,Ltd.",2019-Novel Coronavirus (2019-nCoV) RT-PCR Detection Kit,Molecular,,8/8,1/1,Frozen RNA,,8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
+"Shanghai Kehua Bio-engineering Co., Ltd",Diagnostic kit for SARS-CoV-2 IgM/IgG Antibody (Colloidal Gold),Antibody,,92/135,269/272,IgG; IgM,Control: PCR negative asymptomatic or symptomatic patients,92,3,269,43,135,272,,0.6814814814814815,0.9889705882352942,0.5987995476087827,0.7541206146480625,0.9680794359227837,0.9962421167364238,FindDx
+"Shanghai Outdo Biotech Co., Ltd",Novel Coronavirus (SARS-CoV-2) Antibody (IgM / IgG) Test (Colloidal Gold),Antibody,,69/97,51/53,IgG; IgM,,69,2,51,28,97,53,,0.711340206185567,0.9622641509433962,0.6144794974704171,0.7920987400823389,0.8724547684904088,0.9895899311661808,FindDx
+"Shenzhen Bioeasy Biotechnology Co., Ltd",Bioeasy 2019-Novel Coronavirus (2019-nCoV) Ag GICA Rapid Test (WITHDRAWN),Antigen,,9/37,11/11,,,9,0,11,28,37,11,,0.24324324324324326,1,0.13361203432663304,0.4011760249070895,0.7411599827511859,1,FindDx
+Shenzhen Yhlo Biotech Co. Ltd,iFlash-SARS-CoV-2 IgG,Antibody,,16/16,0/40,IgG,"The cutoff value for a positive result was 10, and samples with values greater than or equal to10 AU/mL were considered positive for SARS‐CoV‐2 infection.",16,40,0,0,16,40,,1,0,0.8063865817272802,1,0,0.08762453925039232,FindDx
+Shenzhen Yhlo Biotech Co. Ltd,iFlash-SARS-CoV-2 IgM,Antibody,,15/16,6/40,IgM,"The cutoff value for a positive result was 10, and samples with values greater than or equal to10 AU/mL were considered positive for SARS‐CoV‐2 infection.",15,34,6,1,16,40,,0.9375,0.15,0.7167073163197013,0.9888809426916687,0.07061091708507437,0.2907262603902002,FindDx
+"Snibe Co., Ltd (Shenzhen New Industries Biomedical Engineering Co., Ltd)",MAGLUMI 2019-nCoV IgM (CLIA),Antibody,,74/126,72/72,IgM,"Control: Pre-pandemic controls
+
+Cut-off value: 1.0 AU/mL",74,0,72,52,126,72,,0.5873015873015873,1,0.49999624827931977,0.6694409736896024,0.9493470601886036,1,FindDx
+STILLA,COVID-19 Multiplex Crystal Digital PCR detection kit,Molecular,,8/8,1/1,Frozen RNA,"Multiplex closed system amplification.
+Binary result only, no Ct provided. Method is quantitative",8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
+TECHNOGENETICS S.r.l,2019-nCoV IgM Antibody Diagnostic Kit (Colloidal gold),Antibody,,119/120,290/295,IgG; IgM,Controls: Pre-pandemic controls,119,5,290,1,120,295,,0.9916666666666667,0.9830508474576272,0.9543025846256776,0.9985274821693251,0.9609432195107845,0.9927392664617174,FindDx
+Thermo Fisher Scientific,TaqMan™ 2019-nCoV Assay Kit v1,Molecular,,8/8,1/1,Frozen RNA,Samples tested were a serial dilution pool of samples.,8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
+TIB Molbiol/Roche Diagnostics,LightMix Modular SARS-CoV-2 (COVID19),Molecular,,16/20,7/7,,LoD: 0.01 copies/uM Egene; 0.1 copies/uM Ngene; 0.15 copies/uM RdRP,16,0,7,4,20,7,,0.8,1,0.5839782779742402,0.9193436467287999,0.6456611570247934,1,FindDx
+Vircell S.L.,COVID-19 ELISA IgG,Antibody,,28/33,20/24,IgG,Control: samples of individuals with selected PCR- or serologically-confirmed infections,28,4,20,5,33,24,,0.8484848484848485,0.8333333333333334,0.6907978686153953,0.9334964074203904,0.6414652961213057,0.9332143199927108,FindDx
+"Xiamen InnoDx Biotech Co., Ltd.",CMIA-Ab,Antibody,,77/80,298/300,Total Ig,,77,2,298,3,80,300,,0.9625,0.9933333333333333,0.8954510802560568,0.9871656636992113,0.9760219257685386,0.9981698899670289,FindDx
+"Xiamen InnoDx Biotech Co., Ltd.",CMIA-IgM,Antibody,,69/80,298/300,IgM,,69,2,298,11,80,300,,0.8625,0.9933333333333333,0.7703270280036945,0.9214536632044885,0.9760219257685386,0.9981698899670289,FindDx
+YouSeq Ltd,YouSeq SARS-COV-2 qPCR Test,Molecular,,13/16,5/5,,LoD determined on Egene,13,0,5,3,16,5,,0.8125,1,0.5699064013154177,0.9340852122641324,0.565508505247919,1,FindDx
