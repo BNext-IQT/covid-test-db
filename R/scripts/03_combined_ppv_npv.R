@@ -24,13 +24,16 @@ load("R/data_derived/find_performance.RData")
 # ignoring multiple trial tests from find b/c I don't know how to handle them yet
 # adding a column for data source (EUA/FindDx)
 
-find_single_trial$source <- "FindDx"
+# find_single_trial$source <- "FindDx"
+
+find_formatted$source <- "FindDx"
 
 eua_performance$source <- "FDA EUA"
 
 combined_performance <- rbind(
   eua_performance,
-  find_single_trial
+  # find_single_trial
+  find_formatted
 )
 
 # remove any where sensitivity/specificity is NaN (which happens)

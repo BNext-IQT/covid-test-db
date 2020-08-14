@@ -7,7 +7,7 @@
 ################################################################################
 
 ### Parameters: Change by hand when needed ----
-path_to_data <- "R/data_raw/2020-06-29/Database_perform.xlsx"
+path_to_data <- "R/data_raw/2020-08-12/Database_Molecular_and_Sero.xlsx"
 
 ### Load libraries ----
 library(tidyverse)
@@ -19,8 +19,9 @@ source("R/scripts/00_accuracy_functions.R")
 
 
 ### Read in data table ----
-eua <- read_xlsx(path_to_data) %>%
+eua <- read_xlsx(path_to_data, sheet = "Combined Molecular Tests") %>%
   clean_names()
+
 
 #### Extract performance data ----
 # This part may be especially brittle
@@ -36,8 +37,8 @@ eua_performance <-
     clinical_lod_or_both,
     ppa,
     npa,
-    target_specimen,
-    notes
+    performance_target_specimen,
+    performance_notes
   ) 
 
 # parse performance data, where it exists
@@ -176,7 +177,7 @@ eua_performance <-
 # remove rows without clinical performance data
 eua_performance <- 
   eua_performance %>%
-  filter(! is.na(ppa)) %>%
+  filter(!(is.na(tp) | is.na(tn) | is.na(fp) | is.na(fn))) %>%
   mutate(
     sensitivity = tp / n_pos,
     specificity = tn / n_neg,

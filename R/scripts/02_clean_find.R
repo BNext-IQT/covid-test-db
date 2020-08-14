@@ -7,10 +7,12 @@
 ################################################################################
 
 ### Parameters: Change by hand when needed ----
-path_to_data <- list.files(
-  "R/data_raw/2020-07-01",
-  full.names = TRUE
-)
+# path_to_data <- list.files(
+#   "R/data_raw/2020-07-01",
+#   full.names = TRUE
+# )
+
+path_to_data <- "R/data_raw/2020-08-12/FIND_COVIDDxData_Aug 5.xlsx"
 
 ### Load libraries ----
 library(tidyverse)
@@ -30,12 +32,12 @@ find <-
         company = manufacturer,
         test_name,
         test_type,
-        target_specimen = target,
+        performance_target_specimen = target,
         n_pos = total_positive,
         n_neg = total_negative,
         tp = true_positive,
         tn = true_negative,
-        notes = comments
+        performance_notes = comments
       ) %>%
       map(.f = function(x) {
         x[x == "Not available"] <- NA
@@ -63,8 +65,8 @@ find <-
         clinical_lod_or_both,
         ppa,
         npa,
-        target_specimen,
-        notes,
+        performance_target_specimen,
+        performance_notes,
         tp,
         fp,
         tn,
@@ -113,19 +115,41 @@ conf_ints <-
 find <- 
   cbind(find, conf_ints)
 
-### split data into tests with only one trial and tests with many trials ----
+
+### get one trial per test ----
+# For tests with multiple trials, we take the one that has the largest sample size
 
 find <- by(find, INDICES = paste(find$company, find$test_name), function(x) x)
 
-num_trials <- sapply(find, nrow)
+find_formatted <- lapply(
+  find,
+  function(x) {
+    row <- which.max(x$n_pos + x$n_neg)
+    row <- row[1]
+    x[row, ]
+  }
+)
 
-find_single_trial <- do.call(rbind, find[num_trials == 1]) %>% as_tibble()
+find_formatted <- do.call(rbind, find_formatted)
 
-find_multiple_trial <- do.call(rbind, find[num_trials > 1]) %>% as_tibble()
-
-### save result ----
 save(
-  find_single_trial,
-  find_multiple_trial,
+  find_formatted,
   file = "R/data_derived/find_performance.RData"
 )
+
+# ### split data into tests with only one trial and tests with many trials ----
+# 
+# find <- by(find, INDICES = paste(find$company, find$test_name), function(x) x)
+# 
+# num_trials <- sapply(find, nrow)
+# 
+# find_single_trial <- do.call(rbind, find[num_trials == 1]) %>% as_tibble()
+# 
+# find_multiple_trial <- do.call(rbind, find[num_trials > 1]) %>% as_tibble()
+# 
+# ### save result ----
+# save(
+#   find_single_trial,
+#   find_multiple_trial,
+#   file = "R/data_derived/find_performance.RData"
+# )
