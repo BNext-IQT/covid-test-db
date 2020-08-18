@@ -31,15 +31,6 @@ services:
     image: 'covid-test-db/ui:latest'
     networks:
       - api
-  dash:
-    container_name: dash
-    hostname: picklejar
-    restart: always
-    build:
-      context: dash
-    image: 'covid-test-db/dash:latest'
-    networks:
-      - api
   nginx:
     restart: always
     image: nginx:latest
