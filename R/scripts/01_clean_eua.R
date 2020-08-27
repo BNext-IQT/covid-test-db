@@ -7,7 +7,7 @@
 ################################################################################
 
 ### Parameters: Change by hand when needed ----
-path_to_data <- "R/data_raw/2020-08-12/Database_Molecular_and_Sero.xlsx"
+path_to_data <- "R/data_raw/2020-08-26/Database_Molecular_and_Sero.xlsx"
 
 ### Load libraries ----
 library(tidyverse)

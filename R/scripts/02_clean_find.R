@@ -12,7 +12,7 @@
 #   full.names = TRUE
 # )
 
-path_to_data <- "R/data_raw/2020-08-12/FIND_COVIDDxData_Aug 5.xlsx"
+path_to_data <- "R/data_raw/2020-08-26/COVIDDxData.xlsx"
 
 ### Load libraries ----
 library(tidyverse)

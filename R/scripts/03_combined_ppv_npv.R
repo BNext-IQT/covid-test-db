@@ -30,10 +30,38 @@ find_formatted$source <- "FindDx"
 
 eua_performance$source <- "FDA EUA"
 
+
+# filter out any companies in find that also appear in eua
+# do in 2 steps: 1. change find names to eua names 2. remove any matching cos
+# why? We have several instances where company and test names are slightly different
+# between the two sources. The point of find is to suppliment where we don't have 
+# data from fda to expand # of tests with performance data. tracking all nitty gritty
+# differences in test names turns into a mess (e.g. are two near-named tests actually 
+# the same or is one a modification of the other?) Stick with FDA companies at the
+# risk of losing a test that might not have EUA approval.
+find_formatted <-
+  find_formatted %>%
+  mutate(
+    company = case_when(
+      company == "Abbott Diagnostics Inc." ~ "Abbott Diagnostics Scarborough, Inc.",
+      company == "Abbott Molecular" ~ "Abbott Molecular Inc.",
+      company == "altona Diagnostics" ~ "altona Diagnostics GmbH",
+      company == "DiaSorin Molecular, LLC" ~ "DiaSorin Molecular LLC",
+      company == "GenMark Diagnostics" ~ "GenMark Diagnostics, Inc.",
+      company == "GenMark Diagnostics, Inc" ~ "GenMark Diagnostics, Inc.",
+      company == "Hologic" ~ "Hologic, Inc.",
+      company == "Jiangsu Bioperfectus Technologies Co. Ltd" ~ "Jiangsu Bioperfectus Technologies Co., Ltd.",
+      company == "Roche Molecular Diagnostics" ~ "Roche Molecular Systems, Inc. (RMS)",
+      company == "Sansure Biotech, Inc." ~ "Sansure BioTech Inc.",
+      TRUE ~ company
+    )
+  )
+
+
 combined_performance <- rbind(
   eua_performance,
   # find_single_trial
-  find_formatted
+  filter(find_formatted, ! company %in% eua_performance$company)
 )
 
 # remove any where sensitivity/specificity is NaN (which happens)
