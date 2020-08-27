@@ -1,3 +1,3 @@
-module gitlab.iqt.org/rashley/covid-test-db/models/diagnostic_type
+module github.com/BNext-IQT/covid-test-db/models/diagnostic_type
 
 go 1.14
