@@ -13,7 +13,7 @@
     "laravel-vue-datatable": "0.5.12",
     "semantic-ui-vue": "0.10.1",
     "vue": "2.6.11",
-    "vue-good-table": "2.19.3",
+    "vue-good-table": "2.21.0",
     "vue-js-modal": "2.0.0-rc.3"
   },
   "devDependencies": {
