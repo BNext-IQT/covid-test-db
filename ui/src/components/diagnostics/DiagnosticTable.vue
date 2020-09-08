@@ -59,7 +59,6 @@
         return (data && filterString === 'Y') || (!data && filterString === 'N')
       },
       getColumns(){
-        console.log(this.diagnostics)
         const stl = this.sampleTypeList.length > 0 ? this.sampleTypeList.map((i) => {
           return i.name
         }).sort() : ['Loading...'];

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div class="logos">
-      <img src="./assets/b.next logo.png" height="50px">
-      <img src="./assets/IQT_Logo.png" height="50px">
+      <img src="./assets/b.next logo.png" height="72px" width="280px">
+      <img src="./assets/IQT_Logo.png" height="72px" width="200px">
     </div>
     <h1>COVID-19 Testing Database</h1>
     <Diagnostics />
