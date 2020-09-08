@@ -19,7 +19,7 @@ replace github.com/BNext-IQT/covid-test-db/models/pcr_platform => ../models/pcr-
 go 1.14
 
 require (
-	github.com/360EntSecGroup-Skylar/excelize v1.4.1
+	github.com/360EntSecGroup-Skylar/excelize/v2/v2 v2.3.0
 	github.com/360EntSecGroup-Skylar/excelize/v2 v2.1.0 // indirect
 	github.com/PuerkitoBio/goquery v1.5.1
 	github.com/gocolly/colly/v2 v2.1.0
