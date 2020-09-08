@@ -27,7 +27,7 @@ require (
 	github.com/BNext-IQT/covid-test-db/models/company v0.0.1 // indirect
 	github.com/BNext-IQT/covid-test-db/models/diagnostic v0.0.1
 	github.com/BNext-IQT/covid-test-db/models/diagnostic_target_type v0.0.1 // indirect
-	github.com/BNext-IQT/covid-test-db/models/diagnostic_type v0.0.1 // indirect
+	github.com/BNext-IQT/covid-test-db/models/diagnostic_type v0.0.1
 	github.com/BNext-IQT/covid-test-db/models/pcr_platform v0.0.1
 	github.com/BNext-IQT/covid-test-db/models/poc v0.0.1
 	github.com/BNext-IQT/covid-test-db/models/regulatory_approval_type v0.0.1

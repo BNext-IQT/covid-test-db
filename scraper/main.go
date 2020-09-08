@@ -415,12 +415,12 @@ func main() {
     log.Println("Excel file processing started")
     
     // open excel file
-    f, err := excelize.OpenFile("Database_Molecular_and_Sero.xlsx")
+    f, err := excelize.OpenFile("Database_Master.xlsx")
     if err != nil {
         log.Println(err.Error())
         return
     }
-    rows := f.GetRows("Combined Molecular Tests")
+    rows := f.GetRows("Combined Molec&Antigen Tests")
     for idx, row := range rows {
         log.Printf("Processing row %d of %d \n", idx, len(rows))
         _, dxErr := getDiagnosticFromRow(row)
