@@ -1,6 +1,8 @@
 package diagnostic
 
 import (
+    "time"
+
     "github.com/google/uuid"
     
     // Import GORM-related packages.
@@ -40,6 +42,10 @@ type Diagnostic struct {
     CostPerKit          float64                                             `json:"costPerKit" gorm:"column:cost_per_kit; type:numeric; null"`
     InStock             bool                                                `json:"inStock" gorm:"column:in_stock; type:bool; not_null"`
     LeadTime            int64                                               `json:"leadTime" gorm:"column:lead_time; type:int; null"`
+    CreatedBy           string                                              `json:"createdBy" gorm:"column:created_by; type:string; null"`
+    Created             time.Time                                           `json:"created" gorm:"column:created; type:datetimetz; null"`
+    UpdatedBy           string                                              `json:"updatedBy" gorm:"column:updated_by; type:string; null"`
+    Updated             time.Time                                           `json:"updated" gorm:"column:updated; type:datetimetz; null"`
     RegulatoryApprovals	[]regulatory_approval_type.RegulatoryApprovalType   `json:"regulatoryApprovals" gorm:"many2many:diagnostic_regulatory_approvals;"`
     DiagnosticTargets	[]diagnostic_target_type.DiagnosticTargetType 	    `json:"diagnosticTargets" gorm:"many2many:diagnostic_targets;"`
     SampleTypes         []sample_type.SampleType                            `json:"sampleTypes" gorm:"many2many:diagnostic_sample_types;"`
