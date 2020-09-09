@@ -234,6 +234,8 @@ func getSampleTypes(names []string)([]sample_type.SampleType, []error){
         if(err == nil){
             types = append(types, *st)
         } else {
+            log.Println("Error finding SampleType %s", name)
+            log.Println(err)
             errs = append(errs, err)
         }
     }
@@ -252,6 +254,8 @@ func getPcrPlatforms(names []string)([]pcr_platform.PcrPlatform, []error){
         if(err == nil){
             pcrs = append(pcrs, *st)
         } else {
+            log.Println("Error finding PCR Platform %s", name)
+            log.Println(err)
             errs = append(errs, err)
         }
     }
@@ -270,6 +274,8 @@ func getTargetTypes(names []string)([]diagnostic_target_type.DiagnosticTargetTyp
         if(err == nil){
             types = append(types, *tt)
         } else {
+            log.Println("Error finding TargetType %s", name)
+            log.Println(err)
             errs = append(errs, err)
         }
     }
@@ -351,6 +357,7 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
     
     diagnosticType, err := getDiagnosticType(strings.TrimSpace(row[mapping["test_type"]]))
     if(err != nil){
+        log.Println("Error finding DiagnosticType %s", row[mapping["test_type"]])
         log.Println(err)
         return nil, err
     }
@@ -358,6 +365,7 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
     approvals, err := getApprovals(strings.TrimSpace(row[mapping["regulatory_status"]]))
 
     if(err != nil){
+        log.Println("Error finding RegulatoryApproval %s", row[mapping["regulatory_status"]])
         log.Println(err)
         return nil, err
     }
