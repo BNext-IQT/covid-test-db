@@ -43,9 +43,9 @@ type Diagnostic struct {
     InStock             bool                                                `json:"inStock" gorm:"column:in_stock; type:bool; not_null"`
     LeadTime            int64                                               `json:"leadTime" gorm:"column:lead_time; type:int; null"`
     CreatedBy           string                                              `json:"createdBy" gorm:"column:created_by; type:string; null"`
-    Created             time.Time                                           `json:"created" gorm:"column:created; type:datetimetz; null"`
+    Created             time.Time                                           `json:"created" gorm:"column:created; type:datetimetz; not null"`
     UpdatedBy           string                                              `json:"updatedBy" gorm:"column:updated_by; type:string; null"`
-    Updated             time.Time                                           `json:"updated" gorm:"column:updated; type:datetimetz; null"`
+    Updated             time.Time                                           `json:"updated" gorm:"column:updated; type:datetimetz; not null"`
     RegulatoryApprovals	[]regulatory_approval_type.RegulatoryApprovalType   `json:"regulatoryApprovals" gorm:"many2many:diagnostic_regulatory_approvals;"`
     DiagnosticTargets	[]diagnostic_target_type.DiagnosticTargetType 	    `json:"diagnosticTargets" gorm:"many2many:diagnostic_targets;"`
     SampleTypes         []sample_type.SampleType                            `json:"sampleTypes" gorm:"many2many:diagnostic_sample_types;"`
@@ -94,6 +94,8 @@ func Create(
         DiagnosticTargets: targets,
         SampleTypes: sampleTypes,
         PcrPlatforms: pcrPlatforms,
+        Created: time.Now(),
+        Updated: time.Now(),
     }
 
     err := db.Create(toInsert).Error;
@@ -105,6 +107,7 @@ func Create(
 }
 
 func Update(db *gorm.DB, toUpdate *Diagnostic) (*Diagnostic, error) {
+    toUpdate.Updated = time.Now();
     err := db.Save(toUpdate).Error;
 
     if err != nil {
