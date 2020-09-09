@@ -23,6 +23,9 @@ co_names_filepath = os.path.join(DATA_DIR, co_names_json)
 with open(co_names_filepath) as fi:
   co_name_datafile_dict = json.load(fi)
 
+# Remove key for unique tests from dictionary
+del co_name_datafile_dict['n_unique_tests']
+
 # Get unique company names
 unique_companies = list(co_name_datafile_dict.keys())
 n_unique_companies = len(unique_companies)
