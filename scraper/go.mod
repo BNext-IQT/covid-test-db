@@ -19,12 +19,7 @@ replace github.com/BNext-IQT/covid-test-db/models/pcr_platform => ../models/pcr-
 go 1.14
 
 require (
-	github.com/360EntSecGroup-Skylar/excelize/v2/v2 v2.3.0
-	github.com/360EntSecGroup-Skylar/excelize/v2 v2.1.0 // indirect
-	github.com/PuerkitoBio/goquery v1.5.1
-	github.com/gocolly/colly/v2 v2.1.0
-	github.com/google/uuid v1.1.1 // indirect
-	github.com/jinzhu/gorm v1.9.16
+	github.com/360EntSecGroup-Skylar/excelize/v2 v2.3.0 // indirect
 	github.com/BNext-IQT/covid-test-db/models/company v0.0.1
 	github.com/BNext-IQT/covid-test-db/models/diagnostic v0.0.1
 	github.com/BNext-IQT/covid-test-db/models/diagnostic_target_type v0.0.1
@@ -33,4 +28,8 @@ require (
 	github.com/BNext-IQT/covid-test-db/models/poc v0.0.1
 	github.com/BNext-IQT/covid-test-db/models/regulatory_approval_type v0.0.1
 	github.com/BNext-IQT/covid-test-db/models/sample_type v0.0.1
+	github.com/PuerkitoBio/goquery v1.5.1
+	github.com/gocolly/colly/v2 v2.1.0
+	github.com/google/uuid v1.1.1 // indirect
+	github.com/jinzhu/gorm v1.9.16
 )
