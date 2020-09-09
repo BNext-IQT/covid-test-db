@@ -23,7 +23,7 @@ RUN go build -o scraper .
 
 # Move to /dist directory as the place for resulting binary folder
 WORKDIR /dist
-COPY scraper/Database_Molecular_and_Sero.xlsx .
+COPY scraper/Database_Master.xlsx .
 
 # Copy binary from build to main folder
 RUN cp /build/scraper .
