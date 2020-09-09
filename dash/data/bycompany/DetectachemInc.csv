@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Detectachem Inc.,MobileDetect Bio BCC19 (MD-Bio BCC19) Test Kit,Molecular Test Kit,Both,43/44,63/63,NP,,43,0,63,1,44,63,,0.9772727272727272,1.0,0.8819202086846236,0.9959768516143629,0.9425268096514744,1.0,FDA EUA

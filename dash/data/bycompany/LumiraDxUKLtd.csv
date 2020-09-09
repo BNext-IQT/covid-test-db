@@ -1,0 +1,3 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+LumiraDx UK Ltd.,LumiraDx SARS-CoV-2 RNA STAR,Molecular Test Kit,Both,33/34,30/31,NP,,33,1,30,1,34,31,,0.9705882352941176,0.967741935483871,0.8508409778365518,0.9947892280744032,0.8380554282383038,0.9942829259130556,FDA EUA
+LumiraDx UK Ltd.,LumiraDx SARS-CoV-2 Ag Test,Antigen Test,Both,81/83,168/174,nasal swab,,81,6,168,2,83,174,,0.9759036144578314,0.9655172413793104,0.9163352895899236,0.9933669729202098,0.926820548672896,0.9841024299777684,FDA EUA

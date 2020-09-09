@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Ethos Laboratories,Ethos Laboratories SARS-CoV-2 MALDI-TOF Assay,Lab-performed test or service,Both,52/53,52/54,NP,,52,2,52,1,53,54,,0.981132075471698,0.9629629629629628,0.9005685649885059,0.9966616326132506,0.8746459065659669,0.9897838464145868,FDA EUA

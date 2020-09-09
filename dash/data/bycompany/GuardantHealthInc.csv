@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Guardant Health, Inc.",Guardant-19,Lab-performed test or service,Both,64/67,59/60,NP,,64,1,59,3,67,60,,0.9552238805970148,0.9833333333333332,0.8764196748946068,0.984656303061848,0.9114466177322053,0.9970519161391264,FDA EUA

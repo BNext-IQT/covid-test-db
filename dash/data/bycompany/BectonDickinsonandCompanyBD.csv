@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Becton, Dickinson and Company (BD)",BD Veritor System for Rapid Detection of SARS-CoV-2,Antigen Test,Both,26/31,195/195,nasal swab,,26,0,195,5,31,195,,0.8387096774193549,1.0,0.6736529727502112,0.9290748009456008,0.9806800991341852,1.0,FDA EUA

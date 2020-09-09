@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Eli Lilly and Company,Lilly SARS-CoV-2 Assay,Lab-performed test or service,Both,14/14,14/15,NP,,14,1,14,0,14,15,,1.0,0.9333333333333332,0.7846829880728186,1.0,0.70182922447576,0.9881334113938052,FDA EUA

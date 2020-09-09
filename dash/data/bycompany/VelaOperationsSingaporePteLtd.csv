@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Vela Operations Singapore Pte Ltd,ViroKey SARS-CoV-2 RT-PCR Test,Molecular Test Kit,Both,35/36,78/82,NP,,35,4,78,1,36,82,,0.9722222222222222,0.951219512195122,0.8582996626496919,0.9950797197044304,0.8811836534035687,0.9808692440261156,FDA EUA

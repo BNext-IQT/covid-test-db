@@ -143,8 +143,8 @@ layout = html.Div(children=[
                className='three columns',
               ),
               id='results-link',
-              href="{}/home".format(APP_PATH),
-              target="_blank"
+              href="{}/page_results".format(APP_PATH),
+              target="_self"
         ),
 
         html.Br(),
@@ -160,8 +160,8 @@ layout = html.Div(children=[
                className='three columns',
               ),
               id='results-link',
-              href="{}/home".format(APP_PATH),
-              target="_blank"
+              href="{}/page_results".format(APP_PATH),
+              target="_self"
         ),
 
         html.Hr(),

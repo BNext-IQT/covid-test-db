@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Cuur Diagnostics,Cuur Diagnostics SARS-CoV-2 Molecular Assay,Lab-performed test or service,Both,48/50,50/50,NP,data are the sum of comparisons vs two other assays,48,0,50,2,50,50,,0.96,1.0,0.8653966212204534,0.9889613473391734,0.9286499658256812,1.0,FDA EUA

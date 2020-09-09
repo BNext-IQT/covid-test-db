@@ -1,0 +1,8 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+RapiGEN Inc.,BIOCREDIT COVID-19 Ag,Antigen,,49/79,30/30,,"Note off-label use of universal transport medium with nasopharyngeal swab for index testing.
+
+Sensitivity analysis of subgroups with high and low viral loads
+
+Positive samples with:
+- Ct <25: 45/53 = 84.9%
+- Ct >25: 4/26 = 15.4%",49,0,30,30,79,30,,0.620253164556962,1.0,0.5100166778257305,0.7193366905302645,0.8864829086095221,1.0,FindDx

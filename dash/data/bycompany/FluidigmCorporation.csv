@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Fluidigm Corporation,Advanta Dx SARS-CoV-2 RT-PCR Assay,Molecular Test Kit,Both,43/43,34/34,saliva,,43,0,34,0,43,34,,1.0,1.0,0.9179874299767729,1.0,0.8984820937803899,1.0,FDA EUA
