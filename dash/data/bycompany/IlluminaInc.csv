@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Illumina, Inc.",Illumina COVIDSeq Test,Molecular Test Kit,Both,53/54,38/39,NPS,,53,1,38,1,54,39,,0.9814814814814816,0.9743589743589745,0.902283346415128,0.9967235966846479,0.8681871352137286,0.9954594139347628,FDA EUA

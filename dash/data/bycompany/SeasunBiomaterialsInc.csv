@@ -1,0 +1,4 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Seasun Biomaterials, Inc.",AQ-TOP COVID-19 Rapid Detection Kit,Molecular Test Kit,Both,"NPS = 20/20
+sputum = 15/15","NPS = 25/25
+sputum = 15/15","NPS, sputum",,35,0,40,0,35,40,Nps,1.0,1.0,0.9010957324106112,1.0,0.9123754607496076,1.0,FDA EUA

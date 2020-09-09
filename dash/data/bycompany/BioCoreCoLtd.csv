@@ -1,0 +1,4 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"BioCore Co., Ltd.",BioCore 2019-nCoV Real Time PCR Kit,Molecular Test Kit,Both,"sputum = 20/20
+OP/NP = 20/20","sputum = 40/40
+OP/NP = 40/40","sputum, OP/NP",combined PPA/NPA for OP and NP,40,0,80,0,40,80,Sputum,1.0,1.0,0.9123754607496076,1.0,0.9541802637354247,1.0,FDA EUA

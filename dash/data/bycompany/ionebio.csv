@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+ionebio,iLAMP Novel-CoV19 Test Kit,Molecular,,3/8,1/1,Frozen RNA,Ct value reported for lowest concentration pooled sample detected,3,0,1,5,8,1,,0.375,1.0,0.13684175946152105,0.6942621454161981,0.2065432914738929,1.0,FindDx

@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+SpectronRX,Hymon SARS-CoV-2 Test Kit,Molecular Test Kit,Both,31/31,45/45,"NP, OP",combined NP + OP data,31,0,45,0,31,45,,1.0,1.0,0.8897409992652461,1.0,0.9213457380593592,1.0,FDA EUA

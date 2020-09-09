@@ -1,0 +1,4 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"University of Texas MD Anderson Cancer Center, Molecular Diagnostics Laboratory",MD Anderson High-throughput SARS-CoV-2 RT-PCR Assay,Lab-performed test or service,Both,"Assay 1 = 26/26
+Assay 2 = 5/5","Assay 1 = 22/22
+Assay 2 = 6/6",NPS,clinical eval was done using 2 different EUA assays,31,0,28,0,31,28,Assay 1,1.0,1.0,0.8897409992652461,1.0,0.8793527963418923,1.0,FDA EUA

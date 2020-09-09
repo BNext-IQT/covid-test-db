@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Roche Ltd,Coronavirus LightMix® Modular SARS and Wuhan CoV E-gene assay,Molecular,,15/15,150/150,,,15,0,150,0,15,150,,1.0,1.0,0.7961107336956521,1.0,0.9750288608542812,1.0,FindDx

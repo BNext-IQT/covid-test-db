@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+AusDiagnostics,"SARS-CoV-2, Influenza and RSV 8-well",Molecular,,53/53,621/622,Fresh RNA extracted,,53,1,621,0,53,622,,1.0,0.9983922829581994,0.9324156955469234,1.0,0.9909498594088342,0.999716149370384,FindDx

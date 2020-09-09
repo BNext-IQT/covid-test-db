@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Enzo Life Sciences, Inc.",AMPIPROBE SARS-CoV-2 Test System,Molecular Test Kit,Both,51/53,144/147,NPS,,51,3,144,2,53,147,,0.9622641509433962,0.979591836734694,0.8724547684904088,0.9895899311661808,0.9417197862349443,0.9930356128061688,FDA EUA

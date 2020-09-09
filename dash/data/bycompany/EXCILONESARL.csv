@@ -1,0 +1,4 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+EXCILONE SARL,Corona Virus Disease 2019 (COVID-19) Nucleic Acid Detection Kit,Molecular,,7/8,1/1,Frozen RNA,"Ct value reported for lowest detectable concentration of pooled sample
+
+Amplification by LightCycler 480 II outperformed ABI 7500; results here given for LightCycler 480 II",7,0,1,1,8,1,,0.875,1.0,0.5291051942301386,0.9775830911367038,0.2065432914738929,1.0,FindDx

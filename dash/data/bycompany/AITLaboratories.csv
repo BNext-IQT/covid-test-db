@@ -1,0 +1,8 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+AIT Laboratories,SARS-CoV-2 Test,Lab-performed test or service,Both,"Sputum = 29/29
+Nasal = 13/13
+Op = 8/8
+Total = 50/50","Sputum = 27/27
+Nasal = 13/13
+Op = 10/10
+Total = 50/50","NP, OP",,50,0,50,0,50,50,Total,1.0,1.0,0.9286499658256812,1.0,0.9286499658256812,1.0,FDA EUA

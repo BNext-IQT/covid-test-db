@@ -1,0 +1,4 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Yale New Haven Hospital, Clinical Virology Laboratory",SARS-CoV-2 PCR test,Lab-performed test or service,Both,28/33,89/91,Sputum,"Initially 124 NP swab samples were tested on the day of collection
+using the EUA authorized CDC assay. Of these NP samples, 33 (26.6%) were
+PCR-positive",28,2,89,5,33,91,,0.8484848484848485,0.978021978021978,0.6907978686153953,0.9334964074203904,0.9233668616945964,0.9939521206928792,FDA EUA

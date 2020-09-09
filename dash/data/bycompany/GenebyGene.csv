@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Gene by Gene,Gene By Gene SARS-CoV-2 Detection Test,Lab-performed test or service,Both,35/35,36/36,NPS,,35,0,36,0,35,36,,1.0,1.0,0.9010957324106112,1.0,0.9035781695514236,1.0,FDA EUA

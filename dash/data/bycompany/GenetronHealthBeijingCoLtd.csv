@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Genetron Health (Beijing) Co., Ltd.",Genetron SARS-CoV-2 RNA Test,Molecular Test Kit,Both,50/50,34/35,OP,,50,1,34,0,50,35,,1.0,0.9714285714285714,0.9286499658256812,1.0,0.8546659090672869,0.9949386386341468,FDA EUA

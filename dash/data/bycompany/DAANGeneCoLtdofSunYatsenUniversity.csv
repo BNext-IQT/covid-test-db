@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"DAAN Gene Co., Ltd of Sun Yat-sen University",Novel Coronavirus (2019-nCoV) Real Time Multiplex RT-PCR kit,Molecular,,33/42,200/200,,,33,0,200,9,42,200,,0.7857142857142857,1.0,0.6405986210195627,0.8829433146894876,0.9811539940816791,1.0,FindDx

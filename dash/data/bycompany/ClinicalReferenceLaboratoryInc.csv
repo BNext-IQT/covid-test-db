@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Clinical Reference Laboratory, Inc.",CRL Rapid Response,Lab-performed test or service,Both,32/32,27/27,saliva,,32,0,27,0,32,27,,1.0,1.0,0.8928172849426366,1.0,0.8754409628553641,1.0,FDA EUA

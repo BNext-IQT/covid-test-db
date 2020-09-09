@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Color Genomics, Inc.",Color SARS Cov-2 Diagnostic Assay,Lab-performed test or service,Both,46/46,46/46,NS,,46,0,46,0,46,46,,1.0,1.0,0.9229238226702192,1.0,0.9229238226702192,1.0,FDA EUA

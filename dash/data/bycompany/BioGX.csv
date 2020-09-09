@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+BioGX,BioGX SARS-CoV-2 Open System Reagents for BD MAX™,Molecular,,7/7,3/3,Specimen without RNA extraction,,7,0,3,0,7,3,,1.0,1.0,0.6456611570247934,1.0,0.4384939195509822,1.0,FindDx

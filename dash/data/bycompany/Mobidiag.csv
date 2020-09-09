@@ -1,0 +1,5 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Mobidiag,Amplidiag COVID-19 Kit,Molecular,,8/8,2/2,Specimen without RNA extraction,"Ct value given is for weakest dilution pool.
+
+Amplification with BioRad CFX96",8,0,2,0,8,2,,1.0,1.0,0.6755843804891231,1.0,0.34237195288961925,1.0,FindDx
+Mobidiag,Novadiag® COVID-19 + InfA/B (lab-based & near-POC),Molecular,,7/8,1/1,Specimen without RNA extraction,"Binary result, no Ct",7,0,1,1,8,1,,0.875,1.0,0.5291051942301386,0.9775830911367038,0.2065432914738929,1.0,FindDx

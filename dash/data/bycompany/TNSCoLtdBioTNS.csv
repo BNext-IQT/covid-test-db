@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"TNS Co., Ltd (Bio TNS)",COVID-19 RT-PCR Peptide Nucleic Acid (PNA) kit,,Both,33/33,32/32,NPS,,33,0,32,0,33,32,,1.0,1.0,0.8957265699643882,1.0,0.8928172849426366,1.0,FDA EUA

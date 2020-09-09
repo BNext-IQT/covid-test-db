@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+DiaSorin Molecular LLC,Simplexa COVID-19 Direct assay,Molecular Test Kit,Both,92/93,123/123,"BAL, NW, NS, NPS",Aggregated across 4 sites and all target specimens,92,0,123,1,93,123,,0.989247311827957,1.0,0.941579408813516,0.9980994069020444,0.9697134063272616,1.0,FDA EUA

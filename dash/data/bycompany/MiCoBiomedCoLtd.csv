@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+MiCo Biomed Co. Ltd,nCOV-QS,Molecular,,22/33,21/21,,,22,0,21,11,33,21,,0.6666666666666666,1.0,0.4960758179994997,0.8024997053219629,0.845356176735798,1.0,FindDx

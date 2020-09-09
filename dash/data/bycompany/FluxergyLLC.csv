@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Fluxergy LLC,Fluxergy Sample-to-Answer SARS-CoV-2 RT-PCR,Molecular,,29/31,58/61,Specimen without RNA extraction,,29,3,58,2,31,61,,0.935483870967742,0.9508196721311476,0.7928101168125357,0.9821255922249368,0.8650865720629857,0.9831343231647692,FindDx

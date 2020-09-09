@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Columbia University Laboratory of Personalized Genomic Medicine,TRIPLEX CII-SARS-CoV-2 rRT-PCR TEST,Lab-performed test or service,Both,17/17,23/23,"NP, OP, NS",,17,0,23,0,17,23,,1.0,1.0,0.8156763396284354,1.0,0.8568788745827371,1.0,FDA EUA

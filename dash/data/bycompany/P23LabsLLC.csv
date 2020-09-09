@@ -1,0 +1,4 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"P23 Labs, LLC",P23 Labs TaqPath SARS-CoV-2 Assay,Lab-performed test or service,Both,"NPS = 31/31
+saliva = 31/31","NPS = 11/11
+saliva = 11/11","saliva, NPS","they collected both NPS + saliva samples for each patient, also report on specific gene targets",62,0,22,0,62,22,Nps,1.0,1.0,0.9416539087749992,1.0,0.8513404742740387,1.0,FDA EUA

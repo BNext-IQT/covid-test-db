@@ -1,0 +1,4 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"NeuMoDx Molecular, Inc.",NeuMoDx SARS-CoV-2 Assay,Molecular Test Kit,Both,"N288 = 10/10
+N96 = 5/5","N288 = 9/9
+N96 = 6/6",NPS,gave data for two different platforms (N288 and N96),15,0,15,0,15,15,N288,1.0,1.0,0.7961107336956521,1.0,0.7961107336956521,1.0,FDA EUA

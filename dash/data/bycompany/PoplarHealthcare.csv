@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Poplar Healthcare,Poplar SARS-CoV-2 TMA Pooling assay,Lab-performed test or service,Both,23/23,25/25,nasal swab,NOTE:  this is a pooled sample assay; PPA and NPA data taken from table 3,23,0,25,0,23,25,,1.0,1.0,0.8568788745827371,1.0,0.8668035060468213,1.0,FDA EUA

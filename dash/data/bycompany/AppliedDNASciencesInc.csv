@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Applied DNA Sciences, Inc.",Linea COVID-19 Assay Kit,Molecular Test Kit,Both,62/63,62/67,"NPS, OPS",combined PPA/NPA for both specimens,62,5,62,1,63,67,,0.984126984126984,0.9253731343283582,0.9154127455383438,0.9971925780924488,0.8369075523798613,0.967704427022072,FDA EUA

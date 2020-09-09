@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Novacyt/primerdesign,genesig Real-Time PCR COVID-19,Molecular,,4/4,53/53,,Target: RdRP gene target,4,0,53,0,4,53,,1.0,1.0,0.5100999795960008,1.0,0.9324156955469234,1.0,FindDx

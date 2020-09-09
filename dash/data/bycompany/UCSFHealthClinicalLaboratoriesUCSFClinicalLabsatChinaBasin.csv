@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"UCSF Health Clinical Laboratories, UCSF Clinical Labs at China Basin",SARS-CoV-2 RNA DETECTR Assay,Lab-performed test or service,Both,38/40,62/62,NPS,,38,0,62,2,40,62,,0.95,1.0,0.8349582918207479,0.9861796228538988,0.9416539087749992,1.0,FDA EUA

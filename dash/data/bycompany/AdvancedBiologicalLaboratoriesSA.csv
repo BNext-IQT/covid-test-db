@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Advanced Biological Laboratories SA,UltraGene Combo2Screen SARS-CoV-2 Assay,Molecular,,8/10,2/2,Frozen RNA,Ct value reported was highest for a positively detected sample,8,0,2,2,10,2,,0.8,1.0,0.4901568467207234,0.9433190520193068,0.34237195288961925,1.0,FindDx

@@ -1,0 +1,4 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Assurance Scientific Laboratories,Assurance SARS-CoV-2 Panel,Lab-performed test or service,Clinical,"Abnova = 38/38 
+Zymo = 34/34","Abnova = 30/30
+Zymo = 48/48","NP, OP and nasal swabs",,72,0,78,0,72,78,Abnova,1.0,1.0,0.9493470601886036,1.0,0.9530605462258804,1.0,FDA EUA

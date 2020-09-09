@@ -1,0 +1,4 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Seegene, Inc.",Allplex 2019-nCoV Assay,Molecular Test Kit,Both,"NP/OP = 49/49
+sputum = 49/49","NP/OP = 94/101
+sputum = 92/95","NP/OP, sputum",,98,10,186,0,98,196,Np/Op,1.0,0.9489795918367347,0.962278675904542,1.0,0.90864341806267,0.9720540943671744,FDA EUA

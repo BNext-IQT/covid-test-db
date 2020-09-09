@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"BioFire Defense, LLC",BioFire COVID-19 Test,Molecular Test Kit,Both,9/10,5/5,NPS,,9,0,5,1,10,5,,0.9,1.0,0.595843614502428,0.9821242504842788,0.565508505247919,1.0,FDA EUA

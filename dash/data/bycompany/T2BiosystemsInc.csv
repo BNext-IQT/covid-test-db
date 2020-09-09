@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"T2 Biosystems, Inc.",T2SARS-CoV-2 Panel,Molecular Test Kit,Both,57/60,41/41,NP,,57,0,41,3,60,41,,0.95,1.0,0.8629926537490016,0.9828508088208588,0.9143295511310924,1.0,FDA EUA

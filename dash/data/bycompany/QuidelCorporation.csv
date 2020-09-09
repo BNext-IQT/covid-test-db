@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Quidel Corporation,Sofia SARS Antigen FIA,Antigen Test,Both,29/30,179/179,"NP, nasal swabs",,29,0,179,1,30,179,,0.9666666666666668,1.0,0.8332924860304113,0.9940915620051426,0.9789894641044488,1.0,FDA EUA

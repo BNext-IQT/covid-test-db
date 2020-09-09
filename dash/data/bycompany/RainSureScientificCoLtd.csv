@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"RainSure Scientific Co., Ltd",RainSure COVID-19 dPCR Detection Kit (lab-based),Molecular,,25/28,76/80,,Target gene: ORF1ab,25,4,76,3,28,80,,0.8928571428571429,0.95,0.7280377463234292,0.9628823079452006,0.878375474489178,0.9803867628727044,FindDx

@@ -1,0 +1,6 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Fosun Pharma USA Inc.,Fosun COVID-19 RT-PCR Detection Kit,Molecular Test Kit,Both,"Sputum = 124/125
+throat = 79/79
+total = 203/204","sputum = 166/180
+tnroat = 213/213
+total = 379/393","sputum, throat swab",,203,14,379,1,204,393,Total,0.9950980392156864,0.9643765903307888,0.972759799694777,0.9991341811059866,0.9410989496377568,0.9786634946221192,FDA EUA

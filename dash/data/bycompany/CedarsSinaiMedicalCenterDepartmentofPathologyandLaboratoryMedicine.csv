@@ -1,0 +1,3 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Cedars-Sinai Medical Center, Department of Pathology and Laboratory Medicine",SARS-CoV-2-Assay,Lab-performed test or service,Both,13/13,104/104,"bronchial fluid/wash, buccal swab, nasal wash, NPS, throat
+swab, oral swab, sputum, OP swab",they have a lot more samples but gave specific PPA/NPA data on 117 respiratory specimens,13,0,104,0,13,104,,1.0,1.0,0.7718981569447083,1.0,0.9643773831248794,1.0,FDA EUA

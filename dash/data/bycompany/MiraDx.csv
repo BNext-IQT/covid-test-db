@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+MiraDx,MiraDx SARS-CoV-2 RT-PCR assay,Lab-performed test or service,Both,31/32,37/37,OP + NP,,31,0,37,1,32,37,,0.96875,1.0,0.8425539219962727,0.9944622826374492,0.905939042544856,1.0,FDA EUA

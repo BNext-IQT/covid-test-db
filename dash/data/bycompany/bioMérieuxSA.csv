@@ -1,0 +1,3 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+bioMérieux SA,BioFire COVID-19 Test,Molecular,,11/11,4/4,Specimen without RNA extraction,Positive results corresponded to Ct range 19-35.9 on reference method,11,0,4,0,11,4,,1.0,1.0,0.7411599827511859,1.0,0.5100999795960008,1.0,FindDx
+bioMérieux SA,SARS-COV-2 R-GENE® (ref 423717),Molecular,,6/6,3/3,Specimen without RNA extraction,,6,0,3,0,6,3,,1.0,1.0,0.6096569663469356,1.0,0.4384939195509822,1.0,FindDx

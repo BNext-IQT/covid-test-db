@@ -1,0 +1,6 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Mayo Clinic Laboratories, Rochester, MN",SARS-CoV-2 Molecular Detection Assay,Lab-performed test or service,Both,"NPS = 15/15
+Upper Respiratory = 484/484
+Lower Respiratory = 8/8","NPS = 30/30
+Upper Respiratory = 20551/20551
+Lower Respiratory = 104/104","NPS, Upper Respiratory, Lower Respiratory","They do clinical testing on 45 real patient samples, then another on clinical samples of Upper + Lower Respiratory samples. Upper = NPS, OPS, nasal swabs. Lower = BAL, sputum, tracheal",507,0,20685,0,507,20685,Nps,1.0,1.0,0.9924798606847992,1.0,0.9998143153650516,1.0,FDA EUA

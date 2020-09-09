@@ -1,0 +1,5 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Access Genetics, LLC",OraRisk COVID-19 RT-PCR,Lab-performed test or service,Both,"NPS = 15/15
+Nasal = 22/22","NPS = 15/15
+Nasal = 22/23","NPS, Nasal","(30 nasopharyngeal swab specimens in VTM and 46 nasal
+swabs in VTM or saline oral rinse",37,1,37,0,37,38,Nps,1.0,0.9736842105263158,0.905939042544856,1.0,0.8650482156319974,0.99533953244647,FDA EUA

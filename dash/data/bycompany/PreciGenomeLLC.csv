@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+PreciGenome LLC,FastPlex Triplex SARS-CoV-2 detection kit (RT-Digital PCR),Molecular Test Kit,Both,104/108,58/60,OPS,,104,2,58,4,108,60,,0.9629629629629628,0.9666666666666668,0.9086169931912852,0.985504693193745,0.8863601247107462,0.9908108735098498,FDA EUA

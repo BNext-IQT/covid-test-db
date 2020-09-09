@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Cormeum Laboratory Services,Cormeum SARS-CoV-2 Assay,Lab-performed test or service,Clinical,37/37,147/147,NP,,37,0,147,0,37,147,,1.0,1.0,0.905939042544856,1.0,0.9745322245322244,1.0,FDA EUA

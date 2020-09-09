@@ -1,0 +1,5 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"BioSewoom, Inc.",Real-Q 2019-nCoV Detection Kit,Molecular Test Kit,Both,"NPS/OPS = 26/43
+ Sputum = 21/21","NPS/OPS = 17/43
+Sputum = 9/9","NPS,OPS,Sputum","These samples were previously tested for SARSCoV-2 using an FDA-authorized assay and stored at a temperature of -70℃ in a clinical
+laboratory in South Korea prior to inclusion in this study.",47,26,26,17,64,52,Nps/Ops,0.734375,0.5,0.6151689374276479,0.8270376143046224,0.3688563855796991,0.6311436144203009,FDA EUA

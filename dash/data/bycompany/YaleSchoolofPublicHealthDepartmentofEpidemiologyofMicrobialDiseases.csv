@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Yale School of Public Health, Department of Epidemiology of Microbial Diseases",SalivaDirect,Lab-performed test or service,Both,32/34,30/33,"NP+Saliva, data are combined",,32,3,30,2,34,33,,0.9411764705882352,0.9090909090909092,0.8090606311053629,0.9837176869361576,0.7642705646564897,0.9685966289507372,FDA EUA

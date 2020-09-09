@@ -1,0 +1,6 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Phosphorus Diagnostics LLC,Phosphorus COVID-19 RT-qPCR Test,Lab-performed test or service,Both,"MagMAX = 33/34
+Promega Maxwell = 33/34
+Maxwell RSC = 33/34","MagMAX = 55/57
+Promega Maxwell = 56/57
+Maxwell RSC = 55/57","saliva, NPS",separates data based on 3 different extraction kits/methods,99,5,166,3,102,171,Magmax,0.9705882352941176,0.9707602339181286,0.9170680330254164,0.9899477339319994,0.9333861030651264,0.9874473827872106,FDA EUA

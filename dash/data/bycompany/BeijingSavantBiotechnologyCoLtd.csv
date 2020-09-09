@@ -1,0 +1,6 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Beijing Savant Biotechnology Co., Ltd",SARS-Cov-2 Antigen Fluorescence Rapid Detection Kit,Antigen,,13/78,31/31,Nucleocapsid protein,"Sensitivity analysis of subgroups with high and low viral loads
+
+Positive samples with:
+- Ct <25: 11/52 = 21.2%
+- Ct >25: 2/26 = 7.7%",13,0,31,65,78,31,,0.16666666666666666,1.0,0.10006850973163446,0.2645577927844454,0.8897409992652461,1.0,FindDx

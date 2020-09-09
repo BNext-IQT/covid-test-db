@@ -1,0 +1,4 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+University of North Carolina Medical Center,UNC Health SARS-CoV-2 real-time RT-PCR test,Lab-performed test or service,Both,"NP/OP = 4/4
+NA/NW = 1/1","NP/OP = 5/5
+NA/NW = 43/43","NP, OP, nasal aspirate, nasal wash",,5,0,48,0,5,48,Np/Op,1.0,1.0,0.565508505247919,1.0,0.9258973488472576,1.0,FDA EUA

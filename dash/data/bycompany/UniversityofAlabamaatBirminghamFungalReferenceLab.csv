@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+University of Alabama at Birmingham Fungal Reference Lab,FRL SARS CoV-2 Test,Lab-performed test or service,Both,5/5,5/5,NPS,"these samples were ""clinical confirmation"" so may not be considered clinical evaluation",5,0,5,0,5,5,,1.0,1.0,0.565508505247919,1.0,0.565508505247919,1.0,FDA EUA

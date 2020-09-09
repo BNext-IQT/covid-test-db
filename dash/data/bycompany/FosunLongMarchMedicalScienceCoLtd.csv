@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Fosun Long March Medical Science Co., Ltd",,Molecular,,32/42,200/200,,,32,0,200,10,42,200,,0.7619047619047619,1.0,0.6147216491768113,0.8651917918898182,0.9811539940816791,1.0,FindDx

@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Laboratorio Clinico Toledo,Laboratorio Clinico Toledo SARS-CoV-2 Assay,Lab-performed test or service,Both,30/30,31/31,"NPS, mid-turbinate, OPS",,30,0,31,0,30,31,,1.0,1.0,0.8864829086095221,1.0,0.8897409992652461,1.0,FDA EUA

@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+TIB Molbiol/Roche Diagnostics,LightMix Modular SARS-CoV-2 (COVID19),Molecular,,16/20,7/7,,LoD: 0.01 copies/uM Egene; 0.1 copies/uM Ngene; 0.15 copies/uM RdRP,16,0,7,4,20,7,,0.8,1.0,0.5839782779742402,0.9193436467288,0.6456611570247934,1.0,FindDx

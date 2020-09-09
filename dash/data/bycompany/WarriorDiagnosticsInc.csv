@@ -1,0 +1,8 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Warrior Diagnostics, Inc.",Warrior Diagnostics SARS-CoV-2 Assay,Lab-performed test or service,Both,"Replicate 1 = 31/31
+Replicate 2 = 31/31
+Replicate 3 = 31/31
+Total = 93/93","Replicate 1 = 28/29
+Replicate 2 = 29/29
+Replicate 3 = 29/29
+Total = 86/87",NPS,Total of 31 discrete samples but used 3 assay replicates,93,1,86,0,93,87,Total,1.0,0.9885057471264368,0.9603310973796384,1.0,0.9377265151398508,0.997968144575522,FDA EUA

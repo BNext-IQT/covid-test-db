@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+EMG / MSE,SmartAmp Covid-19 (Lamp system),Molecular,,7/8,1/1,Fresh RNA extracted,Amplification compared between: LifeCase and LightCycler 480: same performance,7,0,1,1,8,1,,0.875,1.0,0.5291051942301386,0.9775830911367038,0.2065432914738929,1.0,FindDx

@@ -1,0 +1,8 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Jiangsu Bioperfectus Technologies Co., Ltd.",COVID-19 Coronavirus Real Time PCR Kit,Molecular Test Kit,Both,"NPS = 185/185
+throat = 153/153
+sputum = 82/82
+total = 420/420","NPS = 127/141
+throat = 276/280
+sputum = 120/129
+total = 523/550","NPS, sputum, throat swab",,420,27,523,0,420,550,Total,1.0,0.9509090909090908,0.9909362365562984,1.0,0.9295174382780368,0.9660454807948532,FDA EUA

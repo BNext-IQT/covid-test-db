@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Diagnostics for the Real World Ltd,SAMBA II COVID-19 Test (near-POC NAT),Molecular,,90/91,81/81,Specimen without RNA extraction,,90,0,81,1,91,81,,0.989010989010989,1.0,0.940349196409386,0.998057578676652,0.9547203258778711,1.0,FindDx

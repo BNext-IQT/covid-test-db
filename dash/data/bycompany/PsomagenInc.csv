@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Psomagen, Inc.",Psoma COVID-19 RT Test,,Both,55/55,55/55,NPS,,55,0,55,0,55,55,,1.0,1.0,0.9347128562105722,1.0,0.9347128562105722,1.0,FDA EUA

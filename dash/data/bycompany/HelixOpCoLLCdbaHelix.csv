@@ -1,0 +1,5 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Helix OpCo LLC (dba Helix),Helix COVID-19 Test,Lab-performed test or service,Both,"(NPS & OPS) = 30/30
+(NPS,OPS& ANS) = 29/30","(NPS & OPS) = 30/30
+(NPS,OPS& ANS) = 30/30","(NPS & OPS),(NPS,OPS& ANS)",,59,0,60,1,60,60,(Nps & Ops),0.9833333333333332,1.0,0.9114466177322053,0.9970519161391264,0.939826069522067,1.0,FDA EUA
+Helix OpCo LLC (dba Helix),Helix COVID-19 NGS Test,Lab-performed test or service,Both,30/30,30/30,"pos: NP, neg: nasal",,30,0,30,0,30,30,,1.0,1.0,0.8864829086095221,1.0,0.8864829086095221,1.0,FDA EUA

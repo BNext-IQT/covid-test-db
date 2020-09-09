@@ -1,0 +1,3 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Thermo Fisher Scientific,TaqMan™ 2019-nCoV Assay Kit v1,Molecular,,8/8,1/1,Frozen RNA,Samples tested were a serial dilution pool of samples.,8,0,1,0,8,1,,1.0,1.0,0.6755843804891231,1.0,0.2065432914738929,1.0,FindDx
+Thermo Fisher Scientific,TaqPath COVID-19 Combo Kit,Molecular,,13/26,7/7,,LoD determined on Ngene,13,0,7,13,26,7,,0.5,1.0,0.3206030631500208,0.6793969368499793,0.6456611570247934,1.0,FindDx

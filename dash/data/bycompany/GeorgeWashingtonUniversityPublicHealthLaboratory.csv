@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+George Washington University Public Health Laboratory,GWU SARS-CoV-2 RT-PCR Test,Lab-performed test or service,Both,38/40,42/42,NP,,38,0,42,2,40,42,,0.95,1.0,0.8349582918207479,0.9861796228538988,0.916198387490838,1.0,FDA EUA

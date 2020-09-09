@@ -1,0 +1,8 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+BGI Genomics Co. Ltd,Real-Time Fluorescent RT-PCR Kit for Detecting SARS-CoV-2,Molecular Test Kit,Both,"BALF = 47/58
+Throat = 31/34
+RNA = 33/34
+Total = 111/126","BALF = 165/165
+Throat = 67/67
+RNA = 25/26
+Total = 257/258","BALF, throat swab, RNA-BALF",,111,1,257,15,126,258,Total,0.8809523809523809,0.996124031007752,0.8128484274160289,0.9265139957210858,0.9783748428746022,0.9993154859348768,FDA EUA

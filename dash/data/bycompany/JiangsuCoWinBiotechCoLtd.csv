@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Jiangsu CoWin Biotech Co., Ltd.",Novel Coronavirus (SARS-CoV-2) Fast Nucleic Acid Detection Kit (PCR-Fluorescence Probing),Molecular Test Kit,Both,40/40,56/56,OPS,,40,0,56,0,40,56,,1.0,1.0,0.9123754607496076,1.0,0.9358038555118846,1.0,FDA EUA

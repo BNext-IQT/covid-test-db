@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Luminex Corporation,NxTAG CoV Extended Panel,Molecular,,89/91,123/123,Frozen RNA,,89,0,123,2,91,123,,0.978021978021978,1.0,0.9233668616945964,0.9939521206928792,0.9697134063272616,1.0,FindDx

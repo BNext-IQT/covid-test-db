@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"ZhuHai Sinochips Bioscience Co., Ltd.",COVID-19 Nucleic Acid RT-PCR Test Kit,Molecular Test Kit,Both,82/85,310/310,NP,,82,0,310,3,85,310,,0.9647058823529412,1.0,0.9012978896926876,0.9879251769787816,0.98775943023487,1.0,FDA EUA

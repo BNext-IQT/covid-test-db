@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+HealthQuest Esoterics,HealthQuest Esoterics TaqPath SARS-CoV-2 Assay,Lab-performed test or service,Both,35/35,34/34,NPS,,35,0,34,0,35,34,,1.0,1.0,0.9010957324106112,1.0,0.8984820937803899,1.0,FDA EUA

@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Sansure BioTech Inc.,Novel Coronavirus (2019-nCoV) Nucleic Acid Diagnostic Kit(PCR-Fluorescence Probing),Molecular Test Kit,Both,50/53,191/193,OP,,50,2,191,3,53,193,,0.9433962264150944,0.9896373056994818,0.8462955106387369,0.9805636910726858,0.9630092727000984,0.9971536196966306,FDA EUA

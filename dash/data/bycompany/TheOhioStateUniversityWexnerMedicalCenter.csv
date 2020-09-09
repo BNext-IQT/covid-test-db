@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+The Ohio State University Wexner Medical Center,OSUWMC COVID-19 RT-PCR test,Lab-performed test or service,Both,26/26,25/25,NPS,,26,0,25,0,26,25,,1.0,1.0,0.8712669561953783,1.0,0.8668035060468213,1.0,FDA EUA

@@ -1,0 +1,4 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"Bio-Rad Laboratories, Inc",Bio-Rad SARS-CoV-2 ddPCR Test,Molecular Test Kit,Both,"Thermo MagMAX = 37/39
+QIAamp = 35/37","Thermo MagMAX = 37/39
+QIAamp = 38/40",NPS,used 2 types of extraction on the same samples (i.e. 2 rounds of testing),72,4,75,4,76,79,Thermo Magmax,0.9473684210526316,0.9493670886075948,0.8723414339669252,0.979344904984198,0.8769210451713462,0.9801362786852668,FDA EUA

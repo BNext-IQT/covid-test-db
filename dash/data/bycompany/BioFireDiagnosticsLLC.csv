@@ -1,0 +1,9 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"BioFire Diagnostics, LLC",BioFire Respiratory Panel 2.1 (RP2.1),Molecular Test Kit,Both,"Site 1 = 14/15
+Site 2 = 15/15
+Site 3 = 20/20
+Total = 48/49","Site 1 = n/a
+Site 2 = n/a
+Site 3 = n/a
+Total = 49/49",NPS,"NPA was calculated using observed test result negative specimens to the
+expected result of Not Detected",48,0,49,1,49,49,Total,0.979591836734694,1.0,0.8930623153224585,0.9963884204614694,0.927299703264095,1.0,FDA EUA

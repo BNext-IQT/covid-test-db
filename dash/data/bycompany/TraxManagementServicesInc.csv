@@ -1,0 +1,4 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Trax Management Services Inc.,PhoenixDx SARS-CoV-2 Multiplex,Molecular Test Kit,Both,"NPS = 34/34
+OPS = 8/8","NPS = 38/38
+OPS = 4/4","OPS, NPS",,42,0,42,0,42,42,Nps,1.0,1.0,0.916198387490838,1.0,0.916198387490838,1.0,FDA EUA

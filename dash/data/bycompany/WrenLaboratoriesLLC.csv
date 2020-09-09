@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Wren Laboratories LLC,Wren Laboratories COVID-19 PCR Test,Lab-performed test or service,Both,60/60,57/60,NP,,60,3,57,0,60,60,,1.0,0.95,0.939826069522067,1.0,0.8629926537490016,0.9828508088208588,FDA EUA

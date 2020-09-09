@@ -1,0 +1,3 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+Anatolia Geneworks,Bosphore Novel Coronavirus (2019-nCoV) Detection Kit,Molecular,,8/10,3/3,Frozen RNA,"Some samples needed repeating; results given are final outcomes from Table 1 & 2
+Ct given is highest value for a positively detected sample",8,0,3,2,10,3,,0.8,1.0,0.4901568467207234,0.9433190520193068,0.4384939195509822,1.0,FindDx

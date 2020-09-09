@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"GenMark Diagnostics, Inc.",ePlex SARS-CoV-2 Test,Molecular Test Kit,Both,17/18,47/47,NPS,,17,0,47,1,18,47,,0.9444444444444444,1.0,0.7424220019799246,0.9901250641690756,0.9244398288016114,1.0,FDA EUA

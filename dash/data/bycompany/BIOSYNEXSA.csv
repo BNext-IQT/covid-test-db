@@ -1,0 +1,2 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+BIOSYNEX S.A.,VitaPCR™ SARS-CoV-2 Assay,Molecular,,7/8,7/7,Specimen without RNA extraction,,7,0,7,1,8,7,,0.875,1.0,0.5291051942301386,0.9775830911367038,0.6456611570247934,1.0,FindDx
