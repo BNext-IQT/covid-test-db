@@ -20,7 +20,7 @@ replace github.com/BNext-IQT/covid-test-db/models/pcr_platform => ../models/pcr-
 
 require (
 	github.com/google/uuid v1.1.2
-	github.com/gorilla/handlers v1.5.0
+	github.com/gorilla/handlers v1.5.1
 	github.com/gorilla/mux v1.8.0
 	github.com/jinzhu/gorm v1.9.12
 	github.com/lib/pq v1.8.0
