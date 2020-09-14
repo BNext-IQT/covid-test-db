@@ -434,7 +434,6 @@ def generate_figure_x(dataframe, test_val='pos', slider_prevalence_value=init_sl
                         subplot_titles=('<br>'.join(covid_title), flu_title))
     fig.update_layout(transition_duration=500,
                       plot_bgcolor='rgb(255,255,255)')
-    #fig.update_layout(plot_bgcolor='rgb(255,255,255)')
    
     # First subplot 
     for cdat in covid_data:
@@ -473,10 +472,8 @@ def generate_figure_x(dataframe, test_val='pos', slider_prevalence_value=init_sl
     fig.update_yaxes(yaxis)
     fig.update_layout(width=1000, height=500,
                       autosize=False,
+                      transition_duration=500,
                       plot_bgcolor='rgb(255,255,255)')
-    fig.update_layout(transition_duration=500,
-                      plot_bgcolor='rgb(255,255,255)')
-    #fig['layout']['transition']['duration'] = 500
 
     # Define output text
     header_text = generate_header_text(test_val)
