@@ -432,8 +432,8 @@ def generate_figure_x(dataframe, test_val='pos', slider_prevalence_value=init_sl
     # Subplot method
     fig = make_subplots(rows=1, cols=2, start_cell="top-left",
                         subplot_titles=('<br>'.join(covid_title), flu_title))
-    #fig.update_layout(transition_duration=500,
-    #                  plot_bgcolor='rgb(255,255,255)')
+    fig.update_layout(transition_duration=500,
+                      plot_bgcolor='rgb(255,255,255)')
     #fig.update_layout(plot_bgcolor='rgb(255,255,255)')
    
     # First subplot 
@@ -474,8 +474,8 @@ def generate_figure_x(dataframe, test_val='pos', slider_prevalence_value=init_sl
     fig.update_layout(width=1000, height=500,
                       autosize=False,
                       plot_bgcolor='rgb(255,255,255)')
-    #fig.update_layout(transition_duration=500,
-    #                  plot_bgcolor='rgb(255,255,255)')
+    fig.update_layout(transition_duration=500,
+                      plot_bgcolor='rgb(255,255,255)')
     #fig['layout']['transition']['duration'] = 500
 
     # Define output text
