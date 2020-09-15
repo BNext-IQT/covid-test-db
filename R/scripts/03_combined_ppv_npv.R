@@ -91,7 +91,22 @@ combined_ppv_npv_mat <-
       ) %>%
       mutate(
         company = x$company,
-        test_name = x$test_name
+        test_name = x$test_name,
+        ppv = round(ppv, 5),
+        ppv_low = round(ppv_low, 5),
+        ppv_high = round(ppv_high, 5),
+        npv = round(npv, 5),
+        npv_low = round(npv_low, 5),
+        npv_high = round(npv_high, 5),
+        p_pos = round(p_pos, 5),
+        p_pos_low = round(p_pos_low, 5),
+        p_pos_high = round(p_pos_high, 5),
+        fdr = round(fdr, 5),
+        fdr_low = round(fdr_low, 5),
+        fdr_high = round(fdr_high, 5),
+        fomr = round(fomr, 5),
+        fomr_low = round(fomr_low, 5),
+        fomr_high = round(fomr_high, 5)
       ) %>%
       select(
         company,

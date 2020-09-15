@@ -7,7 +7,11 @@
 ################################################################################
 
 ### Parameters: Change by hand when needed ----
-path_to_data <- "R/data_raw/2020-08-26/Database_Molecular_and_Sero.xlsx"
+download.file("https://github.com/BNext-IQT/covid-test-db/raw/master/scraper/Database_Master.xlsx",
+              destfile = "R/data_raw/Database_Master.xlsx",
+              quiet = TRUE)
+
+path_to_data <- "R/data_raw/Database_Master.xlsx"
 
 ### Load libraries ----
 library(tidyverse)
@@ -19,7 +23,7 @@ source("R/scripts/00_accuracy_functions.R")
 
 
 ### Read in data table ----
-eua <- read_xlsx(path_to_data, sheet = "Combined Molecular Tests") %>%
+eua <- read_xlsx(path_to_data, sheet = 2) %>%
   clean_names()
 
 
@@ -27,9 +31,9 @@ eua <- read_xlsx(path_to_data, sheet = "Combined Molecular Tests") %>%
 # This part may be especially brittle
 eua_performance <- 
   eua %>%
-  mutate(
-    test_type = "Molecular" # as of 2020-06-29 this was all that was in the DB, may need to change later
-  ) %>%
+  # mutate(
+  #   test_type = "Molecular" # as of 2020-06-29 this was all that was in the DB, may need to change later
+  # ) %>%
   select(
     company,
     test_name,

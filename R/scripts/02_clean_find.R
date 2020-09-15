@@ -12,7 +12,8 @@
 #   full.names = TRUE
 # )
 
-path_to_data <- "R/data_raw/2020-08-26/COVIDDxData.xlsx"
+path_to_data <- list.files("R/data_raw/2020-09-15", full.names = TRUE)  # "R/data_raw/2020-08-26/COVIDDxData.xlsx"
+
 
 ### Load libraries ----
 library(tidyverse)
@@ -23,6 +24,9 @@ library(readxl)
 source("R/scripts/00_accuracy_functions.R")
 
 #### Read in the tables into a list ----
+
+path_to_data <- path_to_data[ str_detect(path_to_data, "COVIDDxData")]
+
 find <- 
   path_to_data %>%
   map(.f = function(path){
