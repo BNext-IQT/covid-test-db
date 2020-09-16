@@ -28,7 +28,10 @@
             <div v-else>
               IFU/EUA
             </div>
-        </div>
+          </div>
+        </span>
+        <span v-else-if="props.column.field == 'performanceUrl'">
+          <a :href="props.row.performanceUrl">Performance</a>
         </span>
         <span v-else>
           {{props.formattedRow[props.column.field]}}
@@ -53,8 +56,6 @@
         return value ? "Y" : "N"
       },
       filterYN(data, filterString) {
-        console.log("fileterString: %s", filterString);
-        console.log(data);
         return (data && filterString === 'Y') || (!data && filterString === 'N')
       },
       getColumns(){
@@ -155,6 +156,15 @@
               'filterFn':  this.filterYN
             },
             'formatFn': this.convertBoolToYN,
+            'width': '4em',
+          },
+          { 
+            'label': 'Performance Data',
+            'field':'performanceUrl',
+            'sortable': false,
+            'filterOptions':{
+              'enabled': false,
+            },
             'width': '4em',
           },
         ]

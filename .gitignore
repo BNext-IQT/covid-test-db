@@ -23,6 +23,7 @@ scraper/scraper
 .env.development.local
 .env.test.local
 .env.production.local
+__pycache__
 
 #data
 cockroach-data/

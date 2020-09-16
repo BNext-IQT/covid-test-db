@@ -16,12 +16,12 @@ import (
     "github.com/jinzhu/gorm"
     _ "github.com/jinzhu/gorm/dialects/postgres"
 
-    "gitlab.iqt.org/rashley/covid-test-db/models/poc"
-    "gitlab.iqt.org/rashley/covid-test-db/models/diagnostic"
-    "gitlab.iqt.org/rashley/covid-test-db/models/diagnostic_type"
-    "gitlab.iqt.org/rashley/covid-test-db/models/sample_type"
-    "gitlab.iqt.org/rashley/covid-test-db/models/regulatory_approval_type"
-    "gitlab.iqt.org/rashley/covid-test-db/models/pcr_platform"
+    "github.com/BNext-IQT/covid-test-db/models/poc"
+    "github.com/BNext-IQT/covid-test-db/models/diagnostic"
+    "github.com/BNext-IQT/covid-test-db/models/diagnostic_type"
+    "github.com/BNext-IQT/covid-test-db/models/sample_type"
+    "github.com/BNext-IQT/covid-test-db/models/regulatory_approval_type"
+    "github.com/BNext-IQT/covid-test-db/models/pcr_platform"
 )
 
 func getDB () *gorm.DB {

@@ -11,14 +11,14 @@ import (
     "github.com/jinzhu/gorm"
     _ "github.com/jinzhu/gorm/dialects/postgres"
 
-    "gitlab.iqt.org/rashley/covid-test-db/models/poc"
-    "gitlab.iqt.org/rashley/covid-test-db/models/company"
-    "gitlab.iqt.org/rashley/covid-test-db/models/diagnostic"
-    "gitlab.iqt.org/rashley/covid-test-db/models/diagnostic_type"
-    "gitlab.iqt.org/rashley/covid-test-db/models/diagnostic_target_type"
-    "gitlab.iqt.org/rashley/covid-test-db/models/regulatory_approval_type"
-    "gitlab.iqt.org/rashley/covid-test-db/models/sample_type"
-    "gitlab.iqt.org/rashley/covid-test-db/models/pcr_platform"
+    "github.com/BNext-IQT/covid-test-db/models/poc"
+    "github.com/BNext-IQT/covid-test-db/models/company"
+    "github.com/BNext-IQT/covid-test-db/models/diagnostic"
+    "github.com/BNext-IQT/covid-test-db/models/diagnostic_type"
+    "github.com/BNext-IQT/covid-test-db/models/diagnostic_target_type"
+    "github.com/BNext-IQT/covid-test-db/models/regulatory_approval_type"
+    "github.com/BNext-IQT/covid-test-db/models/sample_type"
+    "github.com/BNext-IQT/covid-test-db/models/pcr_platform"
 )
 
 func molecularColumnMapping () map[string]int{
@@ -80,7 +80,7 @@ func Index(vs []string, t string) int {
 }
 
 func getDB () *gorm.DB {
-    const addr = "postgresql://covid_bug@localhost:26257/covid_diagnostics?sslmode=disable"
+    const addr = "postgresql://covid_bug@roach:26257/covid_diagnostics?sslmode=disable"
     db, err := gorm.Open("postgres", addr)
     if err != nil {
         log.Fatal(err)
@@ -234,6 +234,8 @@ func getSampleTypes(names []string)([]sample_type.SampleType, []error){
         if(err == nil){
             types = append(types, *st)
         } else {
+            log.Printf("Error finding SampleType %s\n", name)
+            log.Println(err)
             errs = append(errs, err)
         }
     }
@@ -252,6 +254,8 @@ func getPcrPlatforms(names []string)([]pcr_platform.PcrPlatform, []error){
         if(err == nil){
             pcrs = append(pcrs, *st)
         } else {
+            log.Printf("Error finding PCR Platform %s\n", name)
+            log.Println(err)
             errs = append(errs, err)
         }
     }
@@ -270,6 +274,8 @@ func getTargetTypes(names []string)([]diagnostic_target_type.DiagnosticTargetTyp
         if(err == nil){
             types = append(types, *tt)
         } else {
+            log.Printf("Error finding TargetType %s\n", name)
+            log.Println(err)
             errs = append(errs, err)
         }
     }
@@ -351,6 +357,7 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
     
     diagnosticType, err := getDiagnosticType(strings.TrimSpace(row[mapping["test_type"]]))
     if(err != nil){
+        log.Printf("Error finding DiagnosticType %s\n", row[mapping["test_type"]])
         log.Println(err)
         return nil, err
     }
@@ -358,6 +365,7 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
     approvals, err := getApprovals(strings.TrimSpace(row[mapping["regulatory_status"]]))
 
     if(err != nil){
+        log.Printf("Error finding RegulatoryApproval %s \n", row[mapping["regulatory_status"]])
         log.Println(err)
         return nil, err
     }
@@ -415,12 +423,12 @@ func main() {
     log.Println("Excel file processing started")
     
     // open excel file
-    f, err := excelize.OpenFile("Database_Molecular_and_Sero.xlsx")
+    f, err := excelize.OpenFile("Database_Master.xlsx")
     if err != nil {
         log.Println(err.Error())
         return
     }
-    rows := f.GetRows("Combined Molecular Tests")
+    rows := f.GetRows("Combined Molec&Antigen Tests")
     for idx, row := range rows {
         log.Printf("Processing row %d of %d \n", idx, len(rows))
         _, dxErr := getDiagnosticFromRow(row)

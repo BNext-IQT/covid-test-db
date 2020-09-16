@@ -1,5 +1,8 @@
 <template>
   <div class="diagnostics">
+      <div class="left-div">
+        <strong>Data Last Updated:</strong> {{this.lastUpdated ? this.lastUpdated.toDateString() : ""}}
+      </div>
       <DiagnosticTable :diagnostics="diagnostics" :diagnosticTypeList="diagnosticTypeList" :sampleTypeList="sampleTypeList" :pcrPlatformList="pcrPlatformList" :selectedDx="selectedDx" @select:dx="setSelectedDx" />
      <DiagnosticDetail :diagnostic="selectedDx"/>
   </div>
@@ -19,6 +22,7 @@
         sampleTypeList: [],
         pcrPlatformList: [],
         diagnosticTypeList: [],
+        lastUpdated: null,
       }
     },
     methods: {
@@ -27,6 +31,17 @@
         .get("/api/diagnostics")
         .then((res) => {
           this.diagnostics = res.data;
+          const maxDate = this.diagnostics.reduce((accumulator, current) => {
+            return current !== null && ( !accumulator || current.updated > accumulator.updated) ? current.updated: accumulator
+          }, null)
+          this.lastUpdated = new Date(maxDate);
+
+          for(const dx of this.diagnostics){
+            const url = new URL('performance/page_results', window.location);
+            url.searchParams.append('company', dx.company.name);
+            url.searchParams.append('test', dx.name);
+            dx['performanceUrl'] = url
+          }
         })
         .catch((err) => {
           console.log("error: %o", err);
@@ -94,5 +109,15 @@ li {
 }
 a {
   color: #42b983;
+}
+.left-div {
+    flex: 1;
+    flex-flow: column;
+    padding: 0.5em;
+    margin: 0.5em;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-self: flex-start;
+    text-align: left;
 }
 </style>

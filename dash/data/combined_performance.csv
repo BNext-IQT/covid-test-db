@@ -1,0 +1,296 @@
+company,test_name,test_type,clinical_lod_or_both,ppa,npa,performance_target_specimen,performance_notes,tp,fp,tn,fn,n_pos,n_neg,specimen,sensitivity,specificity,sensitivity_95ci_low,sensitivity_95ci_high,specificity_95ci_low,specificity_95ci_high,source
+"3B Blackbio Biotech India Ltd., a subsidiary of Kilpest India Ltd.",TRUPCR SARS-CoV-2 Kit,Molecular Test Kit,Both,30/31,29/30,"OP, NP",,30,1,29,1,31,30,,0.967741935483871,0.9666666666666667,0.8380554282383038,0.9942829259130556,0.8332924860304113,0.9940915620051426,FDA EUA
+"Abbott Diagnostics Scarborough, Inc.",ID NOW COVID-19,Molecular Test Kit,Both,30/30,30/30,NP,,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+Abbott Molecular Inc.,Abbott RealTime SARS-CoV-2 assay,Molecular Test Kit,Both,47/49,55/55,NP,,47,0,55,2,49,55,,0.9591836734693877,1,0.8628671652316889,0.9887346030720717,0.9347128562105722,1,FDA EUA
+Abbott Molecular Inc.,Alinity m SARS-CoV-2 assay,Molecular Test Kit,Both,47/47,55/57,NPS,,47,2,55,0,47,57,,1,0.9649122807017544,0.9244398288016114,1,0.8807899619581051,0.9903245386467442,FDA EUA
+"Acupath Laboratories, Inc.",Acupath COVID-19 Real-Time (RT-PCR) Assay,Lab-performed test or service,Both,30/30,30/30,"NPS, NPA, BAL",,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+AIT Laboratories,SARS-CoV-2 Test,Lab-performed test or service,Both,"Sputum = 29/29
+Nasal = 13/13
+Op = 8/8
+Total = 50/50","Sputum = 27/27
+Nasal = 13/13
+Op = 10/10
+Total = 50/50","NP, OP",,50,0,50,0,50,50,Total,1,1,0.9286499658256813,1,0.9286499658256813,1,FDA EUA
+altona Diagnostics GmbH,RealStar SARS-CoV-2 RT-PCR Kit U.S.,Molecular Test Kit,Both,33/34,35/35,NP,,33,0,35,1,34,35,,0.9705882352941176,1,0.8508409778365518,0.9947892280744033,0.9010957324106112,1,FDA EUA
+"Altru Diagnostics, Inc.",Altru Dx SARS-CoV-2 RT-PCR assay,Lab-performed test or service,Both,30/30,30/30,"nasal, midturbinate, nasopharyngeal, and oropharyngeal swab",,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+"Applied DNA Sciences, Inc.",Linea COVID-19 Assay Kit,Molecular Test Kit,Both,62/63,62/67,"NPS, OPS",combined PPA/NPA for both specimens,62,5,62,1,63,67,,0.9841269841269841,0.9253731343283582,0.9154127455383438,0.9971925780924489,0.8369075523798613,0.967704427022072,FDA EUA
+Aspirus Reference Laboratory,Aspirus SARS-CoV rRT Assay,Lab-performed test or service,Both,30/30,30/30,"N, NP, OP, BAL",,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+Assurance Scientific Laboratories,Assurance SARS-CoV-2 Panel,Lab-performed test or service,Clinical,"Abnova = 38/38 
+Zymo = 34/34","Abnova = 30/30
+Zymo = 48/48","NP, OP and nasal swabs",,72,0,78,0,72,78,Abnova,1,1,0.9493470601886036,1,0.9530605462258803,1,FDA EUA
+"Avellino Lab USA, Inc.",AvellinoCoV2 test,Lab-performed test or service,Both,30/30,30/30,"NP, OP",,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+Avera Institute for Human Genetics,Avera Institute for Human Genetics SARS-CoV-2 Assay,Lab-performed test or service,Both,30/30,30/30,NP,,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+"Becton, Dickinson & Company",BD SARS-CoV-2Reagents for BD MAX System,Molecular Test Kit,Both,48/50,30/30,NP,,48,0,30,2,50,30,,0.96,1,0.8653966212204534,0.9889613473391734,0.8864829086095221,1,FDA EUA
+BGI Genomics Co. Ltd,Real-Time Fluorescent RT-PCR Kit for Detecting SARS-CoV-2,Molecular Test Kit,Both,"BALF = 47/58
+Throat = 31/34
+RNA = 33/34
+Total = 111/126","BALF = 165/165
+Throat = 67/67
+RNA = 25/26
+Total = 257/258","BALF, throat swab, RNA-BALF",,111,1,257,15,126,258,Total,0.8809523809523809,0.9961240310077519,0.8128484274160289,0.9265139957210858,0.9783748428746022,0.9993154859348767,FDA EUA
+Biocerna,SARS-CoV-2 Test,Lab-performed test or service,Both,30/30,30/30,NS,,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+"Biocollections Worldwide, Inc.",Biocollections Worldwide SARS-Co-V-2 Assay,Lab-performed test or service,Clinical,35/35,35/35,"OP, NP",,35,0,35,0,35,35,,1,1,0.9010957324106112,1,0.9010957324106112,1,FDA EUA
+"BioCore Co., Ltd.",BioCore 2019-nCoV Real Time PCR Kit,Molecular Test Kit,Both,"sputum = 20/20
+OP/NP = 20/20","sputum = 40/40
+OP/NP = 40/40","sputum, OP/NP",combined PPA/NPA for OP and NP,40,0,80,0,40,80,Sputum,1,1,0.9123754607496077,1,0.9541802637354249,1,FDA EUA
+"BioFire Defense, LLC",BioFire COVID-19 Test,Molecular Test Kit,Both,9/10,5/5,NPS,,9,0,5,1,10,5,,0.9,1,0.595843614502428,0.9821242504842789,0.565508505247919,1,FDA EUA
+"BioFire Diagnostics, LLC",BioFire Respiratory Panel 2.1 (RP2.1),Molecular Test Kit,Both,"Site 1 = 14/15
+Site 2 = 15/15
+Site 3 = 20/20
+Total = 48/49","Site 1 = n/a
+Site 2 = n/a
+Site 3 = n/a
+Total = 49/49",NPS,"NPA was calculated using observed test result negative specimens to the
+expected result of Not Detected",48,0,49,1,49,49,Total,0.9795918367346939,1,0.8930623153224585,0.9963884204614694,0.927299703264095,1,FDA EUA
+"Bio-Rad Laboratories, Inc",Bio-Rad SARS-CoV-2 ddPCR Test,Molecular Test Kit,Both,"Thermo MagMAX = 37/39
+QIAamp = 35/37","Thermo MagMAX = 37/39
+QIAamp = 38/40",NPS,used 2 types of extraction on the same samples (i.e. 2 rounds of testing),72,4,75,4,76,79,Thermo Magmax,0.9473684210526315,0.9493670886075949,0.8723414339669252,0.9793449049841981,0.8769210451713462,0.9801362786852669,FDA EUA
+"Cedars-Sinai Medical Center, Department of Pathology and Laboratory Medicine",SARS-CoV-2-Assay,Lab-performed test or service,Both,13/13,104/104,"bronchial fluid/wash, buccal swab, nasal wash, NPS, throat
+swab, oral swab, sputum, OP swab",they have a lot more samples but gave specific PPA/NPA data on 117 respiratory specimens,13,0,104,0,13,104,,1,1,0.7718981569447083,1,0.9643773831248794,1,FDA EUA
+Centers for Disease Control and Prevention (CDC),CDC 2019-nCoV Real-Time RT-PCR Diagnostic Panel (CDC),Molecular Test Kit,Both,17/17,2021/2071,"bronchial fluid/wash, buccal swab, nasal wash/aspirate, nasopharyngeal swab, nasopharyngeal/throat
+swab, oral swab, sputum, oropharyngeal (throat) swab, swab (unspecified), and throat swab.",,17,50,2021,0,17,2071,,1,0.975857073877354,0.8156763396284354,1,0.9683128324961107,0.9816392023965769,FDA EUA
+Cepheid,Xpert Xpress SARS-CoV-2 test,Molecular Test Kit,Both,44/45,43/45,NP,,44,2,43,1,45,45,,0.9777777777777777,0.9555555555555556,0.8843305361128119,0.9960665024772425,0.8517222081611938,0.9877261309595556,FDA EUA
+CirrusDx Laboratories,CirrusDx SARS-CoV-2 Assay,Lab-performed test or service,Both,29/30,30/30,NP,,29,0,30,1,30,30,,0.9666666666666667,1,0.8332924860304113,0.9940915620051426,0.8864829086095221,1,FDA EUA
+"Color Genomics, Inc.",Color SARS Cov-2 Diagnostic Assay,Lab-performed test or service,Both,46/46,46/46,NS,,46,0,46,0,46,46,,1,1,0.9229238226702192,1,0.9229238226702192,1,FDA EUA
+Columbia University Laboratory of Personalized Genomic Medicine,TRIPLEX CII-SARS-CoV-2 rRT-PCR TEST,Lab-performed test or service,Both,17/17,23/23,"NP, OP, NS",,17,0,23,0,17,23,,1,1,0.8156763396284354,1,0.8568788745827371,1,FDA EUA
+Cormeum Laboratory Services,Cormeum SARS-CoV-2 Assay,Lab-performed test or service,Clinical,37/37,147/147,NP,,37,0,147,0,37,147,,1,1,0.9059390425448561,1,0.9745322245322244,0.9999999999999999,FDA EUA
+Cue Health Inc,Cue COVID-19 Test,Molecular Test Kit,Both,6/6,35/38,unclear,"they list 3 clinical tests: a) prospective clinical study, b) study w/ contrived samples, and c) retrospective study. The one I chose was the prospective clinical study",6,3,35,0,6,38,,1,0.9210526315789473,0.6096569663469356,1,0.792003210797347,0.97278589860573506,FDA EUA
+SpectronRX,Hymon SARS-CoV-2 Test Kit,Molecular Test Kit,Both,31/31,45/45,"NP, OP",combined NP + OP data,31,0,45,0,31,45,,1,1,0.8897409992652461,1,0.9213457380593593,1,FDA EUA
+"Diagnostic Solutions Laboratory, LLC",DSL COVID-19 Assay,Lab-performed test or service,Both,29/29,32/33,NPS,,29,1,32,0,29,33,,1,0.9696969696969697,0.8830264055344441,1,0.8468093832683193,0.9946307279103482,FDA EUA
+DiaSorin Molecular LLC,Simplexa COVID-19 Direct assay,Molecular Test Kit,Both,92/93,123/123,"BAL, NW, NS, NPS",Aggregated across 4 sites and all target specimens,92,0,123,1,93,123,,0.989247311827957,1,0.9415794088135159,0.9980994069020444,0.9697134063272617,1,FDA EUA
+"Euroimmun US, Inc.",EURORealTime SARS-Cov-2,Molecular Test Kit,Both,48/50,30/30,OP,,48,0,30,2,50,30,,0.96,1,0.8653966212204534,0.9889613473391734,0.8864829086095221,1,FDA EUA
+Exact Sciences Laboratories,Exact Sciences SARS-CoV-2 (N gene detection) Test,Lab-performed test or service,Both,52/52,67/67,unclear (patient respiratory specimens),,52,0,67,0,52,67,,1,1,0.9312054095871178,1,0.9457719757882375,1,FDA EUA
+Express Gene LLC (dba Molecular Diagnostics Laboratory),Express Gene 2019-nCoV RT-PCR Diagnostic Panel,Lab-performed test or service,Both,30/30,30/30,NPS,,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+Fast Track Diagnostics Luxembourg S.á.r.l. (a Siemens Healthineers Company),FTD SARS-CoV-2,Molecular Test Kit,Both,44/44,30/30,NPS,,44,0,30,0,44,30,,1,1,0.919701682217986,1,0.8864829086095221,1,FDA EUA
+Fosun Pharma USA Inc.,Fosun COVID-19 RT-PCR Detection Kit,Molecular Test Kit,Both,"Sputum = 124/125
+throat = 79/79
+total = 203/204","sputum = 166/180
+tnroat = 213/213
+total = 379/393","sputum, throat swab",,203,14,379,1,204,393,Total,0.9950980392156863,0.9643765903307888,0.972759799694777,0.9991341811059866,0.9410989496377569,0.9786634946221191,FDA EUA
+Fulgent Therapeutics LLC,Fulgent COVID-19 by RT-PCR Test,Lab-performed test or service,Both,30/30,64/64,"Upper Respiratory, NPS, OPS, mid-turbinate",,30,0,64,0,30,64,,1,1,0.8864829086095221,1,0.9433739770288436,1,FDA EUA
+"Genetron Health (Beijing) Co., Ltd.",Genetron SARS-CoV-2 RNA Test,Molecular Test Kit,Both,50/50,34/35,OP,,50,1,34,0,50,35,,1,0.9714285714285714,0.9286499658256813,1,0.8546659090672869,0.9949386386341467,FDA EUA
+"GenMark Diagnostics, Inc.",ePlex SARS-CoV-2 Test,Molecular Test Kit,Both,17/18,47/47,NPS,,17,0,47,1,18,47,,0.9444444444444444,1,0.7424220019799246,0.9901250641690755,0.9244398288016114,1,FDA EUA
+Gnomegen LLC,Gnomegen COVID-19 RT-qPCR Detection Kit,Molecular Test Kit,Both,30/30,30/30,Upper Respiratory,doesn't say specific specimen target,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+HealthQuest Esoterics,HealthQuest Esoterics TaqPath SARS-CoV-2 Assay,Lab-performed test or service,Both,35/35,34/34,NPS,,35,0,34,0,35,34,,1,1,0.9010957324106112,1,0.8984820937803899,1,FDA EUA
+"Hologic, Inc.",Aptima SARS-CoV-2 Assay (Panther System),Molecular Test Kit,Both,50/50,54/55,,"Clinical performance calculated for multiple trials. The one selected is from table 3, the first. Others were contrived or did not include negative specimens",50,1,54,0,50,55,,1,0.9818181818181818,0.9286499658256813,1,0.9039399953951677,0.9967833024077473,FDA EUA
+"Hologic, Inc.",SARS-CoV-2 Assay (Panther Fusion® System),Molecular Test Kit,Both,69/69,109/109,,,69,0,109,0,69,109,,1,1,0.9472609058559944,1,0.9659558177126166,1,FDA EUA
+"Illumina, Inc.",Illumina COVIDSeq Test,Molecular Test Kit,Both,53/54,38/39,NPS,,53,1,38,1,54,39,,0.9814814814814815,0.9743589743589743,0.902283346415128,0.996723596684648,0.8681871352137286,0.9954594139347627,FDA EUA
+Infectious Disease Diagnostics Laboratory - Children's Hospital of Philadelphia,SARS-CoV-2 RT-PCR test,Lab-performed test or service,Both,29/30,30/30,NPS,Samples were from patients + contrived,29,0,30,1,30,30,,0.9666666666666667,1,0.8332924860304113,0.9940915620051426,0.8864829086095221,1,FDA EUA
+"Infectious Diseases Diagnostics Laboratory (IDDL), Boston Children's Hospital",Childrens-Altona-SARS-CoV-2 Assay,Lab-performed test or service,Both,30/30,30/30,"NPS, OPS",,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+Integrity Laboratories,SARS-CoV-2 Assay,Lab-performed test or service,Both,13/13,65/65,NPS,Data for contrived specimens also available,13,0,65,0,13,65,,1,1,0.7718981569447083,1,0.9441965323292894,1,FDA EUA
+"Jiangsu Bioperfectus Technologies Co., Ltd.",COVID-19 Coronavirus Real Time PCR Kit,Molecular Test Kit,Both,"NPS = 185/185
+throat = 153/153
+sputum = 82/82
+total = 420/420","NPS = 127/141
+throat = 276/280
+sputum = 120/129
+total = 523/550","NPS, sputum, throat swab",,420,27,523,0,420,550,Total,1,0.9509090909090909,0.9909362365562984,1,0.9295174382780369,0.9660454807948533,FDA EUA
+LifeHope Labs,LifeHope 2019-nCoV Real-Time RT-PCR Diagnostic Panel,Lab-performed test or service,Both,30/30,30/30,NPS,,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+Massachusetts General Hospital,MGH COVID-19 qPCR assay,Lab-performed test or service,Both,30/30,30/30,NPS,,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+"Mayo Clinic Laboratories, Rochester, MN",SARS-CoV-2 Molecular Detection Assay,Lab-performed test or service,Both,"NPS = 15/15
+Upper Respiratory = 484/484
+Lower Respiratory = 8/8","NPS = 30/30
+Upper Respiratory = 20551/20551
+Lower Respiratory = 104/104","NPS, Upper Respiratory, Lower Respiratory","They do clinical testing on 45 real patient samples, then another on clinical samples of Upper + Lower Respiratory samples. Upper = NPS, OPS, nasal swabs. Lower = BAL, sputum, tracheal",507,0,20685,0,507,20685,Nps,1,1,0.9924798606847993,1,0.9998143153650516,1,FDA EUA
+Mesa Biotech Inc.,Accula SARS-Cov-2 Test,Molecular Test Kit,Both,30/30,30/30,,,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+"NeuMoDx Molecular, Inc.",NeuMoDx SARS-CoV-2 Assay,Molecular Test Kit,Both,"N288 = 10/10
+N96 = 5/5","N288 = 9/9
+N96 = 6/6",NPS,gave data for two different platforms (N288 and N96),15,0,15,0,15,15,N288,1,1,0.7961107336956521,1,0.7961107336956521,1,FDA EUA
+Omnipathology Solutions Medical Corporation,Omni COVID-19 Assay by RT-PCR,Lab-performed test or service,Both,NPS = 7/7,NPS = 5/5,NPS,,7,0,5,0,7,5,Nps,1,1,0.6456611570247934,1,0.565508505247919,1,FDA EUA
+"One Health Laboratories, LLC",SARS-CoV-2 Real-Time RT-PCR-Test,Lab-performed test or service,Both,30/30,30/30,unclear,"doesn't speciffy sample type and doesn't give actual fractions for clinical eval, just that the 60 (30 pos, 30 neg) samples produced ""concordant"" results",30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+"P23 Labs, LLC",P23 Labs TaqPath SARS-CoV-2 Assay,Lab-performed test or service,Both,"NPS = 31/31
+saliva = 31/31","NPS = 11/11
+saliva = 11/11","saliva, NPS","they collected both NPS + saliva samples for each patient, also report on specific gene targets",62,0,22,0,62,22,Nps,1,1,0.9416539087749993,1,0.8513404742740387,1,FDA EUA
+Pathology/Laboratory Medicine Lab of Baptist Hospital Miami,COVID-19 RT-PCR Test,Lab-performed test or service,Both,28/30,29/30,"NPS, OPS",data doesn't specify sample type other than this is meant for upper respiratory samples (NP/OP),28,1,29,2,30,30,,0.9333333333333333,0.9666666666666667,0.7867618227892791,0.9815233646723066,0.8332924860304113,0.9940915620051426,FDA EUA
+Phosphorus Diagnostics LLC,Phosphorus COVID-19 RT-qPCR Test,Lab-performed test or service,Both,"MagMAX = 33/34
+Promega Maxwell = 33/34
+Maxwell RSC = 33/34","MagMAX = 55/57
+Promega Maxwell = 56/57
+Maxwell RSC = 55/57","saliva, NPS",separates data based on 3 different extraction kits/methods,99,5,166,3,102,171,Magmax,0.9705882352941176,0.9707602339181286,0.9170680330254163,0.9899477339319994,0.9333861030651265,0.9874473827872106,FDA EUA
+PreciGenome LLC,FastPlex Triplex SARS-CoV-2 detection kit (RT-Digital PCR),Molecular Test Kit,Both,104/108,58/60,OPS,,104,2,58,4,108,60,,0.9629629629629629,0.9666666666666667,0.9086169931912853,0.985504693193745,0.8863601247107462,0.9908108735098498,FDA EUA
+"Psomagen, Inc.",Psoma COVID-19 RT Test,,Both,55/55,55/55,NPS,,55,0,55,0,55,55,,1,1,0.9347128562105722,1,0.9347128562105722,1,FDA EUA
+QIAGEN GmbH,QIAstat-Dx Respiratory SARS-CoV-2 Panel,Molecular Test Kit,Both,10/10,30/30,NPS,their total PPA also includes LOD samples so I just used the 10 samples that were not contrived/LOD,10,0,30,0,10,30,,1,1,0.7224598312333834,1,0.8864829086095221,1,FDA EUA
+"Quest Diagnostics Infectious Disease, Inc.",Quest SARS-CoV-2 rRT-PCR,Lab-performed test or service,Both,30/30,30/30,"NPS, OPS, sputum",combined all sample types,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+"Roche Molecular Systems, Inc. (RMS)",cobas SARS-CoV-2,Molecular Test Kit,Both,50/50,100/100,,,50,0,100,0,50,100,,1,1,0.9286499658256813,1,0.9630051925239982,1,FDA EUA
+RTA Laboratories Biological Products Pharmaceutical and Machinery Industry,Diagnovital SARS-CoV-2 Real-Time PCR Kit,Molecular Test Kit,Both,30/30,30/30,NPS,,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+Rutgers Clinical Genomics Laboratory at RUCDR Infinite Biologics - Rutgers University,Rutgers Clinical Genomics Laboratory TaqPath SARS-CoV-2-Assay,Lab-performed test or service,Both,"saliva = 30/30
+NPS = 26/26
+OPS = 4/4","saliva = 30/30
+NPS = 27/27
+OPS = 3/3","NPS, OPS, saliva",,60,0,60,0,60,60,Saliva,1,1,0.939826069522067,1,0.939826069522067,1,FDA EUA
+Sansure BioTech Inc.,Novel Coronavirus (2019-nCoV) Nucleic Acid Diagnostic Kit(PCR-Fluorescence Probing),Molecular Test Kit,Both,50/53,191/193,OP,,50,2,191,3,53,193,,0.9433962264150944,0.9896373056994818,0.8462955106387369,0.9805636910726858,0.9630092727000983,0.9971536196966306,FDA EUA
+"Seasun Biomaterials, Inc.",AQ-TOP COVID-19 Rapid Detection Kit,Molecular Test Kit,Both,"NPS = 20/20
+sputum = 15/15","NPS = 25/25
+sputum = 15/15","NPS, sputum",,35,0,40,0,35,40,Nps,1,1,0.9010957324106112,1,0.9123754607496077,1,FDA EUA
+"Seegene, Inc.",Allplex 2019-nCoV Assay,Molecular Test Kit,Both,"NP/OP = 49/49
+sputum = 49/49","NP/OP = 94/101
+sputum = 92/95","NP/OP, sputum",,98,10,186,0,98,196,Np/Op,1,0.9489795918367347,0.9622786759045419,1,0.9086434180626701,0.9720540943671743,FDA EUA
+"SolGent Co., Ltd",DiaPlexQ Novel Coronavirus (2019-nCoV) Detection Kit,Molecular Test Kit,Both,sputum = 30/30,sputum = 30/30,sputum,,30,0,30,0,30,30,Sputum,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+Stanford Health Care Clinical Virology Laboratory,Stanford SARS-CoV-2 assay,Lab-performed test or service,Both,30/30,30/30,NPS,,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+TBG Biotechnology Corp.,ExProbe SARS-CoV-2 Testing Kit,Molecular Test Kit,Both,5/5,199/200,OP,,5,1,199,0,5,200,,1,0.995,0.565508505247919,1,0.9722256001302284,0.9991168540106338,FDA EUA
+The Ohio State University Wexner Medical Center,OSUWMC COVID-19 RT-PCR test,Lab-performed test or service,Both,26/26,25/25,NPS,,26,0,25,0,26,25,,1,1,0.8712669561953783,1,0.8668035060468213,1,FDA EUA
+"Tide Laboratories, LLC",DTPM COVID-19 RT-PCR Test,Lab-performed test or service,Both,23/23,18/18,NPS,,23,0,18,0,23,18,,1,1,0.8568788745827371,1,0.824115449417625,1,FDA EUA
+"TNS Co., Ltd (Bio TNS)",COVID-19 RT-PCR Peptide Nucleic Acid (PNA) kit,,Both,33/33,32/32,NPS,,33,0,32,0,33,32,,1,1,0.8957265699643882,1,0.8928172849426366,1,FDA EUA
+University of Alabama at Birmingham Fungal Reference Lab,FRL SARS CoV-2 Test,Lab-performed test or service,Both,5/5,5/5,NPS,"these samples were ""clinical confirmation"" so may not be considered clinical evaluation",5,0,5,0,5,5,,1,1,0.565508505247919,1,0.565508505247919,1,FDA EUA
+University of North Carolina Medical Center,UNC Health SARS-CoV-2 real-time RT-PCR test,Lab-performed test or service,Both,"NP/OP = 4/4
+NA/NW = 1/1","NP/OP = 5/5
+NA/NW = 43/43","NP, OP, nasal aspirate, nasal wash",,5,0,48,0,5,48,Np/Op,1,1,0.565508505247919,1,0.9258973488472577,1,FDA EUA
+"University of Texas MD Anderson Cancer Center, Molecular Diagnostics Laboratory",MD Anderson High-throughput SARS-CoV-2 RT-PCR Assay,Lab-performed test or service,Both,"Assay 1 = 26/26
+Assay 2 = 5/5","Assay 1 = 22/22
+Assay 2 = 6/6",NPS,clinical eval was done using 2 different EUA assays,31,0,28,0,31,28,Assay 1,1,1,0.8897409992652461,1,0.8793527963418923,1,FDA EUA
+UTMG Pathology Laboratory,UTHSC/UCH SARS-CoV-2-RT-PCR Assay,Lab-performed test or service,Both,30/30,30/30,nasal swab,,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+"Warrior Diagnostics, Inc.",Warrior Diagnostics SARS-CoV-2 Assay,Lab-performed test or service,Both,"Replicate 1 = 31/31
+Replicate 2 = 31/31
+Replicate 3 = 31/31
+Total = 93/93","Replicate 1 = 28/29
+Replicate 2 = 29/29
+Replicate 3 = 29/29
+Total = 86/87",NPS,Total of 31 discrete samples but used 3 assay replicates,93,1,86,0,93,87,Total,1,0.9885057471264368,0.9603310973796384,1,0.9377265151398508,0.997968144575522,FDA EUA
+"Yale New Haven Hospital, Clinical Virology Laboratory",SARS-CoV-2 PCR test,Lab-performed test or service,Both,28/33,89/91,Sputum,"Initially 124 NP swab samples were tested on the day of collection
+using the EUA authorized CDC assay. Of these NP samples, 33 (26.6%) were
+PCR-positive",28,2,89,5,33,91,,0.8484848484848485,0.978021978021978,0.6907978686153953,0.9334964074203904,0.9233668616945964,0.9939521206928791,FDA EUA
+"CENTOGENE US, LLC",CentoFast-SARS-CoV-2 RT-PCR Assay,Lab-performed test or service,Both,30/30,30/30,OP,"clinical evaluation was performed by in-house comparative testing with another
+EUA RT-PCR test. Thirty positive and thirty negative dry oropharyngeal samples were
+tested in a blinded and randomized manner",30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+Centers for Disease Control and Prevention (CDC),Influenza SARS-CoV-2 (Flu SC2) Multiplex Assay,Molecular Test Kit,Both,33/33,74/74,"NP (n=18) , OP (1), Oral (7), Sputum(3), NP/Oral (1), Th/NP (3)",Assay for Flu and SARS-CoV-2,33,0,74,0,33,74,,1,1,0.8957265699643882,1,0.9506484964337836,1,FDA EUA
+Laboratorio Clinico Toledo,Laboratorio Clinico Toledo SARS-CoV-2 Assay,Lab-performed test or service,Both,30/30,31/31,"NPS, mid-turbinate, OPS",,30,0,31,0,30,31,,1,1,0.8864829086095221,1,0.8897409992652461,1,FDA EUA
+Gene by Gene,Gene By Gene SARS-CoV-2 Detection Test,Lab-performed test or service,Both,35/35,36/36,NPS,,35,0,36,0,35,36,,1,1,0.9010957324106112,1,0.9035781695514236,1,FDA EUA
+"Access Bio, Inc.",CareStart COVID-19 MDx RT-PCR,Molecular Test Kit,Both,46/46,46/46,NPS,,46,0,46,0,46,46,,1,1,0.9229238226702192,1,0.9229238226702192,1,FDA EUA
+"Enzo Life Sciences, Inc.",AMPIPROBE SARS-CoV-2 Test System,Molecular Test Kit,Both,51/53,144/147,NPS,,51,3,144,2,53,147,,0.9622641509433962,0.9795918367346939,0.8724547684904088,0.9895899311661808,0.9417197862349443,0.9930356128061687,FDA EUA
+"Clinical Research Sequencing Platform (CRSP), LLC at the Broad Institute of MIT and Harvard",CRSP SARS-CoV-2 Real-time Reverse Transcriptase (RT)-PCR Diagnostic Assay,Lab-performed test or service,Both,33/33,40/40,"OP, NPS",,33,0,40,0,33,40,,1,1,0.8957265699643882,1,0.9123754607496077,1,FDA EUA
+"BioSewoom, Inc.",Real-Q 2019-nCoV Detection Kit,Molecular Test Kit,Both,"NPS/OPS = 26/43
+ Sputum = 21/21","NPS/OPS = 17/43
+Sputum = 9/9","NPS,OPS,Sputum","These samples were previously tested for SARSCoV-2 using an FDA-authorized assay and stored at a temperature of -70℃ in a clinical
+laboratory in South Korea prior to inclusion in this study.",47,26,26,17,64,52,Nps/Ops,0.734375,0.5,0.615168937427648,0.8270376143046224,0.36885638557969913,0.6311436144203009,FDA EUA
+"UCSF Health Clinical Laboratories, UCSF Clinical Labs at China Basin",SARS-CoV-2 RNA DETECTR Assay,Lab-performed test or service,Both,38/40,62/62,NPS,,38,0,62,2,40,62,,0.95,1,0.834958291820748,0.9861796228538989,0.9416539087749993,1,FDA EUA
+Boston Medical Center,BMC-CReM COVID-19 Test,Lab-performed test or service,Both,30/30,30/30,NPS,,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+Trax Management Services Inc.,PhoenixDx SARS-CoV-2 Multiplex,Molecular Test Kit,Both,"NPS = 34/34
+OPS = 8/8","NPS = 38/38
+OPS = 4/4","OPS, NPS",,42,0,42,0,42,42,Nps,1,1,0.9161983874908379,1,0.9161983874908379,1,FDA EUA
+"KogeneBiotech Co., Ltd.",PowerChek 2019-nCoV Real-time PCR Kit,Molecular Test Kit,Both,"NPS = 15/15
+Sputum = 15/15","NPS = 15/15
+Sputum = 15/15","NPS, Sputum",,30,0,30,0,30,30,Nps,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+Boston Heart Diagnostics,Boston Heart COVID-19 RT-PCR Test,Lab-performed test or service,Both,29/30,29/30,NPS,,29,1,29,1,30,30,,0.9666666666666667,0.9666666666666667,0.8332924860304113,0.9940915620051426,0.8332924860304113,0.9940915620051426,FDA EUA
+"Access Genetics, LLC",OraRisk COVID-19 RT-PCR,Lab-performed test or service,Both,"NPS = 15/15
+Nasal = 22/22","NPS = 15/15
+Nasal = 22/23","NPS, Nasal","(30 nasopharyngeal swab specimens in VTM and 46 nasal
+swabs in VTM or saline oral rinse",37,1,37,0,37,38,Nps,1,0.9736842105263158,0.9059390425448561,1,0.8650482156319974,0.99533953244647,FDA EUA
+"DiaCarta, Inc.",QuantiVirus SARS-CoV-2 Multiplex Test Kit,Molecular Test Kit,Both,40/41,52/52,NPS,,40,0,52,1,41,52,,0.975609756097561,1,0.8740465298832192,0.9956815797292835,0.9312054095871178,1,FDA EUA
+Helix OpCo LLC (dba Helix),Helix COVID-19 Test,Lab-performed test or service,Both,"(NPS & OPS) = 30/30
+(NPS,OPS& ANS) = 29/30","(NPS & OPS) = 30/30
+(NPS,OPS& ANS) = 30/30","(NPS & OPS),(NPS,OPS& ANS)",,59,0,60,1,60,60,(Nps & Ops),0.9833333333333333,1,0.9114466177322053,0.9970519161391264,0.939826069522067,1,FDA EUA
+"Jiangsu CoWin Biotech Co., Ltd.",Novel Coronavirus (SARS-CoV-2) Fast Nucleic Acid Detection Kit (PCR-Fluorescence Probing),Molecular Test Kit,Both,40/40,56/56,OPS,,40,0,56,0,40,56,,1,1,0.9123754607496077,1,0.9358038555118846,1,FDA EUA
+Sandia National Laboratories,SNL-NM 2019 nCoV Real-Time RT-PCR Diagnostic Assay,Lab-performed test or service,Both,34/34,35/35,NP,,34,0,35,0,34,35,,1,1,0.8984820937803899,1,0.9010957324106112,1,FDA EUA
+Eli Lilly and Company,Lilly SARS-CoV-2 Assay,Lab-performed test or service,Both,14/14,14/15,NP,,14,1,14,0,14,15,,1,0.9333333333333333,0.7846829880728186,1,0.70182922447576,0.9881334113938052,FDA EUA
+"Clinical Reference Laboratory, Inc.",CRL Rapid Response,Lab-performed test or service,Both,32/32,27/27,saliva,,32,0,27,0,32,27,,1,1,0.8928172849426366,1,0.8754409628553641,1,FDA EUA
+University of California San Diego Health,UCSD RC SARS-CoV-2 Assay,Lab-performed test or service,Both,43/44,59/60,NP,NOTE:  this is a pooled sample assay; PPA and NPA data taken from tables 3 (PPA) and 4 (NPA); LOD data passed thru from Roche cobas by permission from FDA,43,1,59,1,44,60,,0.9772727272727273,0.9833333333333333,0.8819202086846236,0.995976851614363,0.9114466177322053,0.9970519161391264,FDA EUA
+Poplar Healthcare,Poplar SARS-CoV-2 TMA Pooling assay,Lab-performed test or service,Both,23/23,25/25,nasal swab,NOTE:  this is a pooled sample assay; PPA and NPA data taken from table 3,23,0,25,0,23,25,,1,1,0.8568788745827371,1,0.8668035060468213,1,FDA EUA
+Ethos Laboratories,Ethos Laboratories SARS-CoV-2 MALDI-TOF Assay,Lab-performed test or service,Both,52/53,52/54,NP,,52,2,52,1,53,54,,0.9811320754716981,0.9629629629629629,0.9005685649885059,0.9966616326132506,0.8746459065659669,0.9897838464145869,FDA EUA
+Wren Laboratories LLC,Wren Laboratories COVID-19 PCR Test,Lab-performed test or service,Both,60/60,57/60,NP,,60,3,57,0,60,60,,1,0.95,0.939826069522067,1,0.8629926537490016,0.9828508088208587,FDA EUA
+Vela Operations Singapore Pte Ltd,ViroKey SARS-CoV-2 RT-PCR Test,Molecular Test Kit,Both,35/36,78/82,NP,,35,4,78,1,36,82,,0.9722222222222222,0.9512195121951219,0.8582996626496919,0.9950797197044303,0.8811836534035687,0.9808692440261156,FDA EUA
+Helix OpCo LLC (dba Helix),Helix COVID-19 NGS Test,Lab-performed test or service,Both,30/30,30/30,"pos: NP, neg: nasal",,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+George Washington University Public Health Laboratory,GWU SARS-CoV-2 RT-PCR Test,Lab-performed test or service,Both,38/40,42/42,NP,,38,0,42,2,40,42,,0.95,1,0.834958291820748,0.9861796228538989,0.9161983874908379,1,FDA EUA
+Alpha Genomix Laboratories,Alpha Genomix TaqPath SARS-CoV-2 Combo Assay,Lab-performed test or service,Both,29/30,35/35,NP,,29,0,35,1,30,35,,0.9666666666666667,1,0.8332924860304113,0.9940915620051426,0.9010957324106112,1,FDA EUA
+Solaris Diagnostics,Solaris Multiplex SARS-CoV-2 Assay,Lab-performed test or service,Both,30/30 Contrived +30/30 clinical = 60/60,30/30 Contrived +30/30 clinical = 60/60,NP,,60,0,60,0,60,60,30/30 Contrived +30/30 Clinical,1,1,0.939826069522067,1,0.939826069522067,1,FDA EUA
+LumiraDx UK Ltd.,LumiraDx SARS-CoV-2 RNA STAR,Molecular Test Kit,Both,33/34,30/31,NP,,33,1,30,1,34,31,,0.9705882352941176,0.967741935483871,0.8508409778365518,0.9947892280744033,0.8380554282383038,0.9942829259130556,FDA EUA
+"Biomeme, Inc.",Biomeme SARS-CoV-2 Real-Time RT-PCR Test,Molecular Test Kit,Both,49/50,30/30,NP,,49,0,30,1,50,30,,0.98,1,0.8950431352816305,0.9964608319110236,0.8864829086095221,1,FDA EUA
+Pro-Lab Diagnostics,Pro-AmpRT SARS-CoV-2 Test,Lab-performed test or service,Both,29/30,30/30,NP,,29,0,30,1,30,30,,0.9666666666666667,1,0.8332924860304113,0.9940915620051426,0.8864829086095221,1,FDA EUA
+"Yale School of Public Health, Department of Epidemiology of Microbial Diseases",SalivaDirect,Lab-performed test or service,Both,32/34,30/33,"NP+Saliva, data are combined",,32,3,30,2,34,33,,0.9411764705882353,0.9090909090909091,0.8090606311053629,0.9837176869361576,0.7642705646564897,0.968596628950737,FDA EUA
+"ZhuHai Sinochips Bioscience Co., Ltd.",COVID-19 Nucleic Acid RT-PCR Test Kit,Molecular Test Kit,Both,82/85,310/310,NP,,82,0,310,3,85,310,,0.9647058823529412,1,0.9012978896926876,0.9879251769787817,0.9877594302348701,1,FDA EUA
+"DxTerity Diagnostics, Inc.",DxTerity SARS-CoV-2 RT-PCR Test,Lab-performed test or service,Both,35/36,37/40,NP,,35,3,37,1,36,40,,0.9722222222222222,0.925,0.8582996626496919,0.9950797197044303,0.8013546984090247,0.9741644432281418,FDA EUA
+"Guardant Health, Inc.",Guardant-19,Lab-performed test or service,Both,64/67,59/60,NP,,64,1,59,3,67,60,,0.9552238805970149,0.9833333333333333,0.8764196748946068,0.9846563030618481,0.9114466177322053,0.9970519161391264,FDA EUA
+Fluidigm Corporation,Advanta Dx SARS-CoV-2 RT-PCR Assay,Molecular Test Kit,Both,43/43,34/34,saliva,,43,0,34,0,43,34,,1,1,0.9179874299767727,1,0.8984820937803899,1,FDA EUA
+"Abbott Diagnostics Scarborough, Inc.",BinaxNOW COVID-19 Ag Card,Antigen Test,Both,34/35,66/67,nasal swab,,34,1,66,1,35,67,,0.9714285714285714,0.9850746268656716,0.8546659090672869,0.9949386386341467,0.9201794802686534,0.9973604962423233,FDA EUA
+LumiraDx UK Ltd.,LumiraDx SARS-CoV-2 Ag Test,Antigen Test,Both,81/83,168/174,nasal swab,,81,6,168,2,83,174,,0.9759036144578314,0.9655172413793104,0.9163352895899236,0.9933669729202098,0.926820548672896,0.9841024299777683,FDA EUA
+"Becton, Dickinson and Company (BD)",BD Veritor System for Rapid Detection of SARS-CoV-2,Antigen Test,Both,26/31,195/195,nasal swab,,26,0,195,5,31,195,,0.8387096774193549,1,0.6736529727502112,0.9290748009456007,0.9806800991341852,0.9999999999999999,FDA EUA
+Quidel Corporation,Sofia SARS Antigen FIA,Antigen Test,Both,29/30,179/179,"NP, nasal swabs",,29,0,179,1,30,179,,0.9666666666666667,1,0.8332924860304113,0.9940915620051426,0.9789894641044489,0.9999999999999999,FDA EUA
+Cuur Diagnostics,Cuur Diagnostics SARS-CoV-2 Molecular Assay,Lab-performed test or service,Both,48/50,50/50,NP,data are the sum of comparisons vs two other assays,48,0,50,2,50,50,,0.96,1,0.8653966212204534,0.9889613473391734,0.9286499658256813,1,FDA EUA
+"DxTerity Diagnostics, Inc.",DxTerity SARS-CoV-2 RT PCR CE Test,Lab-performed test or service,Both,36/37,36/40,saliva vs NP,data shown are from swabs of symptomatic patients,36,4,36,1,37,40,,0.972972972972973,0.9,0.8617562156243663,0.9952131489450922,0.769479256195261,0.9604211124044251,FDA EUA
+"Patients Choice Laboratories, LLC",PCL SARS-CoV-2 Real-Time RT-PCR Assay,Lab-performed test or service,Both,40/40,35/35,NP,data are the sum of comparisons vs three other assays,40,0,35,0,40,35,,1,1,0.9123754607496077,1,0.9010957324106112,1,FDA EUA
+"BayCare Laboratories, LLC",BayCare SARS-CoV-2 RT PCR Assay,Lab-performed test or service,Both,44/50,30/30,NP,data from tests using pooled swabs,44,0,30,6,50,30,,0.88,1,0.7619492111337642,0.9438247628937535,0.8864829086095221,1,FDA EUA
+"Mammoth Biosciences, Inc.",SARS-CoV-2 DETECTR Reagent Kit,Molecular Test Kit,Both,38/40,62/62,NP,,38,0,62,2,40,62,,0.95,1,0.834958291820748,0.9861796228538989,0.9416539087749993,1,FDA EUA
+MiraDx,MiraDx SARS-CoV-2 RT-PCR assay,Lab-performed test or service,Both,31/32,37/37,OP + NP,,31,0,37,1,32,37,,0.96875,1,0.8425539219962727,0.9944622826374491,0.9059390425448561,1,FDA EUA
+"T2 Biosystems, Inc.",T2SARS-CoV-2 Panel,Molecular Test Kit,Both,57/60,41/41,NP,,57,0,41,3,60,41,,0.95,1,0.8629926537490016,0.9828508088208587,0.9143295511310925,1,FDA EUA
+"OPTOLANE Technologies, Inc.",Kaira 2019-nCoV Detection Kit,Molecular Test Kit,Both,30/30,30/30,NP + OP,,30,0,30,0,30,30,,1,1,0.8864829086095221,1,0.8864829086095221,1,FDA EUA
+Detectachem Inc.,MobileDetect Bio BCC19 (MD-Bio BCC19) Test Kit,Molecular Test Kit,Both,43/44,63/63,NP,,43,0,63,1,44,63,,0.9772727272727273,1,0.8819202086846236,0.995976851614363,0.9425268096514745,1,FDA EUA
+Bioeksen R&D Technologies Ltd.,Bio-Speedy Direct RT-qPCR SARS-CoV-2,Molecular Test Kit,Both,349/357,94/94,NP + OP + nasal wash + BAL,,349,0,94,8,357,94,,0.9775910364145658,1,0.9564106193709877,0.988602372479176,0.9607365374237544,1,FDA EUA
+"Roche Molecular Systems, Inc. (RMS)",cobas SARS-CoV-2 & Influenza A/B,Molecular Test Kit,Both,53/55,287/293,NP,performance data here is for SARS-CoV-2 detection only--NOT for flu A/B,53,6,287,2,55,293,,0.9636363636363636,0.9795221843003413,0.8767630702509828,0.9899706691442751,0.9560508341873807,0.9905819827762795,FDA EUA
+"BillionToOne, Inc.",qSanger-COVID-19 Assay,Molecular Test Kit,Both,27/30,30/30,NP,,27,0,30,3,30,30,,0.9,1,0.7437855868473338,0.9654007400402838,0.8864829086095221,1,FDA EUA
+Verily Life Sciences,Verily COVID-19 RT-PCR Test,Lab-performed test or service,Both,49/49,40/40,NP,Data have a complex structure due to pooled study design.  Results here are from 12-plex pools run on ABI 7500,49,0,40,0,49,40,,1,1,0.927299703264095,1,0.9123754607496077,1,FDA EUA
+"Beijing Wantai Biological Pharmacy Enterprise Co., Ltd.",Wantai SARS-CoV-2 RT-PCR Kit,Molecular Test Kit,Both,36/36,40/40,OP,,36,0,40,0,36,40,,1,1,0.9035781695514236,1,0.9123754607496077,1,FDA EUA
+Advanced Biological Laboratories SA,UltraGene Combo2Screen SARS-CoV-2 Assay,Molecular,,8/10,2/2,Frozen RNA,Ct value reported was highest for a positively detected sample,8,0,2,2,10,2,,0.8,1,0.49015684672072335,0.9433190520193067,0.34237195288961925,1,FindDx
+"Amplex Diagnostics, Gars-Bahnhof, Germany",variplex SARS-CoV-2 test system - run on the Genie II Mk2 instrument (Optigene Ltd),Molecular,,8/47,55/62,Specimen without RNA extraction,-entry 1/1,8,7,55,39,47,62,,0.1702127659574468,0.8870967741935484,0.08886258091263928,0.30140051072885116,0.7848003079004455,0.9442220730866508,FindDx
+Anatolia Geneworks,Bosphore Novel Coronavirus (2019-nCoV) Detection Kit,Molecular,,8/10,3/3,Frozen RNA,"Some samples needed repeating; results given are final outcomes from Table 1 & 2
+Ct given is highest value for a positively detected sample",8,0,3,2,10,3,,0.8,1,0.49015684672072335,0.9433190520193067,0.4384939195509822,1,FindDx
+AusDiagnostics,"SARS-CoV-2, Influenza and RSV 8-well",Molecular,,53/53,621/622,Fresh RNA extracted,,53,1,621,0,53,622,,1,0.9983922829581994,0.9324156955469234,1,0.9909498594088342,0.9997161493703841,FindDx
+"Beijing Savant Biotechnology Co., Ltd",SARS-Cov-2 Antigen Fluorescence Rapid Detection Kit,Antigen,,13/78,31/31,Nucleocapsid protein,"Sensitivity analysis of subgroups with high and low viral loads
+
+Positive samples with:
+- Ct <25: 11/52 = 21.2%
+- Ct >25: 2/26 = 7.7%",13,0,31,65,78,31,,0.16666666666666666,1,0.10006850973163446,0.2645577927844454,0.8897409992652461,1,FindDx
+BGI Health (HK) Co. Ltd.,Real-time fluorescent RT-PCR kit for detecting 2019 nCoV,Molecular,,38/42,200/200,,,38,0,200,4,42,200,,0.9047619047619048,1,0.7793460477494667,0.9623383611716878,0.981153994081679,0.9999999999999999,FindDx
+BioGX,BioGX SARS-CoV-2 Open System Reagents for BD MAX™,Molecular,,7/7,3/3,Specimen without RNA extraction,,7,0,3,0,7,3,,1,1,0.6456611570247934,1,0.4384939195509822,1,FindDx
+BIOMAXIMA S.A.,SARS-CoV-2 Real Time PCR LAB-KIT™,Molecular,,7/7,1/1,Frozen RNA,Ct value reported for lowest detectable concentration of pooled sample,7,0,1,0,7,1,,1,1,0.6456611570247934,1,0.2065432914738929,1,FindDx
+bioMérieux SA,BioFire COVID-19 Test,Molecular,,11/11,4/4,Specimen without RNA extraction,Positive results corresponded to Ct range 19-35.9 on reference method,11,0,4,0,11,4,,1,1,0.7411599827511859,1,0.5100999795960008,1,FindDx
+bioMérieux SA,SARS-COV-2 R-GENE® (ref 423717),Molecular,,6/6,3/3,Specimen without RNA extraction,,6,0,3,0,6,3,,1,1,0.6096569663469356,1,0.4384939195509822,1,FindDx
+biosellal,Bio-T kit SARS-CoV-2,Molecular,,8/8,1/1,Frozen RNA,"Ct value reported is for weakest sample pool
+
+Amplification on ABI 7500 Fast
+
+Target: Gene E; ORF1ab",8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
+BIOSYNEX S.A.,VitaPCR™ SARS-CoV-2 Assay,Molecular,,7/8,7/7,Specimen without RNA extraction,,7,0,7,1,8,7,,0.875,1,0.5291051942301386,0.9775830911367038,0.6456611570247934,1,FindDx
+"Cancer Rop Co., Ltd.",Q-Sens® 2019-nCoV Detection Kit,Molecular,,8/8,1/1,Frozen RNA,"Test provider: Medlane France
+
+Amplification on ABI 7500",8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
+"CerTest Biotec, S.L.",VIASURE SARS-CoV-2 Real Time PCR Detection Kit,Molecular,,17/18,2/2,Frozen RNA,Ct value is highest value across either loci detected positive.,17,0,2,1,18,2,,0.9444444444444444,1,0.7424220019799246,0.9901250641690755,0.34237195288961925,1,FindDx
+"CerTest Biotec, S.L.",VIASURE SARS-CoV-2 S gene Real Time PCR Detection Kit adapted for BD MAX™ System,Molecular,,47/68,27/27,,,47,0,27,21,68,27,,0.6911764705882353,1,0.5736296438762007,0.7882776633107216,0.8754409628553641,1,FindDx
+Coris BioConcept,COVID-19 Ag Respi-Strip,Antigen,,38/159,593/615,,,38,22,593,121,159,615,,0.2389937106918239,0.9642276422764228,0.17935941502124522,0.31094281733215834,0.94643188968464,0.9762597974934684,FindDx
+Coyote Bioscience,DirectDetect™ SARS-CoV-2 Detection Kit,Molecular,,30/55,38/43,Specimen without RNA extraction,-entry 1/1,30,5,38,25,55,43,,0.5454545454545454,0.8837209302325582,0.41522461348360484,0.669749282535538,0.755205511093586,0.9492964700513791,FindDx
+"DAAN Gene Co., Ltd of Sun Yat-sen University",Novel Coronavirus (2019-nCoV) Real Time Multiplex RT-PCR kit,Molecular,,33/42,200/200,,,33,0,200,9,42,200,,0.7857142857142857,1,0.6405986210195627,0.8829433146894876,0.981153994081679,0.9999999999999999,FindDx
+Diagnostics for the Real World Ltd,SAMBA II COVID-19 Test (near-POC NAT),Molecular,,90/91,81/81,Specimen without RNA extraction,,90,0,81,1,91,81,,0.989010989010989,1,0.9403491964093861,0.998057578676652,0.9547203258778711,1,FindDx
+Eiken Chemical,Loopamp®︎ 2019-SARS-CoV-2 Detection Reagent Kit,Molecular,,30/30,44/46,Fresh RNA extracted,,30,2,44,0,30,46,,1,0.9565217391304348,0.8864829086095221,1,0.8546747708094657,0.9879948064111692,FindDx
+EMG / MSE,SmartAmp Covid-19 (Lamp system),Molecular,,7/8,1/1,Fresh RNA extracted,Amplification compared between: LifeCase and LightCycler 480: same performance,7,0,1,1,8,1,,0.875,1,0.5291051942301386,0.9775830911367038,0.2065432914738929,1,FindDx
+Eurobio Scientific,EurobioPlex SARS-CoV-2 Multiplex,Molecular,,7/7,1/1,Frozen RNA,,7,0,1,0,7,1,,1,1,0.6456611570247934,1,0.2065432914738929,1,FindDx
+EXCILONE SARL,Corona Virus Disease 2019 (COVID-19) Nucleic Acid Detection Kit,Molecular,,7/8,1/1,Frozen RNA,"Ct value reported for lowest detectable concentration of pooled sample
+
+Amplification by LightCycler 480 II outperformed ABI 7500; results here given for LightCycler 480 II",7,0,1,1,8,1,,0.875,1,0.5291051942301386,0.9775830911367038,0.2065432914738929,1,FindDx
+Fluxergy LLC,Fluxergy Sample-to-Answer SARS-CoV-2 RT-PCR,Molecular,,29/31,58/61,Specimen without RNA extraction,,29,3,58,2,31,61,,0.9354838709677419,0.9508196721311475,0.7928101168125357,0.9821255922249368,0.8650865720629857,0.9831343231647693,FindDx
+"Fosun Long March Medical Science Co., Ltd",,Molecular,,32/42,200/200,,,32,0,200,10,42,200,,0.7619047619047619,1,0.6147216491768113,0.8651917918898182,0.981153994081679,0.9999999999999999,FindDx
+GeneFirst Ltd,The Novel Coronavirus (2019-nCoV) Nucleic Acid Test Kit,Molecular,,8/8,2/2,Frozen RNA,Ct value reported is for weakest sample pool,8,0,2,0,8,2,,1,1,0.6755843804891231,1,0.34237195288961925,1,FindDx
+ID.VET,ID HRM SARS-COV-2 Triplex,Molecular,,8/8,1/1,Frozen RNA,"Analysis of results through online software; no Ct values given, only binary outcome",8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
+idSOLUTIONS,IDNCOV-2,Molecular,,8/8,1/1,Frozen RNA,Ct value reported for lowest detectable concentration of pooled sample,8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
+ionebio,iLAMP Novel-CoV19 Test Kit,Molecular,,3/8,1/1,Frozen RNA,Ct value reported for lowest concentration pooled sample detected,3,0,1,5,8,1,,0.375,1,0.13684175946152105,0.6942621454161981,0.2065432914738929,1,FindDx
+Luminex Corporation,NxTAG CoV Extended Panel,Molecular,,89/91,123/123,Frozen RNA,,89,0,123,2,91,123,,0.978021978021978,1,0.9233668616945964,0.9939521206928791,0.9697134063272617,1,FindDx
+Mammoth Biosciences,SARS-CoV-2 DETECTR,Molecular,,9/10,11/11,Fresh RNA extracted,"Note, manufacturer is among authors.",9,0,11,1,10,11,,0.9,1,0.595843614502428,0.9821242504842789,0.7411599827511859,1,FindDx
+MiCo Biomed Co. Ltd,nCOV-QS,Molecular,,22/33,21/21,,,22,0,21,11,33,21,,0.6666666666666666,1,0.4960758179994997,0.8024997053219629,0.845356176735798,1,FindDx
+Mobidiag,Amplidiag COVID-19 Kit,Molecular,,8/8,2/2,Specimen without RNA extraction,"Ct value given is for weakest dilution pool.
+
+Amplification with BioRad CFX96",8,0,2,0,8,2,,1,1,0.6755843804891231,1,0.34237195288961925,1,FindDx
+Mobidiag,Novadiag® COVID-19 + InfA/B (lab-based & near-POC),Molecular,,7/8,1/1,Specimen without RNA extraction,"Binary result, no Ct",7,0,1,1,8,1,,0.875,1,0.5291051942301386,0.9775830911367038,0.2065432914738929,1,FindDx
+Novacyt/primerdesign,genesig Real-Time PCR COVID-19,Molecular,,4/4,53/53,,Target: RdRP gene target,4,0,53,0,4,53,,1,1,0.5100999795960008,1,0.9324156955469234,1,FindDx
+"OptiGene Ltd. (Camberley, UK)",LAMP-COVID-19,Molecular,,33/44,68/70,Fresh RNA extracted,The index test used here was Direct RT-LAMP and reference standard was rRT-PCR (CT cut-off of <33),33,2,68,11,44,70,,0.75,0.9714285714285714,0.6055915019158504,0.8542593391931426,0.9016755648760819,0.9921295531061938,FindDx
+OPTIMedical,OPTI SARS-CoV-2 RT-PCR Test,Molecular,,8/8,1/1,Frozen RNA,"Ct value reported for lowest detectable concentration of pooled sample
+
+Amplification on LightCycler480",8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
+"Outdo Biotech Co., Ltd",,Molecular,,39/42,200/200,,,39,0,200,3,42,200,,0.9285714285714286,1,0.8099028671147483,0.9754100364488272,0.981153994081679,0.9999999999999999,FindDx
+PerkinElmer Inc.,PerkinElmer® SARS-CoV-2 Realtime RT-PCR Assay,Molecular,,41/42,200/200,,,41,0,200,1,42,200,,0.9761904761904762,1,0.8767851883475174,0.9957847045008997,0.981153994081679,0.9999999999999999,FindDx
+R-Biopharm AG,RIDA® GENE SARS-CoV-2 RUO (PG6815RUO),Molecular,,5/5,15/15,Specimen without RNA extraction,,5,0,15,0,5,15,,1,1,0.565508505247919,1,0.7961107336956521,1,FindDx
+"RainSure Scientific Co., Ltd",RainSure COVID-19 dPCR Detection Kit (lab-based),Molecular,,25/28,76/80,,Target gene: ORF1ab,25,4,76,3,28,80,,0.8928571428571429,0.95,0.7280377463234292,0.9628823079452006,0.878375474489178,0.9803867628727044,FindDx
+RapiGEN Inc.,BIOCREDIT COVID-19 Ag,Antigen,,49/79,30/30,,"Note off-label use of universal transport medium with nasopharyngeal swab for index testing.
+
+Sensitivity analysis of subgroups with high and low viral loads
+
+Positive samples with:
+- Ct <25: 45/53 = 84.9%
+- Ct >25: 4/26 = 15.4%",49,0,30,30,79,30,,0.620253164556962,1,0.5100166778257305,0.7193366905302645,0.8864829086095221,1,FindDx
+Roche Ltd,Coronavirus LightMix® Modular SARS and Wuhan CoV E-gene assay,Molecular,,15/15,150/150,,,15,0,150,0,15,150,,1,1,0.7961107336956521,1,0.9750288608542812,1,FindDx
+"Shanghai Fosun Long March Medical Science Co.,Ltd.",2019-Novel Coronavirus (2019-nCoV) RT-PCR Detection Kit,Molecular,,8/8,1/1,Frozen RNA,,8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
+"Shenzhen Bioeasy Biotechnology Co., Ltd",Bioeasy 2019-nCoV Ag Fluorescence Rapid Test Kit (Time-Resolved Fluorescence),Antigen,,141/208,31/31,Nucleocapsid protein,,141,0,31,67,208,31,,0.6778846153846154,1,0.6116496017653976,0.7376680015759667,0.8897409992652461,1,FindDx
+"Shenzhen Bioeasy Biotechnology Co., Ltd",Bioeasy 2019-Novel Coronavirus (2019-nCoV) Ag GICA Rapid Test (WITHDRAWN),Antigen,,9/37,11/11,,,9,0,11,28,37,11,,0.24324324324324326,1,0.13361203432663304,0.4011760249070895,0.7411599827511859,1,FindDx
+Stanford University,SHC EUA test,Molecular,,26/26,50/54,Fresh RNA extracted,,26,4,50,0,26,54,,1,0.9259259259259259,0.8712669561953783,1,0.8244564280657937,0.9708189446763159,FindDx
+STILLA,COVID-19 Multiplex Crystal Digital PCR detection kit,Molecular,,8/8,1/1,Frozen RNA,"Multiplex closed system amplification.
+Binary result only, no Ct provided. Method is quantitative",8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
+Thermo Fisher Scientific,TaqMan™ 2019-nCoV Assay Kit v1,Molecular,,8/8,1/1,Frozen RNA,Samples tested were a serial dilution pool of samples.,8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
+Thermo Fisher Scientific,TaqPath COVID-19 Combo Kit,Molecular,,13/26,7/7,,LoD determined on Ngene,13,0,7,13,26,7,,0.5,1,0.3206030631500208,0.6793969368499793,0.6456611570247934,1,FindDx
+TIB Molbiol/Roche Diagnostics,LightMix Modular SARS-CoV-2 (COVID19),Molecular,,16/20,7/7,,LoD: 0.01 copies/uM Egene; 0.1 copies/uM Ngene; 0.15 copies/uM RdRP,16,0,7,4,20,7,,0.8,1,0.5839782779742402,0.9193436467287999,0.6456611570247934,1,FindDx
+YouSeq Ltd,YouSeq SARS-COV-2 qPCR Test,Molecular,,13/16,5/5,,LoD determined on Egene,13,0,5,3,16,5,,0.8125,1,0.5699064013154177,0.9340852122641324,0.565508505247919,1,FindDx

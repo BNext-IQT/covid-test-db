@@ -6,9 +6,6 @@ services:
     restart: always
     image: 'cockroachdb/cockroach:latest'
     command: start --insecure
-    ports:
-      - 26257:26257
-      - 8080:8080
     networks:
       - database
     volumes:
@@ -34,6 +31,15 @@ services:
     image: 'covid-test-db/ui:latest'
     networks:
       - api
+  dash:
+    container_name: dash
+    hostname: draxx
+    restart: always
+    build:
+      context: dash
+    image: 'covid-test-db/dash:latest'
+    networks:
+      - api
   nginx:
     restart: always
     image: nginx:latest
@@ -49,6 +55,5 @@ networks:
     name: admin
   database:
     name: database
-    driver: bridge
   api:
     name: api
