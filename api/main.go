@@ -118,53 +118,6 @@ func getPoc(w http.ResponseWriter, r *http.Request) {
 }
 
 //diagnostic endpoints
-func createDiagnostic(w http.ResponseWriter, r *http.Request) {
-	db := getDB()
-	defer db.Close()
-	var d diagnostic.Diagnostic
-
-	err := json.NewDecoder(r.Body).Decode(&d)
-    if err != nil {
-        http.Error(w, err.Error(), http.StatusBadRequest)
-        return
-    }
-
-	created, err := diagnostic.Create(db, d.Name, d.Description, d.TestUrl, d.Company,
-			 d.DiagnosticType, d.Poc, d.VerifiedLod, d.AvgCt, d.PrepIntegrated,
-			 d.TestsPerRun, d.TestsPerKit, d.Sensitivity, d.Specificity,
-             d.SourceOfPerfData, d.CatalogNo, d.PointOfCare, d.CostPerKit,
-             d.InStock, d.LeadTime,
-			 d.RegulatoryApprovals, d.DiagnosticTargets, d.SampleTypes, d.PcrPlatforms,
-	)
-	if err != nil {
-        log.Print(err)
-    }
-	
-    sendJsonResponse(w, created)
-}
-
-func updateDiagnostic(w http.ResponseWriter, r *http.Request) {
-	dxID, err := uuid.Parse(mux.Vars(r)["id"])
-	db := getDB()
-	defer db.Close()
-	var d diagnostic.Diagnostic
-
-	err = json.NewDecoder(r.Body).Decode(&d)
-
-    if err != nil {
-        http.Error(w, err.Error(), http.StatusBadRequest)
-        return
-    }
-    d.Id = dxID
-
-	created, err := diagnostic.Update(db, &d)
-	if err != nil {
-        log.Print(err)
-    }
-	
-    sendJsonResponse(w, created)
-}
-
 func getDiagnosticList(w http.ResponseWriter, r *http.Request) {
 	db := getDB()
 	defer db.Close()
@@ -269,13 +222,9 @@ func main() {
 	})
 	router.HandleFunc("/api/", homeLink)
 	router.HandleFunc("/api/pocs", getPocList).Methods("GET")
-	router.HandleFunc("/api/pocs", createPoc).Methods("POST")
 	router.HandleFunc("/api/pocs/{id}", getPoc).Methods("GET")
-	router.HandleFunc("/api/pocs/{id}", updatePoc).Methods("PUT")
 	router.HandleFunc("/api/diagnostics", getDiagnosticList).Methods("GET")
-	router.HandleFunc("/api/diagnostics", createDiagnostic).Methods("POST")
 	router.HandleFunc("/api/diagnostics/{id}", getDiagnostic).Methods("GET")
-	router.HandleFunc("/api/diagnostics/{id}", updateDiagnostic).Methods("PUT")
 	router.HandleFunc("/api/diagnostictypes", getDiagnosticTypeList).Methods("GET")
 	router.HandleFunc("/api/sampletypes", getSampleTypeList).Methods("GET")
 	router.HandleFunc("/api/regulatoryapprovals", getRegulatoryApprovalList).Methods("GET")
