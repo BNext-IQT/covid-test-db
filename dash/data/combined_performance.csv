@@ -215,7 +215,11 @@ MiraDx,MiraDx SARS-CoV-2 RT-PCR assay,Lab-performed test or service,Both,31/32,3
 Detectachem Inc.,MobileDetect Bio BCC19 (MD-Bio BCC19) Test Kit,Molecular Test Kit,Both,43/44,63/63,NP,,43,0,63,1,44,63,,0.9772727272727273,1,0.8819202086846236,0.995976851614363,0.9425268096514745,1,FDA EUA
 Bioeksen R&D Technologies Ltd.,Bio-Speedy Direct RT-qPCR SARS-CoV-2,Molecular Test Kit,Both,349/357,94/94,NP + OP + nasal wash + BAL,,349,0,94,8,357,94,,0.9775910364145658,1,0.9564106193709877,0.988602372479176,0.9607365374237544,1,FDA EUA
 "Roche Molecular Systems, Inc. (RMS)",cobas SARS-CoV-2 & Influenza A/B,Molecular Test Kit,Both,53/55,287/293,NP,performance data here is for SARS-CoV-2 detection only--NOT for flu A/B,53,6,287,2,55,293,,0.9636363636363636,0.9795221843003413,0.8767630702509828,0.9899706691442751,0.9560508341873807,0.9905819827762795,FDA EUA
+"BillionToOne, Inc.",qSanger-COVID-19 Assay,Molecular Test Kit,Both,27/30,30/30,NP,,27,0,30,3,30,30,,0.9,1,0.7437855868473338,0.9654007400402838,0.8864829086095221,1,FDA EUA
+Verily Life Sciences,Verily COVID-19 RT-PCR Test,Lab-performed test or service,Both,49/49,40/40,NP,Data have a complex structure due to pooled study design.  Results here are from 12-plex pools run on ABI 7500,49,0,40,0,49,40,,1,1,0.927299703264095,1,0.9123754607496077,1,FDA EUA
+"Beijing Wantai Biological Pharmacy Enterprise Co., Ltd.",Wantai SARS-CoV-2 RT-PCR Kit,Molecular Test Kit,Both,36/36,40/40,OP,,36,0,40,0,36,40,,1,1,0.9035781695514236,1,0.9123754607496077,1,FDA EUA
 Advanced Biological Laboratories SA,UltraGene Combo2Screen SARS-CoV-2 Assay,Molecular,,8/10,2/2,Frozen RNA,Ct value reported was highest for a positively detected sample,8,0,2,2,10,2,,0.8,1,0.49015684672072335,0.9433190520193067,0.34237195288961925,1,FindDx
+"Amplex Diagnostics, Gars-Bahnhof, Germany",variplex SARS-CoV-2 test system - run on the Genie II Mk2 instrument (Optigene Ltd),Molecular,,8/47,55/62,Specimen without RNA extraction,-entry 1/1,8,7,55,39,47,62,,0.1702127659574468,0.8870967741935484,0.08886258091263928,0.30140051072885116,0.7848003079004455,0.9442220730866508,FindDx
 Anatolia Geneworks,Bosphore Novel Coronavirus (2019-nCoV) Detection Kit,Molecular,,8/10,3/3,Frozen RNA,"Some samples needed repeating; results given are final outcomes from Table 1 & 2
 Ct given is highest value for a positively detected sample",8,0,3,2,10,3,,0.8,1,0.49015684672072335,0.9433190520193067,0.4384939195509822,1,FindDx
 AusDiagnostics,"SARS-CoV-2, Influenza and RSV 8-well",Molecular,,53/53,621/622,Fresh RNA extracted,,53,1,621,0,53,622,,1,0.9983922829581994,0.9324156955469234,1,0.9909498594088342,0.9997161493703841,FindDx
@@ -240,7 +244,8 @@ BIOSYNEX S.A.,VitaPCR™ SARS-CoV-2 Assay,Molecular,,7/8,7/7,Specimen without RN
 Amplification on ABI 7500",8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
 "CerTest Biotec, S.L.",VIASURE SARS-CoV-2 Real Time PCR Detection Kit,Molecular,,17/18,2/2,Frozen RNA,Ct value is highest value across either loci detected positive.,17,0,2,1,18,2,,0.9444444444444444,1,0.7424220019799246,0.9901250641690755,0.34237195288961925,1,FindDx
 "CerTest Biotec, S.L.",VIASURE SARS-CoV-2 S gene Real Time PCR Detection Kit adapted for BD MAX™ System,Molecular,,47/68,27/27,,,47,0,27,21,68,27,,0.6911764705882353,1,0.5736296438762007,0.7882776633107216,0.8754409628553641,1,FindDx
-Coris BioConcept,COVID-19 Ag Respi-Strip,Antigen,,32/106,42/42,Nucleoprotein antigen,"For samples with Ct < 25 (n = 10), <30 (n = 34) and <35 (n = 64), 1.8 × 105, 9.4 × 103 and 494.8 copies/mL respectively, COVID-19 Ag Respi-Strip has a sensitivity of 100%, 70.6% and 46.9%.",32,0,42,74,106,42,,0.3018867924528302,1,0.22268303619470353,0.3949481709253676,0.9161983874908379,1,FindDx
+Coris BioConcept,COVID-19 Ag Respi-Strip,Antigen,,38/159,593/615,,,38,22,593,121,159,615,,0.2389937106918239,0.9642276422764228,0.17935941502124522,0.31094281733215834,0.94643188968464,0.9762597974934684,FindDx
+Coyote Bioscience,DirectDetect™ SARS-CoV-2 Detection Kit,Molecular,,30/55,38/43,Specimen without RNA extraction,-entry 1/1,30,5,38,25,55,43,,0.5454545454545454,0.8837209302325582,0.41522461348360484,0.669749282535538,0.755205511093586,0.9492964700513791,FindDx
 "DAAN Gene Co., Ltd of Sun Yat-sen University",Novel Coronavirus (2019-nCoV) Real Time Multiplex RT-PCR kit,Molecular,,33/42,200/200,,,33,0,200,9,42,200,,0.7857142857142857,1,0.6405986210195627,0.8829433146894876,0.981153994081679,0.9999999999999999,FindDx
 Diagnostics for the Real World Ltd,SAMBA II COVID-19 Test (near-POC NAT),Molecular,,90/91,81/81,Specimen without RNA extraction,,90,0,81,1,91,81,,0.989010989010989,1,0.9403491964093861,0.998057578676652,0.9547203258778711,1,FindDx
 Eiken Chemical,Loopamp®︎ 2019-SARS-CoV-2 Detection Reagent Kit,Molecular,,30/30,44/46,Fresh RNA extracted,,30,2,44,0,30,46,,1,0.9565217391304348,0.8864829086095221,1,0.8546747708094657,0.9879948064111692,FindDx
@@ -263,6 +268,7 @@ Mobidiag,Amplidiag COVID-19 Kit,Molecular,,8/8,2/2,Specimen without RNA extracti
 Amplification with BioRad CFX96",8,0,2,0,8,2,,1,1,0.6755843804891231,1,0.34237195288961925,1,FindDx
 Mobidiag,Novadiag® COVID-19 + InfA/B (lab-based & near-POC),Molecular,,7/8,1/1,Specimen without RNA extraction,"Binary result, no Ct",7,0,1,1,8,1,,0.875,1,0.5291051942301386,0.9775830911367038,0.2065432914738929,1,FindDx
 Novacyt/primerdesign,genesig Real-Time PCR COVID-19,Molecular,,4/4,53/53,,Target: RdRP gene target,4,0,53,0,4,53,,1,1,0.5100999795960008,1,0.9324156955469234,1,FindDx
+"OptiGene Ltd. (Camberley, UK)",LAMP-COVID-19,Molecular,,33/44,68/70,Fresh RNA extracted,The index test used here was Direct RT-LAMP and reference standard was rRT-PCR (CT cut-off of <33),33,2,68,11,44,70,,0.75,0.9714285714285714,0.6055915019158504,0.8542593391931426,0.9016755648760819,0.9921295531061938,FindDx
 OPTIMedical,OPTI SARS-CoV-2 RT-PCR Test,Molecular,,8/8,1/1,Frozen RNA,"Ct value reported for lowest detectable concentration of pooled sample
 
 Amplification on LightCycler480",8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
@@ -281,6 +287,7 @@ Roche Ltd,Coronavirus LightMix® Modular SARS and Wuhan CoV E-gene assay,Molecul
 "Shanghai Fosun Long March Medical Science Co.,Ltd.",2019-Novel Coronavirus (2019-nCoV) RT-PCR Detection Kit,Molecular,,8/8,1/1,Frozen RNA,,8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
 "Shenzhen Bioeasy Biotechnology Co., Ltd",Bioeasy 2019-nCoV Ag Fluorescence Rapid Test Kit (Time-Resolved Fluorescence),Antigen,,141/208,31/31,Nucleocapsid protein,,141,0,31,67,208,31,,0.6778846153846154,1,0.6116496017653976,0.7376680015759667,0.8897409992652461,1,FindDx
 "Shenzhen Bioeasy Biotechnology Co., Ltd",Bioeasy 2019-Novel Coronavirus (2019-nCoV) Ag GICA Rapid Test (WITHDRAWN),Antigen,,9/37,11/11,,,9,0,11,28,37,11,,0.24324324324324326,1,0.13361203432663304,0.4011760249070895,0.7411599827511859,1,FindDx
+Stanford University,SHC EUA test,Molecular,,26/26,50/54,Fresh RNA extracted,,26,4,50,0,26,54,,1,0.9259259259259259,0.8712669561953783,1,0.8244564280657937,0.9708189446763159,FindDx
 STILLA,COVID-19 Multiplex Crystal Digital PCR detection kit,Molecular,,8/8,1/1,Frozen RNA,"Multiplex closed system amplification.
 Binary result only, no Ct provided. Method is quantitative",8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
 Thermo Fisher Scientific,TaqMan™ 2019-nCoV Assay Kit v1,Molecular,,8/8,1/1,Frozen RNA,Samples tested were a serial dilution pool of samples.,8,0,1,0,8,1,,1,1,0.6755843804891231,1,0.2065432914738929,1,FindDx
