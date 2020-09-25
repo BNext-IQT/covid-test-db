@@ -24,25 +24,18 @@ load("R/data_derived/find_performance.RData")
 # ignoring multiple trial tests from find b/c I don't know how to handle them yet
 # adding a column for data source (EUA/FindDx)
 
-# find_single_trial$source <- "FindDx"
-
 find_formatted$source <- "FindDx"
 
 eua_performance$source <- "FDA EUA"
 
 
-# filter out any companies in find that also appear in eua
-# do in 2 steps: 1. change find names to eua names 2. remove any matching cos
-# why? We have several instances where company and test names are slightly different
-# between the two sources. The point of find is to suppliment where we don't have 
-# data from fda to expand # of tests with performance data. tracking all nitty gritty
-# differences in test names turns into a mess (e.g. are two near-named tests actually 
-# the same or is one a modification of the other?) Stick with FDA companies at the
-# risk of losing a test that might not have EUA approval.
+### Reconcile company names across our data sources ----
+# This is a manual process using a case_when statement
 find_formatted <-
   find_formatted %>%
   mutate(
     company = case_when(
+      company == "Abbott Diagnostics" ~ "Abbott Diagnostics Scarborough, Inc.",
       company == "Abbott Diagnostics Inc." ~ "Abbott Diagnostics Scarborough, Inc.",
       company == "Abbott Molecular" ~ "Abbott Molecular Inc.",
       company == "altona Diagnostics" ~ "altona Diagnostics GmbH",
@@ -58,10 +51,32 @@ find_formatted <-
   )
 
 
+
+### Reconcile tests with multiple trials ----
+# Append FindDx {x} to the test name to differentiate multiple trials and flag
+# that the source of this is FindDx vs FDA EUA
+
+find_formatted <- by(
+  find_formatted, 
+  INDICES = paste(find_formatted$company, find_formatted$test_name), 
+  function(x) x
+)
+
+find_formatted <- lapply(
+  find_formatted,
+  function(x) {
+    x$test_name <- paste(x$test_name, "- Source: FindDx", seq_along(x$test_name))
+    x
+  }
+)
+
+find_formatted <- do.call(rbind, find_formatted)
+
+### Combine find with eua data ----
+# as of now filtering out antibody tests
 combined_performance <- rbind(
   eua_performance,
-  # find_single_trial
-  filter(find_formatted, ! company %in% eua_performance$company)
+  filter(find_formatted, test_type != "Antibody")
 )
 
 # remove any where sensitivity/specificity is NaN (which happens)
