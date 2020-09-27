@@ -10,7 +10,7 @@
   "dependencies": {
     "axios": "0.20.0",
     "core-js": "3.6.5",
-    "laravel-vue-datatable": "0.5.13",
+    "laravel-vue-datatable": "0.5.14",
     "semantic-ui-vue": "0.11.0",
     "vue": "2.6.12",
     "vue-good-table": "2.21.0",
