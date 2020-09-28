@@ -101,9 +101,6 @@ CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostics (
 	prep_integrated BOOLEAN DEFAULT FALSE,
 	tests_per_run INT NULL,
 	tests_per_kit INT NULL,
-	sensitivity NUMERIC(10, 4) NULL,
-	specificity NUMERIC(10, 4) NULL,
-	source_of_perf_data STRING NULL,
 	catalog_no STRING NULL,
 	point_of_care BOOLEAN DEFAULT FALSE,
 	cost_per_kit NUMERIC(10, 4) NULL,
@@ -153,6 +150,43 @@ CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostic_pcr_platforms (
 	updated_by STRING NULL,
 	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
 	PRIMARY KEY (diagnostic_id, pcr_platform_id)
+);
+
+CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostic_performance (
+	diagnostic_id UUID NULL REFERENCES covid_diagnostics.diagnostics(id) ON DELETE CASCADE,
+	source_of_perf_data STRING NULL,
+	source_display_name STRING NULL,
+	tp INT NULL,
+	fp INT NULL,
+	tn INT NULL,
+	fn INT NULL,
+	sensitivity NUMERIC(10, 8) NULL,
+	sensitivity_ci_low NUMERIC(10, 8) NULL,
+	sensitivity_ci_high NUMERIC(10, 8) NULL,
+	specificity NUMERIC(10, 8) NULL,
+	specificity_ci_low NUMERIC(10, 8) NULL,
+	specificity_ci_high NUMERIC(10, 8) NULL,
+	created_by STRING NULL,
+	created TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
+	updated_by STRING NULL,
+	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
+	PRIMARY KEY (diagnostic_id, source_of_perf_data)
+);
+
+CREATE TABLE IF NOT EXISTS covid_diagnostics.diagnostic_RAW_performance (
+	diagnostic_id UUID NULL REFERENCES covid_diagnostics.diagnostics(id) ON DELETE CASCADE,
+	source_of_perf_data STRING NULL,
+	source_display_name STRING NULL,
+	clinical_lod STRING NULL,
+	ppa STRING NULL,
+	npa STRING NULL,
+	performance_target STRING NULL,
+	performance_notes STRING NULL,
+	created_by STRING NULL,
+	created TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
+	updated_by STRING NULL,
+	updated TIMESTAMPTZ NOT NULL DEFAULT clock_timestamp(),
+	PRIMARY KEY (diagnostic_id, source_of_perf_data)
 );
 
 /* fill in reference tables */

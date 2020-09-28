@@ -1,12 +1,15 @@
 package main 
 
 import (
+    //"database/sql"
     "io"
     "log"
     "os"
     "strconv"
     "strings"
+    "time"
 
+    "github.com/google/uuid"
     "github.com/360EntSecGroup-Skylar/excelize"
     "github.com/jinzhu/gorm"
     _ "github.com/jinzhu/gorm/dialects/postgres"
@@ -60,6 +63,12 @@ func molecularColumnMapping () map[string]int{
         "tests_per_kit": 32,
         "abi_7500": 33,
         "test_type": 36,
+        "clinical_lod": 37,
+        "ppa": 38,
+        "npa": 39,
+        "performance_target": 40,
+        "performance_notes": 41,
+
     }
 } 
 
@@ -203,9 +212,8 @@ func getOrCreatePcrPlatform(name string)(*pcr_platform.PcrPlatform, error){
 func createDiagnostic( name string, description string, testUrl string, company company.Company, 
              diagnosticType diagnostic_type.DiagnosticType, poc poc.Poc, 
              verifiedLod string, avgCt float64, prepIntegrated bool,
-             testsPerRun int64, testsPerKit int64, sensitivity float64, specificity float64,
-             sourceOfPerfData string, catalogNo string, pointOfCare bool, costPerKit float64,
-             inStock bool, leadTime int64,
+             testsPerRun int64, testsPerKit int64, catalogNo string, pointOfCare bool, 
+             costPerKit float64, inStock bool, leadTime int64,
              approvals []regulatory_approval_type.RegulatoryApprovalType, 
              targets []diagnostic_target_type.DiagnosticTargetType,
              sampleTypes []sample_type.SampleType,
@@ -216,11 +224,32 @@ func createDiagnostic( name string, description string, testUrl string, company 
     var result *diagnostic.Diagnostic = nil
     result, err := diagnostic.Create(db, name, description, testUrl, company, diagnosticType, poc,
                     verifiedLod, avgCt, prepIntegrated, testsPerRun, testsPerKit,
-                    sensitivity, specificity, sourceOfPerfData, catalogNo, pointOfCare, costPerKit,
-                    inStock, leadTime,
+                    catalogNo, pointOfCare, costPerKit, inStock, leadTime,
                     approvals, targets, sampleTypes, pcrPlatforms)   
 
     return result, err
+}
+
+func insertRawPerformanceData( dxId uuid.UUID,  sourceOfPerfData string, sourceDisplayName string,
+    clodb string, ppa string, npa string, performanceTarget string, performanceNotes string)(error){
+    db := getDB()
+    defer db.Close()
+
+    result := db.Exec(
+    `INSERT INTO covid_diagnostics.diagnostic_RAW_performance (diagnostic_id, source_of_perf_data, source_display_name,
+    clinical_lod, ppa, npa, performance_target, performance_notes,
+    created_by, created, updated_by, updated) 
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $9, $10);`, 
+    dxId, sourceOfPerfData, sourceDisplayName, clodb, ppa, npa, performanceTarget, performanceNotes,
+    "scraper", time.Now())
+ 
+    err := result.Error
+    if (err != nil){
+        log.Println("Error in RAW insert")
+        log.Println(err)
+    }
+
+    return err;
 }
 
 func getSampleTypes(names []string)([]sample_type.SampleType, []error){
@@ -374,9 +403,6 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
     prepIntegrated := Index(positives, strings.ToLower(strings.TrimSpace(row[mapping["prep_integrated"]]))) >= 0
     tpr, _ := strconv.ParseInt(row[mapping["tests_per_run"]], 10, 64)
     tpk, _ := strconv.ParseInt(row[mapping["tests_per_kit"]], 10, 64)
-    sensitivity, _ := strconv.ParseFloat(row[mapping["sensitivity"]], 64)
-    specificity, _ := strconv.ParseFloat(row[mapping["specificity"]], 64)
-    sourceOfPerfData := strings.TrimSpace(row[mapping["source"]])
     catalogNo := strings.TrimSpace(row[mapping["product_no"]])
     pointOfCare := Index(positives, strings.ToLower(strings.TrimSpace(row[mapping["point_of_care"]]))) >= 0
     costPerKit, _ := strconv.ParseFloat(row[mapping["Cost_per_kit"]], 64)
@@ -395,9 +421,6 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
         prepIntegrated,
         tpr,
         tpk,
-        sensitivity,
-        specificity,
-        sourceOfPerfData,
         catalogNo,
         pointOfCare,
         costPerKit,
@@ -408,6 +431,20 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
         sampleTypes,
         pcrPlatforms,
     )
+
+    sourceOfPerfData := strings.TrimSpace(row[mapping["source"]])
+    clodb := strings.TrimSpace(row[mapping["clinical_lod"]])
+    ppa := strings.TrimSpace(row[mapping["ppa"]])
+    npa := strings.TrimSpace(row[mapping["npa"]])
+    performance_target := strings.TrimSpace(row[mapping["performance_target"]])
+    performance_notes := strings.TrimSpace(row[mapping["performance_notes"]])
+
+    rawErr := insertRawPerformanceData(dx.Id, sourceOfPerfData, "IFU/EUA", clodb,
+                ppa, npa, performance_target, performance_notes);
+    if(rawErr != nil){
+        log.Println("Error Inserting Raw performance data")
+        log.Println(rawErr)
+    }
 
     return dx, dxErr
 }
