@@ -33,8 +33,8 @@ if [ $# -gt 0 ]; then
     check_args "$@"
 fi
 
+docker-compose -f docker-compose.yaml down 
+
 if [[ "$EXTREME" -gt 0 ]]; then
 	sudo rm -rf cockroach-data/
 fi
-
-docker-compose -f docker-compose.yaml down 

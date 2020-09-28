@@ -1,0 +1,60 @@
+version: '3.7'
+services:
+  database:
+    container_name: roach
+    hostname: roach
+    restart: always
+    image: 'cockroachdb/cockroach:latest'
+    command: start --insecure
+    networks:
+      - database
+    volumes:
+      - '${PWD}/cockroach-data/roach:/cockroach/cockroach-data'
+      - '${PWD}/sql_scripts:/sql_scripts'
+  api:
+    container_name: api
+    hostname: bugbrother
+    restart: always
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    image: 'covid-test-db/api:latest'
+    networks:
+      - database
+      - api
+  ui:
+    container_name: ui
+    hostname: magnifyingglass
+    restart: always
+    build:
+      context: ui
+    image: 'covid-test-db/ui:latest'
+    networks:
+      - api
+  dash:
+    container_name: dash
+    hostname: draxx
+    restart: always
+    build:
+      context: dash
+    image: 'covid-test-db/dash:latest'
+    networks:
+      - api
+  nginx:
+    restart: always
+    image: nginx:latest
+    container_name: rev_prox
+    volumes:
+      - '${PWD}/proxy/reverse_proxy.conf:/etc/nginx/nginx.conf'
+    ports:
+      - 80:80
+    networks:
+      - api
+networks:
+  admin:
+    name: admin
+  database:
+    name: database
+    driver: bridge
+  api:
+    name: api
