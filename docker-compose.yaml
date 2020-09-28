@@ -51,8 +51,6 @@ services:
     networks:
       - api
 networks:
-  admin:
-    name: admin
   database:
     name: database
   api:
