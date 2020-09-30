@@ -8,6 +8,9 @@ services:
     command: start --insecure
     networks:
       - database
+    ports:
+      - 26257:26257
+      - 8080:8080
     volumes:
       - '${PWD}/cockroach-data/roach:/cockroach/cockroach-data'
       - '${PWD}/sql_scripts:/sql_scripts'
@@ -53,5 +56,6 @@ services:
 networks:
   database:
     name: database
+    driver: bridge
   api:
     name: api
