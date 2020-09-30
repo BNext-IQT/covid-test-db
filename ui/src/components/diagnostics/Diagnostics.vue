@@ -3,7 +3,7 @@
       <div class="left-div">
         <strong>Data Last Updated:</strong> {{this.lastUpdated ? this.lastUpdated.toDateString() : ""}}
       </div>
-      <DiagnosticTable :diagnostics="diagnostics" :diagnosticTypeList="diagnosticTypeList" :sampleTypeList="sampleTypeList" :pcrPlatformList="pcrPlatformList" :selectedDx="selectedDx" @select:dx="setSelectedDx" />
+      <DiagnosticTable :diagnostics="diagnostics" :diagnosticTypeList="diagnosticTypeList" :sampleTypeList="sampleTypeList" :pcrPlatformList="pcrPlatformList" :selectedDx="selectedDx" @select-dx="setSelectedDx" />
      <DiagnosticDetail :diagnostic="selectedDx"/>
   </div>
 </template>

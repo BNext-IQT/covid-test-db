@@ -50,7 +50,7 @@
     methods: {
       select(params) {
         const dx = params.row
-        this.$emit('select:dx', dx);
+        this.$emit('select-dx', dx);
       },
       convertBoolToYN(value) {
         return value ? "Y" : "N"
