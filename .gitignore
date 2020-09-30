@@ -16,6 +16,7 @@ scraper/scraper
 
 #logfiles
 *.log
+log
 
 # misc
 .DS_Store
