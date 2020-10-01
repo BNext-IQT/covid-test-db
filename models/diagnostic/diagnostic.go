@@ -116,7 +116,8 @@ func FetchById(db *gorm.DB, id uuid.UUID) (*Diagnostic, error) {
 
     err := db.Preload("Company").Preload("Poc").Preload("DiagnosticType").Preload("RegulatoryApprovals").
     Preload("DiagnosticTargets").Preload("SampleTypes").Preload("PcrPlatforms").
-    Preload("DiagnosticPerformance").Where("id = ?", id).First(&result).Error;
+    //Preload("DiagnosticPerformance").
+    Where("id = ?", id).First(&result).Error;
 
     if err != nil {
         result = nil
@@ -130,7 +131,8 @@ func FetchList(db *gorm.DB) ([]Diagnostic, error) {
 
     err := db.Preload("Company").Preload("Poc").Preload("DiagnosticType").Preload("RegulatoryApprovals").
     Preload("DiagnosticTargets").Preload("SampleTypes").Preload("PcrPlatforms").
-    Preload("DiagnosticPerformance").Find(&results).Error;
+    // Preload("DiagnosticPerformance").
+    Find(&results).Error;
 
     if err != nil {
         results = nil
