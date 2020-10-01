@@ -138,7 +138,7 @@ markdown_text_intro = '''
 ## How to use this app
 Researchers may not know the prevalence of novel coronavirus in any one place or time.
 But users can explore how diagnostic tests would be expected to perform based on their reported clinical trial data.
-The tool below allows you to select one of {} diagnostic tests for novel coronavirus and examine its expected PPV and NPV across a range of disease prevalence, from 0.5% to 100%.
+The tool below allows you to select performance data from {} studies covering hundreds of diagnostic tests for novel coronavirus and examine its expected PPV and NPV across a range of disease prevalence, from 0.5% to 100%.
 
 You can choose a prevalence level by adjusting a slider. You'll see a series of images like the one below.  
 
@@ -159,13 +159,11 @@ The data populated for this app come from three sources:
 
 ## Completeness of the data
 
-As of this writing, we only include data on molecular PCR tests. We plan to include data on antigen and antibody tests in a future version. 
+As of this writing, we include data on molecular PCR tests and antigen tests. We do not include data on antibody tests.
 
-Also, not every vendor reports clinical trial data, some only report analytical data. In this case, we do not include any performance data. However, a future version of this app may include analytical data as well.
+For a given test, we may include performance data that was reported to the FDA, data from FindDx that may include several performance studies of a given test, or data from both sources.
 
-Where there is data from both the FDA's EUA website and FindDX, we choose data from the FDA. That is not to say that we think it's better. Rather, we desire to report data from the manufacturer to give a picutre of what's reported to the FDA. 
-
-FindDx sometimes reports multiple performance studies for a single test. For the tests exclusive to FindDx that have multiple studies, we choose to report the one with the largeest sample size. 
+Not every vendor reports clinical trial data, some only report analytical data. In this case, if FindDx reports data for that test, we include it. If not, we do not include any performance data.
 
 ## Calculation details
 
