@@ -22,6 +22,8 @@ services:
     networks:
       - database
       - api
+    volumes:
+      - '${PWD}/log:/var/log'
   ui:
     container_name: ui
     hostname: magnifyingglass

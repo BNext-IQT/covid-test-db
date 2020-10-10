@@ -9,4 +9,4 @@ docker build -f scraper/Dockerfile -t cdb_scraper .
 docker exec -it roach \
 	sh -c "/cockroach/cockroach sql --insecure < /sql_scripts/initialize.sql"
 
-docker run --network="database" cdb_scraper
+docker run --network="database" -v ${pwd}/log:/var/log cdb_scraper
