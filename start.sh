@@ -40,5 +40,5 @@ if [ "$RUN_INIT" -gt 0 ]; then
 	docker exec -it roach \
 	sh -c "/cockroach/cockroach sql --insecure < /sql_scripts/initialize.sql"
 
-    docker run --network="database" cdb_scraper
+    docker run --network="database" -v ${pwd}/log:/var/log cdb_scraper
 fi

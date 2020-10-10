@@ -243,7 +243,7 @@ func getPcrPlatformList(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	logFile, err := os.OpenFile("api.log", os.O_CREATE | os.O_APPEND | os.O_RDWR, 0666)
+	logFile, err := os.OpenFile("/var/log/api.log", os.O_CREATE | os.O_APPEND | os.O_RDWR, 0666)
 	if err != nil {
 	    panic(err)
 	}
