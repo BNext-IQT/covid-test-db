@@ -413,7 +413,7 @@ func getDiagnosticFromRow(row []string)(*diagnostic.Diagnostic, error){
 }
 
 func main() {
-    logFile, err := os.OpenFile("scraper.log", os.O_CREATE | os.O_APPEND | os.O_RDWR, 0666)
+    logFile, err := os.OpenFile("/var/log/scraper.log", os.O_CREATE | os.O_APPEND | os.O_RDWR, 0666)
     if err != nil {
         panic(err)
     }
