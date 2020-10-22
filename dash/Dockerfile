@@ -1,4 +1,8 @@
-FROM python:3.8-slim-buster
+FROM python:3.9-slim-buster
+
+RUN apt-get update && \
+	apt-get -y upgrade && \
+ 	apt-get -y install make automake gcc g++ subversion python3-dev libopenblas-dev liblapack-dev gfortran
 
 RUN mkdir app
 WORKDIR app

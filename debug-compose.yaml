@@ -27,6 +27,8 @@ services:
       - api
     volumes:
       - '${PWD}/log:/var/log/cvdb'
+    depends_on:
+      - "database"
   ui:
     container_name: ui
     hostname: magnifyingglass
@@ -36,6 +38,8 @@ services:
     image: 'covid-test-db/ui:latest'
     networks:
       - api
+    depends_on:
+      - "api"
   dash:
     container_name: dash
     hostname: draxx
@@ -45,6 +49,8 @@ services:
     image: 'covid-test-db/dash:latest'
     networks:
       - api
+    depends_on:
+      - "api"
   nginx:
     restart: always
     image: nginx:latest
@@ -55,6 +61,9 @@ services:
       - 80:80
     networks:
       - api
+    depends_on:
+      - "api"
+      - "ui"
 networks:
   database:
     name: database
