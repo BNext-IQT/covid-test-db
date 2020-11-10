@@ -1,0 +1,17 @@
+name: test
+
+on: [push, pull_request]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: test
+      run: |
+        docker build -t cvdb/api -f ./api/Dockerfile ./ && \
+        docker build -t cvdb/ui -f ./ui/Dockerfile ./ui && \
+        docker build -t cvdb/scraper -f ./scraper/Dockerfile ./ 
+    
