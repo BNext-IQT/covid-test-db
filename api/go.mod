@@ -23,7 +23,7 @@ require (
 	github.com/gorilla/handlers v1.5.1
 	github.com/gorilla/mux v1.8.0
 	github.com/jinzhu/gorm v1.9.12
-	github.com/lib/pq v1.8.0
+	github.com/lib/pq v1.9.0
 	github.com/BNext-IQT/covid-test-db/models/company v0.0.1 // indirect
 	github.com/BNext-IQT/covid-test-db/models/diagnostic v0.0.1
 	github.com/BNext-IQT/covid-test-db/models/diagnostic_target_type v0.0.1 // indirect
