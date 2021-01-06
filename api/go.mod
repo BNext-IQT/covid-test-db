@@ -19,11 +19,11 @@ replace github.com/BNext-IQT/covid-test-db/models/sample_type => ../models/sampl
 replace github.com/BNext-IQT/covid-test-db/models/pcr_platform => ../models/pcr-platform/
 
 require (
-	github.com/google/uuid v1.1.2
+	github.com/google/uuid v1.1.3
 	github.com/gorilla/handlers v1.5.1
 	github.com/gorilla/mux v1.8.0
 	github.com/jinzhu/gorm v1.9.12
-	github.com/lib/pq v1.8.0
+	github.com/lib/pq v1.9.0
 	github.com/BNext-IQT/covid-test-db/models/company v0.0.1 // indirect
 	github.com/BNext-IQT/covid-test-db/models/diagnostic v0.0.1
 	github.com/BNext-IQT/covid-test-db/models/diagnostic_target_type v0.0.1 // indirect

@@ -7,7 +7,7 @@ gunicorn
 xlsxwriter
 requests
 flask
-dash==1.17.0
+dash==1.18.1
 dash_auth
 dash-html-components
 dash-core-components

@@ -212,7 +212,7 @@ TBG Biotechnology Corp.,ExProbe SARS-CoV-2 Testing Kit,Molecular Test Kit,Both,5
 "Tempus Labs, Inc.",iC SARS-CoV2 Test,Lab-performed test or service,Both,29/29,30/30,NP,Company dropped 1 inconclusive positive result from the data analysis,29,0,30,0,29,30,,1,1,0.8830264055344441,1,0.8864829086095221,1,FDA EUA
 The Ohio State University Wexner Medical Center,OSUWMC COVID-19 RT-PCR test,Lab-performed test or service,Both,26/26,25/25,NPS,,26,0,25,0,26,25,,1,1,0.8712669561953783,1,0.8668035060468213,1,FDA EUA
 "Tide Laboratories, LLC",DTPM COVID-19 RT-PCR Test,Lab-performed test or service,Both,23/23,18/18,NPS,,23,0,18,0,23,18,,1,1,0.8568788745827371,1,0.824115449417625,1,FDA EUA
-"TNS Co., Ltd (Bio TNS)",COVID-19 RT-PCR Peptide Nucleic Acid (PNA) kit,,Both,33/33,32/32,NPS,,33,0,32,0,33,32,,1,1,0.8957265699643882,1,0.8928172849426366,1,FDA EUA
+"TNS Co., Ltd (Bio TNS)",COVID-19 RT-PCR Peptide Nucleic Acid (PNA) kit,Molecular Test Kit,Both,33/33,32/32,NPS,,33,0,32,0,33,32,,1,1,0.8957265699643882,1,0.8928172849426366,1,FDA EUA
 Trax Management Services Inc.,PhoenixDx SARS-CoV-2 Multiplex,Molecular Test Kit,Both,"NPS = 34/34
 OPS = 8/8","NPS = 38/38
 OPS = 4/4","OPS, NPS",,42,0,42,0,42,42,Nps,1,1,0.9161983874908379,1,0.9161983874908379,1,FDA EUA
@@ -245,6 +245,10 @@ using the EUA authorized CDC assay. Of these NP samples, 33 (26.6%) were
 PCR-positive",28,2,89,5,33,91,,0.8484848484848485,0.978021978021978,0.6907978686153953,0.9334964074203904,0.9233668616945964,0.9939521206928791,FDA EUA
 "Yale School of Public Health, Department of Epidemiology of Microbial Diseases",SalivaDirect,Lab-performed test or service,Both,32/34,30/33,"NP+Saliva, data are combined",,32,3,30,2,34,33,,0.9411764705882353,0.9090909090909091,0.8090606311053629,0.9837176869361576,0.7642705646564897,0.968596628950737,FDA EUA
 "ZhuHai Sinochips Bioscience Co., Ltd.",COVID-19 Nucleic Acid RT-PCR Test Kit,Molecular Test Kit,Both,82/85,310/310,NP,,82,0,310,3,85,310,,0.9647058823529412,1,0.9012978896926876,0.9879251769787817,0.9877594302348701,1,FDA EUA
+"Agena Bioscience, Inc.",MassARRAY SARS-CoV-2 Panel,Molecular Test Kit,Both,57/60,60/60,NP,,57,0,60,3,60,60,,0.95,1,0.8629926537490016,0.9828508088208587,0.939826069522067,1,FDA EUA
+"Celltrion USA, Inc.",Sampinute COVID-19 Antigen MIA,Antigen Test,Both,5/5,100/100,not specified,,5,0,100,0,5,100,,1,1,0.565508505247919,1,0.9630051925239982,1,FDA EUA
+DNA Genotek Inc.,ORAcollect∙RNA OR-100 and ORAcollect∙RNA ORE-100 saliva collection devices,Colleciton kit only,,31/31,32/32,NP,not associated with specific lab,31,0,32,0,31,32,,1,1,0.8897409992652461,1,0.8928172849426366,1,FDA EUA
+"Lucira Health, Inc.",Lucira COVID-19 All-In-One Test Kit,Molecular Test Kit,Both,48/51,49/50,nasal swab,,48,1,49,3,51,50,,0.9411764705882353,0.98,0.8407512606105804,0.9797937271359479,0.8950431352816305,0.9964608319110236,FDA EUA
 "Abbott Diagnostics Scarborough, Inc.",ID NOW COVID-19 - Source: FindDx 1,Molecular,,50/57,50/50,Specimen without RNA extraction,,50,0,50,7,57,50,,0.8771929824561403,1,0.7675331041107074,0.939220169964925,0.9286499658256813,1,FindDx
 "Abbott Diagnostics Scarborough, Inc.",ID NOW COVID-19 - Source: FindDx 2,Molecular,,26/33,546/546,Specimen without RNA extraction,,26,0,546,7,33,546,,0.7878787878787878,1,0.6224802241287064,0.8932411343356383,0.99301326054631,1,FindDx
 "Abbott Diagnostics Scarborough, Inc.",ID NOW COVID-19 - Source: FindDx 3,Molecular,,94/119,79/79,Specimen without RNA extraction,,94,0,79,25,119,79,,0.7899159663865546,1,0.7082417604271238,0.8534572080005098,0.9536271631644004,1,FindDx
