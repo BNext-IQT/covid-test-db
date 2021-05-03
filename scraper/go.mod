@@ -20,7 +20,7 @@ go 1.14
 
 require (
 	github.com/360EntSecGroup-Skylar/excelize v1.4.1
-	github.com/360EntSecGroup-Skylar/excelize/v2 v2.3.2
+	github.com/360EntSecGroup-Skylar/excelize/v2 v2.4.0
 	github.com/BNext-IQT/covid-test-db/models/company v0.0.1
 	github.com/BNext-IQT/covid-test-db/models/diagnostic v0.0.1
 	github.com/BNext-IQT/covid-test-db/models/diagnostic_target_type v0.0.1
