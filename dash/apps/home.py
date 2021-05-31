@@ -171,7 +171,7 @@ layout = html.Div(children=[
                  dbc.Col(dbc.Card(children=[html.H3(children='Access data & code used to build this dashboard',
                                                     className="text-center"),
                                             html.A([
-                                            html.Img(src="{}/assets/GitLab_Logo.png".format(APP_PATH),
+                                            html.Img(src="{}/assets/GitHub_logo.png".format(APP_PATH),
                                                      style={
                                                             'height' : '7vw',
                                                             'min-height' : '1vw',
@@ -179,7 +179,7 @@ layout = html.Div(children=[
                                                             'padding-bottom' : 10,
                                                            }
                                                     )
-                                                   ], className='text-center', href='https://gitlab.iqt.org/zhampelarias/covid-dash-app'),
+                                                   ], className='text-center', href='https://github.com/BNext-IQT/covid-test-db'),
                                            ], body=True, color="dark", outline=True), width=2, lg=4, className="mb-4"),
 
                  dbc.Col(dbc.Card(children=[html.H3(children='Explore other work from B.Next',
