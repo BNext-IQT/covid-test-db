@@ -27,7 +27,7 @@ require (
 	github.com/BNext-IQT/covid-test-db/models/poc v0.0.1
 	github.com/BNext-IQT/covid-test-db/models/regulatory_approval_type v0.0.1
 	github.com/BNext-IQT/covid-test-db/models/sample_type v0.0.1
-	github.com/google/uuid v1.2.0
+	github.com/google/uuid v1.3.0
 	github.com/gorilla/handlers v1.5.1
 	github.com/gorilla/mux v1.8.0
 	github.com/jinzhu/gorm v1.9.16
